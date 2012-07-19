@@ -1,0 +1,47 @@
+<?php
+function wpsc_dynamic_gallery_install(){
+	WPSC_Settings_Tab_Gallery_Settings::wpsc_dynamic_gallery_set_setting();
+}
+
+/**
+ * Load languages file
+ */
+function wpsc_dynamic_gallery_init() {
+	load_plugin_textdomain( 'wpsc_dgallery', false, WPSC_DYNAMIC_GALLERY_FOLDER.'/languages' );
+}
+// Add language
+add_action('init', 'wpsc_dynamic_gallery_init');
+
+// Add Dynamic Gallery tab into Store settings 	
+add_filter( 'wpsc_settings_tabs', array('WPSC_Dynamic_Gallery_Hook_Filter', 'add_wpsc_settings_tabs') );
+
+// Include script for dashboard
+add_action('admin_head', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_dynamic_gallery_add_script') );
+
+// Add extra fields for image in Product Edit Page
+add_filter( 'attachment_fields_to_edit', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_attachment_fields_filter'), 12, 2 );
+add_filter( 'attachment_fields_to_save', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_exclude_image_from_product_page_field_save'), 1, 2 );
+add_action( 'add_attachment', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_exclude_image_from_product_page_field_add') );
+
+add_action( 'wp_head',array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_hide_featured_image_single_product'),1 );
+
+//Ajax Preview gallery
+add_action('wp_ajax_wpsc_dynamic_gallery', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_dynamic_gallery_preview') );
+add_action('wp_ajax_nopriv_wpsc_dynamic_gallery', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_dynamic_gallery_preview') );
+
+//Ajax do dynamic gallery frontend
+add_action('wp_ajax_wpsc_dynamic_gallery_frontend', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_dynamic_gallery_frontend') );
+add_action('wp_ajax_nopriv_wpsc_dynamic_gallery_frontend', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_dynamic_gallery_frontend') );
+
+//Frontend do dynamic gallery
+if ( !function_exists( 'gold_shpcrt_display_gallery' ) ){
+	function gold_shpcrt_display_gallery($product_id){
+		global $post;
+		if(is_singular('wpsc-product')){
+			echo WPSC_Dynamic_Gallery_Display_Class::wpsc_dynamic_gallery_display($product_id);
+		}
+	}
+}else{
+	add_action('wp_footer', array('WPSC_Dynamic_Gallery_Hook_Filter', 'do_dynamic_gallery') );
+}
+?>
