@@ -35,23 +35,24 @@ class WPSC_Settings_Tab_Gallery_Settings {
 					'&quot;Century Gothic&quot;, sans-serif'		=> 'Century Gothic'
 					);
 					
-	public function wpsc_dynamic_gallery_set_setting($reset=false){
+	public function wpsc_dynamic_gallery_set_setting($reset=false, $free_version=false){
 		global $wpdb;
-		if( trim(get_option('product_gallery_width')) == '' || $reset ){
+		if( ( trim(get_option('product_gallery_width')) == '' || $reset) && !$free_version){
 			update_option('product_gallery_width','320');
 		}
-		if( trim(get_option('product_gallery_height')) == '' || $reset ){
+		if( (trim(get_option('product_gallery_height')) == '' || $reset) && !$free_version ){
 			update_option('product_gallery_height',215);
 		}
-		if( trim(get_option('thumb_width')) == '' || $reset ){
+		if( (trim(get_option('thumb_width')) == '' || $reset) && !$free_version){
 			update_option('thumb_width',105);
 		}
-		if( trim(get_option('thumb_height')) == '' || $reset ){
+		if( (trim(get_option('thumb_height')) == '' || $reset) && !$free_version){
 			update_option('thumb_height',75);
 		}
-		if( trim(get_option('thumb_spacing')) == '' || $reset ){
+		if( (trim(get_option('thumb_spacing')) == '' || $reset) && !$free_version){
 			update_option('thumb_spacing',2);
 		}
+
 		if( trim(get_option('product_gallery_speed')) == '' || $reset ){
 			update_option('product_gallery_speed',5);
 		}
@@ -59,7 +60,7 @@ class WPSC_Settings_Tab_Gallery_Settings {
 			update_option('product_gallery_effect','slide-vert');
 		}
 		if( trim(get_option('product_gallery_auto_start')) == '' || $reset ){
-			update_option('product_gallery_auto_start','yes');
+			update_option('product_gallery_auto_start','true');
 		}
 		if( trim(get_option('product_gallery_animation_speed')) == '' || $reset ){
 			update_option('product_gallery_animation_speed',2);
@@ -129,6 +130,7 @@ class WPSC_Settings_Tab_Gallery_Settings {
 	public function is_update_message_displayed() {
 		if(isset($_REQUEST['updateoption'])){
 			$this->update_settings($_POST);
+			$this->wpsc_dynamic_gallery_set_setting(true, true);
 		}
 		return true;
 	}

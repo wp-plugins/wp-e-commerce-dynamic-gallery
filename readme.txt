@@ -3,7 +3,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, e-commerce,  wordpress ecommerce
 Requires at least: 3.3
 Tested up to: 3.4.1
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -103,6 +103,8 @@ Support and access to this plugin documents are available from the [HELP tab](ht
 
 == Changelog ==
 
+= 1.0.1 - 2012/07/23 =
+* Fix: Thumbnails show after edit settings in Dynamic Gallery tab.
 
 = 1.0 - 2012/07/18 =
 * Initial release.
