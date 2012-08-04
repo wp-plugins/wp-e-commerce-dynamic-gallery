@@ -1,6 +1,6 @@
 <?php
 function wpsc_dynamic_gallery_install(){
-	WPSC_Settings_Tab_Gallery_Settings::wpsc_dynamic_gallery_set_setting();
+	WPSC_Settings_Tab_Gallery_Settings::wpsc_dynamic_gallery_set_setting(true, true);
 }
 
 /**
@@ -36,7 +36,6 @@ add_action('wp_ajax_nopriv_wpsc_dynamic_gallery_frontend', array('WPSC_Dynamic_G
 //Frontend do dynamic gallery
 if ( !function_exists( 'gold_shpcrt_display_gallery' ) ){
 	function gold_shpcrt_display_gallery($product_id){
-		global $post;
 		if(is_singular('wpsc-product')){
 			echo WPSC_Dynamic_Gallery_Display_Class::wpsc_dynamic_gallery_display($product_id);
 		}

@@ -75,16 +75,16 @@ class WPSC_Settings_Tab_Gallery_Settings {
 			update_option('product_gallery_text_color','#FFFFFF');
 		}
 		if( trim(get_option('product_gallery_bg_des')) == '' || $reset ){
-			update_option('product_gallery_bg_des','#000000');
+			update_option('product_gallery_bg_des','#226fd8');
 		}
 		if( trim(get_option('product_gallery_nav')) == '' || $reset ){
 			update_option('product_gallery_nav','yes');
 		}
 		if( trim(get_option('bg_nav_color')) == '' || $reset ){
-			update_option('bg_nav_color','#FFFFFF');
+			update_option('bg_nav_color','#226fd8');
 		}
 		if( trim(get_option('bg_nav_text_color')) == '' || $reset ){
-			update_option('bg_nav_text_color','#000000');
+			update_option('bg_nav_text_color','#FFFFFF');
 		}
 		if( trim(get_option('popup_gallery')) == '' || $reset ){
 			update_option('popup_gallery','fb');
@@ -93,7 +93,7 @@ class WPSC_Settings_Tab_Gallery_Settings {
 			update_option('enable_gallery_thumb','yes');
 		}
 		if( trim(get_option('transition_scroll_bar')) == '' || $reset ){
-			update_option('transition_scroll_bar','#000000');
+			update_option('transition_scroll_bar','#226fd8');
 		}
 		if( trim(get_option('lazy_load_scroll')) == '' || $reset ){
 			update_option('lazy_load_scroll','yes');
@@ -312,7 +312,7 @@ class WPSC_Settings_Tab_Gallery_Settings {
           <tr>
 		    <th scope="row"><?php _e('Background', 'wpsc_dgallery');?>	</th>
 		    <td>
-            <input type="text" class="colorpick" value="<?php echo get_option('product_gallery_bg_des');?>" style="width: 7em;" id="product_gallery_bg_des" name="product_gallery_bg_des" disabled="disabled" /> <span class="description"><?php _e('Caption text background colour.', 'wpsc_dgallery');?> <?php _e('Default', 'wpsc_dgallery');?> <code>#000000</code>.</span> <div style="z-index: 100; background: #eee; border: 1px solid #ccc; position: absolute; display: none;" class="colorpickdiv" id="colorPickerDiv_product_gallery_bg_des"></div></td>
+            <input type="text" class="colorpick" value="<?php echo get_option('product_gallery_bg_des');?>" style="width: 7em;" id="product_gallery_bg_des" name="product_gallery_bg_des" disabled="disabled" /> <span class="description"><?php _e('Caption text background colour.', 'wpsc_dgallery');?> <?php _e('Default', 'wpsc_dgallery');?> <code>#226fd8</code>.</span> <div style="z-index: 100; background: #eee; border: 1px solid #ccc; position: absolute; display: none;" class="colorpickdiv" id="colorPickerDiv_product_gallery_bg_des"></div></td>
 		  </tr>
           
           
@@ -373,14 +373,14 @@ class WPSC_Settings_Tab_Gallery_Settings {
           <tr>
 		    <th scope="row"><?php _e('Colour', 'wpsc_dgallery');?>	</th>
 		    <td>
-            <input type="text" class="colorpick" value="<?php echo get_option('bg_nav_color');?>" style="width:7em;" id="bg_nav_color" name="bg_nav_color" disabled="disabled" /> <span class="description"><?php _e('Nav bar background colour.', 'wpsc_dgallery');?> <?php _e('Default', 'wpsc_dgallery');?> <code>#FFFFFF</code>.</span> 
+            <input type="text" class="colorpick" value="<?php echo get_option('bg_nav_color');?>" style="width:7em;" id="bg_nav_color" name="bg_nav_color" disabled="disabled" /> <span class="description"><?php _e('Nav bar background colour.', 'wpsc_dgallery');?> <?php _e('Default', 'wpsc_dgallery');?> <code>#226fd8</code>.</span> 
             <div id="colorPickerDiv_bg_nav_color" class="colorpickdiv" style="z-index: 100;background:#eee;border:1px solid #ccc;position:absolute;display:none;"></div>
             </td>
 		  </tr>
           <tr>
 		    <th scope="row"><?php _e('Text', 'wpsc_dgallery');?>	</th>
 		    <td>
-            <input type="text" class="colorpick" value="<?php echo get_option('bg_nav_text_color');?>" style="width:7em;" id="bg_nav_text_color" name="bg_nav_text_color" disabled="disabled" /> <span class="description"><?php _e('Nav bar text color.', 'wpsc_dgallery');?> <?php _e('Default', 'wpsc_dgallery');?> <code>#000000</code>.</span>
+            <input type="text" class="colorpick" value="<?php echo get_option('bg_nav_text_color');?>" style="width:7em;" id="bg_nav_text_color" name="bg_nav_text_color" disabled="disabled" /> <span class="description"><?php _e('Nav bar text color.', 'wpsc_dgallery');?> <?php _e('Default', 'wpsc_dgallery');?> <code>#FFFFFF</code>.</span>
             <div id="colorPickerDiv_bg_nav_text_color" class="colorpickdiv" style="z-index: 100;background:#eee;border:1px solid #ccc;position:absolute;display:none;"></div>
             </td>
 		  </tr>
@@ -402,7 +402,7 @@ class WPSC_Settings_Tab_Gallery_Settings {
           <tr>
 		    <th scope="row"><?php _e('Colour', 'wpsc_dgallery');?>	</th>
 		    <td>
-            <input type="text" class="colorpick" value="<?php echo get_option('transition_scroll_bar');?>" style="width:7em;" id="transition_scroll_bar" name="transition_scroll_bar" disabled="disabled" /> <span class="description"><?php _e('Scroll bar colour.', 'wpsc_dgallery');?> <?php _e('Default', 'wpsc_dgallery');?> <code>#000000</code>.</span>
+            <input type="text" class="colorpick" value="<?php echo get_option('transition_scroll_bar');?>" style="width:7em;" id="transition_scroll_bar" name="transition_scroll_bar" disabled="disabled" /> <span class="description"><?php _e('Scroll bar colour.', 'wpsc_dgallery');?> <?php _e('Default', 'wpsc_dgallery');?> <code>#226fd8</code>.</span>
             <div id="colorPickerDiv_transition_scroll_bar" class="colorpickdiv" style="z-index: 100;background:#eee;border:1px solid #ccc;position:absolute;display:none;"></div>
             </td>
 		  </tr>

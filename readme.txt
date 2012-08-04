@@ -20,8 +20,6 @@ As soon as you install WP e-Commerce Dynamic Gallery it <strong>brings your stor
 * Gallery scales images to fit inside the container no matter what the size or shape.
 * Search Engine friendly images. Image Alt tags if set are visible to search engines
 
- 
- 
 Having an image with your products creates more sales. WP e-Commerce Dynamic Gallery allows you to show an unlimited number of images - it shows one image or lots of images in a beautiful and dynamic presentation.  
 
 = More Features =
@@ -35,10 +33,13 @@ Having an image with your products creates more sales. WP e-Commerce Dynamic Gal
 
 = Premium Upgrade =
 
-A $5 premium upgrade activates a total of 22 extra feature settings that allows you to tweak and style the WP e-Commerce Dynamic Gallery to match your theme and your preferences to perfection. One of those 22 settings is the choice of 5 different image transition effects - you will see all the additional premium upgrade setting that are available on the admin page when you download and install this plugin. 
+A $5 premium upgrade activates a total of 22 extra feature settings that allows you to tweak and style the WP e-Commerce Dynamic Gallery to match your theme and your preferences to perfection. You will see all the additional premium upgrade setting that are available on the admin page when you download and install this plugin. 
 
-[Home Page](http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/) |
-[Documentation](http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/) |
+= Gold Cart Compatability =
+
+WP e-Commerce Dynamic Gallery PRO is 100% compatible with the getshopped.org Premium 'Gold Cart' plugin. This Free lite available here on Wordpress will not work for you if you have the 'Gold Cart' installed and activated. 
+
+[Plugin Documentation](http://docs.a3rev.com/user-guides/wp-e-commerce/wpec-dynamic-gallery/) |
 [Support](http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/#help)
 
 
@@ -104,7 +105,7 @@ Support and access to this plugin documents are available from the [HELP tab](ht
 == Changelog ==
 
 = 1.0.1 - 2012/07/23 =
-* Fix: Thumbnails show after edit settings in Dynamic Gallery tab.
+* Fix: Thumbnails show after editing thumbnail settings in the Store > Dynamic Gallery tab.
 
 = 1.0 - 2012/07/18 =
 * Initial release.

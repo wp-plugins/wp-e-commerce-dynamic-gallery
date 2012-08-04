@@ -95,7 +95,6 @@ class WPSC_Dynamic_Gallery_Hook_Filter{
 	}
 	
 	function wpsc_dynamic_gallery_frontend(){
-		global $post;
 		check_ajax_referer( 'wpsc_dynamic_gallery_frontend', 'security' );
 		echo WPSC_Dynamic_Gallery_Display_Class::wpsc_dynamic_gallery_display($_REQUEST['product_id']);
 		die();

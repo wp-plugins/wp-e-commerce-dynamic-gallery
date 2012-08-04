@@ -53,8 +53,8 @@ class WPSC_Dynamic_Gallery_Display_Class{
 		 * Single Product Image
 		 */
 		global $post;
-		if($product_id > 0){
-			$post->ID = $product_id;
+		if($product_id <= 0){
+			$product_id = $post->ID;
 		}
 		//Gallery settings
 		$g_width = get_option('product_gallery_width');
@@ -321,9 +321,9 @@ class WPSC_Dynamic_Gallery_Display_Class{
             
             $html .=  '<script type="text/javascript">
                 jQuery(function() {
-                    var settings_defaults_'.$post->ID.' = { loader_image: \''.WPSC_DYNAMIC_GALLERY_URL.'/assets/js/mygallery/loader.gif\',
+                    var settings_defaults_'.$product_id.' = { loader_image: \''.WPSC_DYNAMIC_GALLERY_URL.'/assets/js/mygallery/loader.gif\',
                         start_at_index: 0,
-                        gallery_ID: \''.$post->ID.'\',
+                        gallery_ID: \''.$product_id.'\',
                         description_wrapper: false,
                         thumb_opacity: 0.5,
                         animate_first_image: false,
@@ -355,10 +355,10 @@ class WPSC_Dynamic_Gallery_Display_Class{
                         beforeImageVisible: false
                     }
                 };
-                jQuery("#gallery_'.$post->ID.'").adGallery(settings_defaults_'.$post->ID.');
+                jQuery("#gallery_'.$product_id.'").adGallery(settings_defaults_'.$product_id.');
             });
             </script>';
-            $html .=  '<div id="gallery_'.$post->ID.'" class="ad-gallery">
+            $html .=  '<div id="gallery_'.$product_id.'" class="ad-gallery">
                 <div class="ad-image-wrapper"></div>
                 <div class="ad-controls"> </div>
                   <div class="ad-nav">
@@ -368,14 +368,14 @@ class WPSC_Dynamic_Gallery_Display_Class{
                         
 						$args = array(
 							'post_type'      => 'attachment',
-							'post_parent'    => $post->ID,
+							'post_parent'    => $product_id,
 							'post_mime_type' => 'image',
 							'orderby'        => 'menu_order',
 							'order'          => 'ASC',
 							'numberposts'    => -1
 						); 
 						$attached_images = get_posts($args);
-						$featured_img = get_post_meta($post->ID, '_thumbnail_id');
+						$featured_img = get_post_meta($product_id, '_thumbnail_id');
 						$attached_thumb = array();
 						if( count($attached_images) > 0 ){
 							$i = 0;
@@ -452,7 +452,7 @@ class WPSC_Dynamic_Gallery_Display_Class{
 									   $img_description = $alt;
 								   }
                                             
-                                    $html .=  '<li class="'.$li_class.'"><a alt="'.$alt.'" class="" title="'.$img_description.'" rel="gallery_product_'.$post->ID.'" href="'.$image_lager_default_url.'"><div><img style="width:'.$thumb_width.'px !important;height:'.$thumb_height.'px !important" src="'.$image_lager_default_url.'" alt="'.$img_description.'" class="image'.$i.'" width="'.$thumb_width.'" height="'.$thumb_height.'"></div></a></li>';
+                                    $html .=  '<li class="'.$li_class.'"><a alt="'.$alt.'" class="" title="'.$img_description.'" rel="gallery_product_'.$product_id.'" href="'.$image_lager_default_url.'"><div><img style="width:'.$thumb_width.'px !important;height:'.$thumb_height.'px !important" src="'.$image_lager_default_url.'" alt="'.$img_description.'" class="image'.$i.'" width="'.$thumb_width.'" height="'.$thumb_height.'"></div></a></li>';
                                     $img_description = trim(strip_tags(stripslashes(str_replace("'","", str_replace('"', '', $img_description)))));
                                     if($img_description != ''){
                                         $script_lightbox .= $common.'"'.$image_lager_default_url.'?lightbox[title]='.$img_description.'"';
@@ -484,7 +484,7 @@ class WPSC_Dynamic_Gallery_Display_Class{
 								$script_fancybox .= '</script>';
                             }
                         }else{
-                            $html .=  '<li style="width:'.$g_thumb_width.'px;height:'.$g_thumb_height.'px;"> <a style="width:'.($g_thumb_width-2).'px !important;height:'.($g_thumb_height - 2).'px !important;overflow:hidden;float:left !important" class="lightbox" rel="gallery_product_'.$post->ID.'" href="'.WPSC_DYNAMIC_GALLERY_URL . '/assets/js/mygallery/no-image.png"> <div><img style="width:'.$g_thumb_width.'px;height:'.$g_thumb_height.'px;" src="'.WPSC_DYNAMIC_GALLERY_URL . '/assets/js/mygallery/no-image.png" class="image" alt=""> </div></a> </li>';	
+                            $html .=  '<li style="width:'.$g_thumb_width.'px;height:'.$g_thumb_height.'px;"> <a style="width:'.($g_thumb_width-2).'px !important;height:'.($g_thumb_height - 2).'px !important;overflow:hidden;float:left !important" class="lightbox" rel="gallery_product_'.$product_id.'" href="'.WPSC_DYNAMIC_GALLERY_URL . '/assets/js/mygallery/no-image.png"> <div><img style="width:'.$g_thumb_width.'px;height:'.$g_thumb_height.'px;" src="'.WPSC_DYNAMIC_GALLERY_URL . '/assets/js/mygallery/no-image.png" class="image" alt=""> </div></a> </li>';	
                         }
 						if($popup_gallery == 'lb'){
                         	$html .=  $script_lightbox;
@@ -506,7 +506,6 @@ class WPSC_Dynamic_Gallery_Display_Class{
 		/**
 		 * Single Product Image
 		 */
-		global $post;
 		?>
         <script src="<?php echo WPSC_DYNAMIC_GALLERY_URL ?>/assets/js/jquery.js" type="text/javascript"></script>
         <div class="images" style="width:<?php echo $request['product_gallery_width'].'px';?>;margin:30px auto;">
@@ -583,7 +582,7 @@ class WPSC_Dynamic_Gallery_Display_Class{
             	<script src="<?php echo WPSC_DYNAMIC_GALLERY_URL ?>/assets/js/fancybox/fancybox.min.js" type="text/javascript"></script>
                 <?php
 			}
-            $post->ID = 'mrkunau';
+            $product_id = 'mrkunau';
             echo '<style>
 			#TB_window{width:auto !important;}
                 .ad-gallery {
@@ -782,9 +781,9 @@ class WPSC_Dynamic_Gallery_Display_Class{
             
             echo '<script type="text/javascript">
                 jQuery(function() {
-                    var settings_defaults_'.$post->ID.' = { loader_image: \''.WPSC_DYNAMIC_GALLERY_URL.'/assets/js/mygallery/loader.gif\',
+                    var settings_defaults_'.$product_id.' = { loader_image: \''.WPSC_DYNAMIC_GALLERY_URL.'/assets/js/mygallery/loader.gif\',
                         start_at_index: 0,
-                        gallery_ID: \''.$post->ID.'\',
+                        gallery_ID: \''.$product_id.'\',
                         description_wrapper: false,
                         thumb_opacity: 0.5,
                         animate_first_image: false,
@@ -816,10 +815,10 @@ class WPSC_Dynamic_Gallery_Display_Class{
                         beforeImageVisible: false
                     }
                 };
-                jQuery("#gallery_'.$post->ID.'").adGallery(settings_defaults_'.$post->ID.');
+                jQuery("#gallery_'.$product_id.'").adGallery(settings_defaults_'.$product_id.');
             });
             </script>';
-            echo '<div id="gallery_'.$post->ID.'" class="ad-gallery">
+            echo '<div id="gallery_'.$product_id.'" class="ad-gallery">
                 <div class="ad-image-wrapper"></div>
                 <div class="ad-controls"> </div>
                   <div class="ad-nav">
@@ -888,7 +887,7 @@ class WPSC_Dynamic_Gallery_Display_Class{
                                         
                                     $img_description = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.';
                                             
-                                    echo '<li class="'.$li_class.'"><a class="" title="'.$img_description.'" rel="gallery_product_'.$post->ID.'" href="'.$image_lager_default_url.'"><div><img style="width:'.$thumb_width.'px !important;height:'.$thumb_height.'px !important" src="'.$image_lager_default_url.'" alt="'.$img_description.'" class="image'.$i.'" width="'.$thumb_width.'" height="'.$thumb_height.'"></div></a></li>';
+                                    echo '<li class="'.$li_class.'"><a class="" title="'.$img_description.'" rel="gallery_product_'.$product_id.'" href="'.$image_lager_default_url.'"><div><img style="width:'.$thumb_width.'px !important;height:'.$thumb_height.'px !important" src="'.$image_lager_default_url.'" alt="'.$img_description.'" class="image'.$i.'" width="'.$thumb_width.'" height="'.$thumb_height.'"></div></a></li>';
                                     $img_description = trim(strip_tags(stripslashes(str_replace("'","", str_replace('"', '', $img_description)))));
                                     if($img_description != ''){
                                         $script_lightbox .= $common.'"'.$image_lager_default_url.'?lightbox[title]='.$img_description.'"';
@@ -919,7 +918,7 @@ class WPSC_Dynamic_Gallery_Display_Class{
 								$script_fancybox .= '</script>';
                             }
                         }else{
-                            echo '<li> <a class="lightbox" rel="gallery_product_'.$post->ID.'" href="'.WPSC_DYNAMIC_GALLERY_URL . '/assets/js/mygallery/no-image.png"> <img src="'.WPSC_DYNAMIC_GALLERY_URL . '/assets/js/mygallery/no-image.png" class="image" alt=""> </a> </li>';
+                            echo '<li> <a class="lightbox" rel="gallery_product_'.$product_id.'" href="'.WPSC_DYNAMIC_GALLERY_URL . '/assets/js/mygallery/no-image.png"> <img src="'.WPSC_DYNAMIC_GALLERY_URL . '/assets/js/mygallery/no-image.png" class="image" alt=""> </a> </li>';
 									
                         }
 						if($popup_gallery == 'lb'){
