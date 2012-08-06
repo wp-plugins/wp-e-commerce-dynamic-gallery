@@ -33,12 +33,17 @@ Having an image with your products creates more sales. WP e-Commerce Dynamic Gal
 
 = Premium Upgrade =
 
-A $5 premium upgrade activates a total of 22 extra feature settings that allows you to tweak and style the WP e-Commerce Dynamic Gallery to match your theme and your preferences to perfection. You will see all the additional premium upgrade setting that are available on the admin page when you download and install this plugin. 
+The premium upgrade activates a total of 22 advanced Gallery styling and function settings which enables you to turn the default Dynamic Product Gallery into your own individual product presentation masterpiece.
 
 = Gold Cart Compatability =
 
-WP e-Commerce Dynamic Gallery PRO is 100% compatible with the getshopped.org Premium 'Gold Cart' plugin. This Free lite available here on Wordpress will not work for you if you have the 'Gold Cart' installed and activated. 
+WP e-Commerce Dynamic Gallery PRO is tested 100% compatible with the getshopped.org Premium 'Gold Cart' plugin. This Free lite available here on Wordpress will not work for you if you have the 'Gold Cart' installed and activated. 
 
+= 100% Grid View Compatabile =
+
+WP e-Commerce Dynamic Gallery is 100% compatabile with [WP e-Commerce Grid View](http://wordpress.org/extend/plugins/wp-e-commerce-grid-view/)
+
+[Pro Upgrade](http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/) |
 [Plugin Documentation](http://docs.a3rev.com/user-guides/wp-e-commerce/wpec-dynamic-gallery/) |
 [Support](http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/#help)
 
