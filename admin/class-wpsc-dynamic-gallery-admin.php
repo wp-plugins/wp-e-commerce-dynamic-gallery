@@ -452,7 +452,7 @@ class WPSC_Settings_Tab_Gallery_Settings {
 	
 	function wpsc_dynamic_gallery_extension() {
 		$html = '';
-		$html .= '<div id="wpsc_dynamic_gallery_extensions">'.__('Upgrade to', 'wpsc_dgallery').' <a target="_blank" href="http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/">'.__('WP e-Commerce Dynamic Gallery Pro', 'wpsc_dgallery').'</a> '.__('to activate these 22 advanced styling and function settings. These 22 powerful settings allow you to turn the default Dynamic Gallery into your own individual product presentation masterpiece. Use them to regularly tweak the look and feel of your products presentation, which helps keep your site fresh and interesting for your customers.', 'wpsc_dgallery').'</div>';
+		$html .= '<div id="wpsc_dynamic_gallery_extensions">'.__('Features that you see inside this yellow frame are this plugins Pro Version Features. Upgrade to the', 'wpsc_dgallery').' <a target="_blank" href="http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/">'.__('Pro Version', 'wpsc_dgallery').'</a> '.__('for a small once only fee to activate all 22 gallery features and unleash to full glory of the WP e-Commerce dynamic products gallery on your site. Note: Thumbnail size settings are activated in this Lite version and are at the bottom of this page.', 'wpsc_dgallery').'</div>';
 		return $html;	
 	}
 }
