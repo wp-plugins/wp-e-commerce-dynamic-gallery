@@ -1,10 +1,9 @@
 <?php
 /*
 Plugin Name: WP e-Commerce Dynamic Gallery LITE
-Plugin URI: http://www.a3rev.com/
 Description: Bring your product pages and presentation alive with WP e-Commerce Dynamic Gallery. Simply and Beautifully.
-Version: 1.0.1
-Author: A3 Revolution Software Development team
+Version: 1.0.2
+Author: A3 Revolution
 Author URI: http://www.a3rev.com/
 License: GPLv2 or later
 */
@@ -31,8 +30,11 @@ License: GPLv2 or later
 define( 'WPSC_DYNAMIC_GALLERY_FILE_PATH', dirname(__FILE__) );
 define( 'WPSC_DYNAMIC_GALLERY_DIR_NAME', basename(WPSC_DYNAMIC_GALLERY_FILE_PATH) );
 define( 'WPSC_DYNAMIC_GALLERY_FOLDER', dirname(plugin_basename(__FILE__)) );
+define( 'WPSC_DYNAMIC_GALLERY_NAME', plugin_basename(__FILE__) );
 define( 'WPSC_DYNAMIC_GALLERY_URL', WP_CONTENT_URL.'/plugins/'.WPSC_DYNAMIC_GALLERY_FOLDER );
 define( 'WPSC_DYNAMIC_GALLERY_DIR', WP_CONTENT_DIR.'/plugins/'.WPSC_DYNAMIC_GALLERY_FOLDER );
+define( 'WPSC_DYNAMIC_GALLERY_IMAGES_URL',  WPSC_DYNAMIC_GALLERY_URL . '/assets/images' );
+define( 'WPSC_DYNAMIC_GALLERY_JS_URL',  WPSC_DYNAMIC_GALLERY_URL . '/assets/js' );
 
 include( 'classes/class-wpsc-dynamic-gallery-hook-filter.php' );
 include( 'classes/class-wpsc-dynamic-gallery-metaboxes.php' );

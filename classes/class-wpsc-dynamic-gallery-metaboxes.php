@@ -70,7 +70,7 @@ class WPSC_Dynamic_Gallery_Metaboxes_Class{
 		
 		if(is_array($attached_thumb) && count($attached_thumb)>0){
 	
-			echo '<a href="#" onclick="tb_show(\'\', \'media-upload.php?parent_page=wpsc-edit-products&post_id='.$post->ID.'&type=image&TB_iframe=true\');return false;" style="margin-right:10px;margin-bottom:10px;" class="upload_image_button1" rel="'.$post->ID.'"><img src="'.WPSC_DYNAMIC_GALLERY_URL.'/assets/js/mygallery/no-image.jpg" style="width:69px;height:69px;border:2px solid #CCC" /><input type="hidden" name="upload_image_id[1]" class="upload_image_id" value="0" /></a>';
+			echo '<a href="#" onclick="tb_show(\'\', \'media-upload.php?parent_page=wpsc-edit-products&post_id='.$post->ID.'&type=image&TB_iframe=true\');return false;" style="margin-right:10px;margin-bottom:10px;" class="upload_image_button1" rel="'.$post->ID.'"><img src="'.WPSC_DYNAMIC_GALLERY_JS_URL.'/mygallery/no-image.jpg" style="width:69px;height:69px;border:2px solid #CCC" /><input type="hidden" name="upload_image_id[1]" class="upload_image_id" value="0" /></a>';
 			
 			$i = 0 ;
 			foreach($attached_thumb as $item_thumb){
@@ -80,7 +80,7 @@ class WPSC_Dynamic_Gallery_Metaboxes_Class{
 				echo '<a href="#" style="margin-right:10px;margin-bottom:10px;" class="upload_image_button" rel="'.$post->ID.'"><img src="'.$image_attribute[0].'" style="width:69px;height:69px;border:2px solid #CCC" /><input type="hidden" name="upload_image_id['.$i.']" class="upload_image_id" value="'.$item_thumb->ID.'" /></a>';
 			}
 		}else{
-			echo '<a href="#" class="upload_image_button" rel="'.$post->ID.'"><img src="'.WPSC_DYNAMIC_GALLERY_URL.'/assets/js/mygallery/no-image.jpg" style="width:69px;height:69px;border:2px solid #CCC" /><input type="hidden" name="upload_image_id[1]" class="upload_image_id" value="0" /></a>';
+			echo '<a href="#" class="upload_image_button" rel="'.$post->ID.'"><img src="'.WPSC_DYNAMIC_GALLERY_JS_URL.'/mygallery/no-image.jpg" style="width:69px;height:69px;border:2px solid #CCC" /><input type="hidden" name="upload_image_id[1]" class="upload_image_id" value="0" /></a>';
 		}
 		
 		echo '</div>';			

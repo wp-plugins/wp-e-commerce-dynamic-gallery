@@ -3,7 +3,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, e-commerce,  wordpress ecommerce
 Requires at least: 3.3
 Tested up to: 3.4.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -18,7 +18,7 @@ As soon as you install WP e-Commerce Dynamic Gallery it <strong>brings your stor
 * Instantly adds a scrolling gallery to every product page and adds all product images to each gallery
 * On-page Gallery easy manager greatly simplifies product image editing and gallery management.
 * Gallery scales images to fit inside the container no matter what the size or shape.
-* Search Engine friendly images. Image Alt tags if set are visible to search engines
+* <strong>Search Engine friendly images</strong>. Image Alt tags if set are visible to search engines
 
 Having an image with your products creates more sales. WP e-Commerce Dynamic Gallery allows you to show an unlimited number of images - it shows one image or lots of images in a beautiful and dynamic presentation.  
 
@@ -33,7 +33,7 @@ Having an image with your products creates more sales. WP e-Commerce Dynamic Gal
 
 = Premium Upgrade =
 
-The premium upgrade activates a total of 22 advanced Gallery styling and function settings which enables you to turn the default Dynamic Product Gallery into your own individual product presentation masterpiece.
+A small once only Premium upgrade activates a total of 22 different settings that allows you to tweak and style the WP e-Commerce Dynamic Gallery to match your theme and your preferences to perfection. You will see all of the available upgrade features on the plugins admin panel.  
 
 = Gold Cart Compatability =
 
@@ -43,10 +43,17 @@ WP e-Commerce Dynamic Gallery PRO is tested 100% compatible with the getshopped.
 
 WP e-Commerce Dynamic Gallery is 100% compatabile with [WP e-Commerce Grid View](http://wordpress.org/extend/plugins/wp-e-commerce-grid-view/)
 
+= Localization =
+
+English (default) - always include.
+.po file (wpsc_dgallery.po) in languages folder for translations.
+If you do a translation of this plugin for your site [please send it to us](http://a3rev.com/contact/) for inclusion in the plugins language folder. We'll acknowledge your work and link to your site. 
+
+= Plugins Resources =
+
 [Pro Upgrade](http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/) |
 [Plugin Documentation](http://docs.a3rev.com/user-guides/wp-e-commerce/wpec-dynamic-gallery/) |
 [Support](http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/#help)
-
 
 == Installation ==
 
@@ -70,12 +77,6 @@ The manual installation method involves downloading our plugin and uploading it 
 2. Using an FTP program, or your hosting control panel, upload the unzipped plugin folder to your WordPress installations wp-content/plugins/ directory.
 3. Activate the plugin from the Plugins menu within the WordPress admin.
 
-= Localization =
-* English (default) - always include.
-* .po file (wpsc_dgallery.po) in languages folder for translations.
-* Your translation? Please do yours and [send it to us](http://www.a3rev.com/contact/) We'll acknowledge your work and link to your site.
-Please [Contact us](http://www.a3rev.com/contact/) if you'd like to provide a translation or an update.
-
 == Screenshots ==
 
 1. WP e-Commerce Dynamic Gallery
@@ -89,7 +90,7 @@ Please [Contact us](http://www.a3rev.com/contact/) if you'd like to provide a tr
 
 2. Set the wide and tall in px of the image gallery to match your theme.
 
-3. Set the Wide and Tall in px of your gallery Thumbnails and the padding to show between them.
+3. Set the Wide and Tall in px of your gallery Thumbnails and the padding to show between them (at botton of admin page).
 
 4. Use the Click here to preview gallery link to see a pop up preview of your work..
 
@@ -109,10 +110,20 @@ Support and access to this plugin documents are available from the [HELP tab](ht
 
 == Changelog ==
 
+= 1.0.2 - 2012/09/05 =
+* Fixed : Fixed: Gallery preview not working on sites that do not have wp_enqueue_script( 'thickbox' ) by default. Added call to wp_enqueue_script( 'thickbox' ) if it does not exist so that preview window can open.
+* Fixed : Updated depreciated php function ereg() with stristr() so that Pro version auto plugin auto upgrade feature work without error for WordPress 3.4.0 and later
+* Feature: Add fancybox script to plugin so that if the theme does not support fancybox or it is disabled in the admin panel then the gallery image zoom can still work.
+* Feature: Enqueue plugin script into footer use wp_enqueue_script so that now it is only loaded when needed rather than site-wide and has zero impact on page load speeds.
+* Feature: Enqueue plugin style into header use wp_enqueue_style so that now it is only loaded when needed rather than site-wide and has zero impact on page load speeds.
+* Feature: Add plugin Documentation and Support links to the wp plugins dashboard description.
+* Tweak: Plugins admin dashboard message and added links to other A3 WordPress WP e-Commerce plugins
+* Tweak: Updated readme.
+* Tweak: Add plugin description to wp plugins dashboard.
+* Tweak: Change localization file path from actual to base path
+
 = 1.0.1 - 2012/07/23 =
 * Fix: Thumbnails show after editing thumbnail settings in the Store > Dynamic Gallery tab.
 
 = 1.0 - 2012/07/18 =
-* Initial release.
-
-  
+* Initial release. 

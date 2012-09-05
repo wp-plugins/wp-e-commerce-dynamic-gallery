@@ -2,294 +2,390 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP e-Commerce Dynamic Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-06 10:26+0700\n"
-"PO-Revision-Date: 2012-08-06 10:26+0700\n"
+"POT-Creation-Date: 2012-09-05 15:01+0700\n"
+"PO-Revision-Date: 2012-09-05 15:01+0700\n"
 "Last-Translator: Nguyen Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:171
+#: admin/class-wpsc-dynamic-gallery-admin.php:177
 msgid "Gallery"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:174
+#: admin/class-wpsc-dynamic-gallery-admin.php:180
 msgid "Gallery width"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:181
+#: admin/class-wpsc-dynamic-gallery-admin.php:187
 msgid "Gallery height"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:190
+#: admin/class-wpsc-dynamic-gallery-admin.php:196
 msgid "Auto start"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:193
+#: admin/class-wpsc-dynamic-gallery-admin.php:199
 msgid "False"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:194
+#: admin/class-wpsc-dynamic-gallery-admin.php:200
 msgid "True"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:199
+#: admin/class-wpsc-dynamic-gallery-admin.php:205
 msgid "Time between transitions"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:202
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:232
+#: admin/class-wpsc-dynamic-gallery-admin.php:208
+#: admin/class-wpsc-dynamic-gallery-admin.php:238
 msgid "seconds"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:206
+#: admin/class-wpsc-dynamic-gallery-admin.php:212
 msgid "Slide transition effect"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:209
+#: admin/class-wpsc-dynamic-gallery-admin.php:215
 msgid "None"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:210
+#: admin/class-wpsc-dynamic-gallery-admin.php:216
 msgid "Fade"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:211
+#: admin/class-wpsc-dynamic-gallery-admin.php:217
 msgid "Slide Hori"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:212
+#: admin/class-wpsc-dynamic-gallery-admin.php:218
 msgid "Slide vert"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:213
+#: admin/class-wpsc-dynamic-gallery-admin.php:219
 msgid "Resize"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:218
+#: admin/class-wpsc-dynamic-gallery-admin.php:224
 msgid "Transition effect speed"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:236
+#: admin/class-wpsc-dynamic-gallery-admin.php:242
 msgid "Image background colour"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:237
+#: admin/class-wpsc-dynamic-gallery-admin.php:243
 msgid "Gallery image background colour."
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:237
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:243
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:308
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:315
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:376
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:383
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:405
+#: admin/class-wpsc-dynamic-gallery-admin.php:243
+#: admin/class-wpsc-dynamic-gallery-admin.php:249
+#: admin/class-wpsc-dynamic-gallery-admin.php:314
+#: admin/class-wpsc-dynamic-gallery-admin.php:321
+#: admin/class-wpsc-dynamic-gallery-admin.php:382
+#: admin/class-wpsc-dynamic-gallery-admin.php:389
+#: admin/class-wpsc-dynamic-gallery-admin.php:411
 msgid "Default"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:242
+#: admin/class-wpsc-dynamic-gallery-admin.php:248
 msgid "Border colour"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:243
+#: admin/class-wpsc-dynamic-gallery-admin.php:249
 msgid "Gallery border colour."
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:248
+#: admin/class-wpsc-dynamic-gallery-admin.php:254
 msgid "Gallery popup"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:251
+#: admin/class-wpsc-dynamic-gallery-admin.php:257
 msgid "Fancybox"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:252
+#: admin/class-wpsc-dynamic-gallery-admin.php:258
 msgid "Lightbox"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:258
+#: admin/class-wpsc-dynamic-gallery-admin.php:264
 msgid "Caption text"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:261
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:329
+#: admin/class-wpsc-dynamic-gallery-admin.php:267
+#: admin/class-wpsc-dynamic-gallery-admin.php:335
 msgid "Font"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:278
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:346
+#: admin/class-wpsc-dynamic-gallery-admin.php:284
+#: admin/class-wpsc-dynamic-gallery-admin.php:352
 msgid "Font size"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:295
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:363
+#: admin/class-wpsc-dynamic-gallery-admin.php:301
+#: admin/class-wpsc-dynamic-gallery-admin.php:369
 msgid "Font style"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:298
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:366
+#: admin/class-wpsc-dynamic-gallery-admin.php:304
+#: admin/class-wpsc-dynamic-gallery-admin.php:372
 msgid "Normal"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:299
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:367
+#: admin/class-wpsc-dynamic-gallery-admin.php:305
+#: admin/class-wpsc-dynamic-gallery-admin.php:373
 msgid "Italic"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:300
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:368
+#: admin/class-wpsc-dynamic-gallery-admin.php:306
+#: admin/class-wpsc-dynamic-gallery-admin.php:374
 msgid "Bold"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:301
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:369
+#: admin/class-wpsc-dynamic-gallery-admin.php:307
+#: admin/class-wpsc-dynamic-gallery-admin.php:375
 msgid "Bold/Italic"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:306
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:374
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:403
+#: admin/class-wpsc-dynamic-gallery-admin.php:312
+#: admin/class-wpsc-dynamic-gallery-admin.php:380
+#: admin/class-wpsc-dynamic-gallery-admin.php:409
 msgid "Colour"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:308
+#: admin/class-wpsc-dynamic-gallery-admin.php:314
 msgid "Caption text color."
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:313
+#: admin/class-wpsc-dynamic-gallery-admin.php:319
 msgid "Background"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:315
+#: admin/class-wpsc-dynamic-gallery-admin.php:321
 msgid "Caption text background colour."
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:322
+#: admin/class-wpsc-dynamic-gallery-admin.php:328
 msgid "Nav bar"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:325
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:399
+#: admin/class-wpsc-dynamic-gallery-admin.php:331
+#: admin/class-wpsc-dynamic-gallery-admin.php:405
 msgid "Control"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:326
+#: admin/class-wpsc-dynamic-gallery-admin.php:332
 msgid "Enable Nav bar Control"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:376
+#: admin/class-wpsc-dynamic-gallery-admin.php:382
 msgid "Nav bar background colour."
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:381
+#: admin/class-wpsc-dynamic-gallery-admin.php:387
 msgid "Text"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:383
+#: admin/class-wpsc-dynamic-gallery-admin.php:389
 msgid "Nav bar text color."
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:388
+#: admin/class-wpsc-dynamic-gallery-admin.php:394
 msgid "Container height"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:396
+#: admin/class-wpsc-dynamic-gallery-admin.php:402
 msgid "Lazy-load scroll"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:400
+#: admin/class-wpsc-dynamic-gallery-admin.php:406
 msgid "Enable lazy-load scroll"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:405
+#: admin/class-wpsc-dynamic-gallery-admin.php:411
 msgid "Scroll bar colour."
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:411
+#: admin/class-wpsc-dynamic-gallery-admin.php:417
 msgid "Image Thumbnails"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:414
+#: admin/class-wpsc-dynamic-gallery-admin.php:420
 msgid "Show thumbnails"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:415
+#: admin/class-wpsc-dynamic-gallery-admin.php:421
 msgid "Enable thumbnail gallery"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:421
+#: admin/class-wpsc-dynamic-gallery-admin.php:428
 msgid "Thumbnail width"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:428
+#: admin/class-wpsc-dynamic-gallery-admin.php:435
 msgid "Thumbnail height"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:435
+#: admin/class-wpsc-dynamic-gallery-admin.php:442
 msgid "Thumbnail spacing"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:443
+#: admin/class-wpsc-dynamic-gallery-admin.php:450
 msgid "Preview"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:446
+#: admin/class-wpsc-dynamic-gallery-admin.php:453
 msgid "Click here to preview gallery"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:455
-msgid "Upgrade to"
+#: admin/class-wpsc-dynamic-gallery-admin.php:462
+msgid "Help us help you!"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:455
-msgid "WP e-Commerce Dynamic Gallery Pro"
+#: admin/class-wpsc-dynamic-gallery-admin.php:463
+msgid "Creating a great plugin, keeping it upgraded, giving support. listening to feedback and building in enhancements takes a lot of time and money."
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/admin/class-wpsc-dynamic-gallery-admin.php:455
-msgid "to activate these 22 advanced styling and function settings. These 22 powerful settings allow you to turn the default Dynamic Gallery into your own individual product presentation masterpiece. Use them to regularly tweak the look and feel of your products presentation, which helps keep your site fresh and interesting for your customers."
+#: admin/class-wpsc-dynamic-gallery-admin.php:464
+msgid "No Donations Accepted"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/classes/class-wpsc-dynamic-gallery-display.php:340
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/classes/class-wpsc-dynamic-gallery-display.php:800
+#: admin/class-wpsc-dynamic-gallery-admin.php:466
+msgid "We don't ask for or accept donations for our plugins beacuse we do not build them as a hobby and we are not a charity. We are a business that building quality WordPress themes and plugins. I f we were paid to develop this plugin at our client per hour development rate this plugin cost was USD$6,600 to bring from inception to launch."
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:467
+msgid "Lite v Pro version"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:468
+msgid "Our Lite version plugins here on WordPress while fully functional are designed to give you a good taste of what the fully featured Pro version of the plugin can do for your WP e-Commerce store. See the list below for the features and benefits to you from upgrading to this plugins Pro version"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:471
+msgid "Unlocks the 22 advanced Gallery settings in this yellow border."
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:472
+msgid "Lifetime guaranteed same day support."
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:473
+msgid "Pro version only future feature enhancements."
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:476
+msgid "See the Pro version on the"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:476
+msgid "A3 market place"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:477
+msgid "Go Pro and help us help you."
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:478
+msgid "Your small once only Pro upgrade license fee help fund and support the maintenance and ongoing development of this plugin"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:479
+msgid "More quality WP e-Commerce Plugins from A3 Rev"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:482
+msgid "WP e-Commerce Catalog Visibility and Email Inquiry"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:483
+msgid "WP e-Commerce Grid View"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:484
+msgid "WP e-Commerce Predictive Search"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:485
+msgid "WP e-Commerce Compare Products"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:486
+msgid "WP e-Commerce Email Template"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:489
+msgid "Spreading the Word about this plugin."
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:490
+msgid "Things you can do to help others find this plugin"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:492
+msgid "Rate this plugin 5"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:492
+msgid "on WordPress.org"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:493
+msgid "Write about it in your blog"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:496
+msgid "Thank you for your support!"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-display.php:328
+#: classes/class-wpsc-dynamic-gallery-display.php:774
 msgid "START SLIDESHOW"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/classes/class-wpsc-dynamic-gallery-display.php:341
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/classes/class-wpsc-dynamic-gallery-display.php:801
+#: classes/class-wpsc-dynamic-gallery-display.php:329
+#: classes/class-wpsc-dynamic-gallery-display.php:775
 msgid "STOP SLIDESHOW"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/classes/class-wpsc-dynamic-gallery-display.php:342
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/classes/class-wpsc-dynamic-gallery-display.php:802
+#: classes/class-wpsc-dynamic-gallery-display.php:330
+#: classes/class-wpsc-dynamic-gallery-display.php:776
 msgid "ZOOM +"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/classes/class-wpsc-dynamic-gallery-hook-filter.php:17
+#: classes/class-wpsc-dynamic-gallery-hook-filter.php:20
 msgid "Dynamic Gallery"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/classes/class-wpsc-dynamic-gallery-hook-filter.php:57
+#: classes/class-wpsc-dynamic-gallery-hook-filter.php:102
 msgid "Exclude image"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/classes/class-wpsc-dynamic-gallery-hook-filter.php:66
+#: classes/class-wpsc-dynamic-gallery-hook-filter.php:111
 msgid "Enabling this option will hide it from the product page image gallery."
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/classes/class-wpsc-dynamic-gallery-metaboxes.php:27
+#: classes/class-wpsc-dynamic-gallery-hook-filter.php:175
+msgid "Documentation"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-hook-filter.php:176
+msgid "Support"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-metaboxes.php:27
 msgid "Gallery Images"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/classes/class-wpsc-dynamic-gallery-metaboxes.php:28
+#: classes/class-wpsc-dynamic-gallery-metaboxes.php:28
 msgid "Product Download"
 msgstr ""
 
-#: /Applications/XAMPP/xamppfiles/htdocs/ecommerce/wp-content/plugins/wp-e-commerce-dynamic-gallery-lite/classes/class-wpsc-dynamic-gallery-metaboxes.php:29
+#: classes/class-wpsc-dynamic-gallery-metaboxes.php:29
 msgid "Shipping"
 msgstr ""
 

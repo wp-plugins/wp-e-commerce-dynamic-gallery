@@ -158,14 +158,20 @@ class WPSC_Settings_Tab_Gallery_Settings {
 	}
 	public function display() {
 		global $wpdb;
+		
+		// Include script for dashboard
+		add_action('admin_footer', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_dynamic_gallery_add_script') );
+		
 		$wpsc_dynamic_gallery = wp_create_nonce("wpsc_dynamic_gallery");
 		?>
         <style type="text/css">
+			.form-table { margin:0; }
 			.description{font-family: sans-serif;font-size: 12px;font-style: italic;color:#666666;}
 			input.colorpick{text-transform:uppercase;}
-			#wpsc_dgallery_upgrade_area { border:2px solid #FF0;-webkit-border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px; border-radius: 10px; padding:0; position:relative}
-	  	 	#wpsc_dgallery_upgrade_area h3{ margin-left:10px;}
-	   		#wpsc_dynamic_gallery_extensions { background: url("<?php echo WPSC_DYNAMIC_GALLERY_URL; ?>/assets/images/logo_a3blue.png") no-repeat scroll 4px 6px #FFFBCC; -webkit-border-radius:4px;-moz-border-radius:4px;-o-border-radius:4px; border-radius: 4px 4px 4px 4px; color: #555555; float: right; margin: 0px; padding: 4px 8px 4px 38px; position: absolute; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); width: 300px; left:400px; top:10px; border:1px solid #E6DB55}
+			#wpsc_dgallery_upgrade_area { border:2px solid #E6DB55;-webkit-border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px; border-radius: 10px; padding:0 40% 0 0; position:relative; background:#FFFBCC;}
+			#wpsc_dgallery_upgrade_inner { background:#FFF; -webkit-border-radius:10px 0 0 10px;-moz-border-radius:10px 0 0 10px;-o-border-radius:10px 0 0 10px; border-radius: 10px 0 0 10px;}
+	  	 	#wpsc_dgallery_upgrade_inner h3{ margin-left:10px;}
+	   		#wpsc_dynamic_gallery_extensions { -webkit-border-radius:4px;-moz-border-radius:4px;-o-border-radius:4px; border-radius: 4px 4px 4px 4px; color: #555555; float: right; margin: 0px; padding: 5px; position: absolute; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); width: 38%; right:0; top:0px;}
        	</style>
         
 		<h3><?php _e('Gallery', 'wpsc_dgallery'); ?></h3>
@@ -184,7 +190,7 @@ class WPSC_Settings_Tab_Gallery_Settings {
             </td>
 		  </tr>
 		</table>
-        <table class="form-table"><tr valign="top"><td style="padding:0;"><div id="wpsc_dgallery_upgrade_area"><?php echo WPSC_Settings_Tab_Gallery_Settings::wpsc_dynamic_gallery_extension(); ?>
+        <table class="form-table"><tr valign="top"><td style="padding:0;"><div id="wpsc_dgallery_upgrade_area"><?php echo WPSC_Settings_Tab_Gallery_Settings::wpsc_dynamic_gallery_extension(); ?><div id="wpsc_dgallery_upgrade_inner">
         <table class="form-table">
           <tr>
 		    <th scope="row"><?php _e('Auto start', 'wpsc_dgallery');?>	</th>
@@ -415,7 +421,8 @@ class WPSC_Settings_Tab_Gallery_Settings {
 		    <td><input type="checkbox" <?php if( get_option('enable_gallery_thumb') == 'yes' ){echo 'checked="checked" ';}?>value="yes" id="enable_gallery_thumb" name="enable_gallery_thumb" disabled="disabled" /> <span class="description"><?php _e('Enable thumbnail gallery', 'wpsc_dgallery');?></span></td>
 		  </tr>
         </table>
-        </div></td></tr></table>
+        </div></div>
+        </td></tr></table>
         <table class="form-table">
           <tr>
 		    <th scope="row"><?php _e('Thumbnail width', 'wpsc_dgallery');?>	</th>
@@ -452,7 +459,42 @@ class WPSC_Settings_Tab_Gallery_Settings {
 	
 	function wpsc_dynamic_gallery_extension() {
 		$html = '';
-		$html .= '<div id="wpsc_dynamic_gallery_extensions">'.__('Features that you see inside this yellow frame are this plugins Pro Version Features. Upgrade to the', 'wpsc_dgallery').' <a target="_blank" href="http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/">'.__('Pro Version', 'wpsc_dgallery').'</a> '.__('for a small once only fee to activate all 22 gallery features and unleash to full glory of the WP e-Commerce dynamic products gallery on your site. Note: Thumbnail size settings are activated in this Lite version and are at the bottom of this page.', 'wpsc_dgallery').'</div>';
+		$html .= '<div id="wpsc_dynamic_gallery_extensions"><h3>'.__('Help us help you!', 'wpsc_dgallery').'</h3>';
+		$html .= '<p>'.__('Creating a great plugin, keeping it upgraded, giving support. listening to feedback and building in enhancements takes a lot of time and money.', 'wpsc_dgallery').'</p>';
+		$html .= '<h3>'.__('No Donations Accepted', 'wpsc_dgallery').'</h3>';
+		$html .= '<img src="'.WPSC_DYNAMIC_GALLERY_IMAGES_URL.'/btn_donate.png" />';
+		$html .= '<p>'.__("We don't ask for or accept donations for our plugins because we do not build them as a hobby and we are not a charity. We are a business that building quality WordPress themes and plugins. If we were paid to develop this plugin at our client per hour development rate this plugin cost was USD$6,600 to bring from inception to launch.", 'wpsc_dgallery').'</p>';
+		$html .= '<h3>'.__('Lite v Pro version', 'wpsc_dgallery').'</h3>';
+		$html .= '<p>'.__('Our Lite version plugins here on WordPress while fully functional are designed to give you a good taste of what the fully featured Pro version of the plugin can do for your WP e-Commerce store. See the list below for the features and benefits to you from upgrading to this plugins Pro version', 'wpsc_dgallery').'</p>';
+		$html .= '<p>';
+		$html .= '<ul style="padding-left:10px;">';
+		$html .= '<li>1. '.__('Unlocks the 22 advanced Gallery settings in this yellow border.', 'wpsc_dgallery').'</li>';
+		$html .= '<li>2. '.__('Lifetime guaranteed same day support.', 'wpsc_dgallery').'</li>';
+		$html .= '<li>3. '.__('Pro version only future feature enhancements.', 'wpsc_dgallery').'</li>';
+		$html .= '</ul>';
+		$html .= '</p>';
+		$html .= '<p>* '.__('See the Pro version on the', 'wpsc_dgallery').' <a href="http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/" target="_blank">'.__('A3 market place', 'wpsc_dgallery').'</a></p>';
+		$html .= '<h3>'.__('Go Pro and help us help you.', 'wpsc_dgallery').'</h3>';
+		$html .= '<p>'.__('Your small once only Pro upgrade license fee help fund and support the maintenance and ongoing development of this plugin', 'wpsc_dgallery').'</p>';
+		$html .= '<h3>'.__('More quality WP e-Commerce Plugins from A3 Rev', 'wpsc_dgallery').'</h3>';
+		$html .= '<p>';
+		$html .= '<ul style="padding-left:10px;">';
+		$html .= '<li>* <a href="http://wordpress.org/extend/plugins/wp-e-commerce-catalog-visibility-and-email-inquiry/" target="_blank">'.__('WP e-Commerce Catalog Visibility and Email Inquiry', 'wpsc_dgallery').'</a></li>';
+		$html .= '<li>* <a href="http://wordpress.org/extend/plugins/wp-e-commerce-grid-view/" target="_blank">'.__('WP e-Commerce Grid View', 'wpsc_dgallery').'</a></li>';
+		$html .= '<li>* <a href="http://wordpress.org/extend/plugins/wp-e-commerce-predictive-search/" target="_blank">'.__('WP e-Commerce Predictive Search', 'wpsc_dgallery').'</a></li>';
+		$html .= '<li>* <a href="http://wordpress.org/extend/plugins/wp-ecommerce-compare-products/" target="_blank">'.__('WP e-Commerce Compare Products', 'wpsc_dgallery').'</a></li>';
+		$html .= '<li>* <a href="http://wordpress.org/extend/plugins/wp-email-template/" target="_blank">'.__('WP e-Commerce Email Template', 'wpsc_dgallery').'</a></li>';
+		$html .= '</ul>';
+		$html .= '</p>';
+		$html .= '<h3>'.__('Spreading the Word about this plugin.', 'wpsc_dgallery').'</h3>';
+		$html .= '<p>'.__("Things you can do to help others find this plugin", 'wpsc_dgallery');
+		$html .= '<ul style="padding-left:10px;">';
+		$html .= '<li>* <a href="http://wordpress.org/extend/plugins/wp-e-commerce-dynamic-gallery/" target="_blank">'.__('Rate this plugin 5', 'wpsc_dgallery').' <img src="'.WPSC_DYNAMIC_GALLERY_IMAGES_URL.'/stars.png" align="top" /> '.__('on WordPress.org', 'wpsc_dgallery').'</a></li>';
+		$html .= '<li>* <a href="http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/" target="_blank">'.__('Write about it in your blog', 'wpsc_dgallery').'</a></li>';
+		$html .= '</ul>';
+		$html .= '</p>';
+		$html .= '<h3>'.__('Thank you for your support!', 'wpsc_dgallery').'</h3>';
+		$html .= '</div>';
 		return $html;	
 	}
 }

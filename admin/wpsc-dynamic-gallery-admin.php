@@ -12,11 +12,11 @@ function wpsc_dynamic_gallery_init() {
 // Add language
 add_action('init', 'wpsc_dynamic_gallery_init');
 
+// Add text on right of Visit the plugin on Plugin manager page
+add_filter( 'plugin_row_meta', array('WPSC_Dynamic_Gallery_Hook_Filter', 'plugin_extra_links'), 10, 2 );
+
 // Add Dynamic Gallery tab into Store settings 	
 add_filter( 'wpsc_settings_tabs', array('WPSC_Dynamic_Gallery_Hook_Filter', 'add_wpsc_settings_tabs') );
-
-// Include script for dashboard
-add_action('admin_head', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_dynamic_gallery_add_script') );
 
 // Add extra fields for image in Product Edit Page
 add_filter( 'attachment_fields_to_edit', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_attachment_fields_filter'), 12, 2 );
@@ -24,6 +24,8 @@ add_filter( 'attachment_fields_to_save', array('WPSC_Dynamic_Gallery_Hook_Filter
 add_action( 'add_attachment', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_exclude_image_from_product_page_field_add') );
 
 add_action( 'wp_head',array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_hide_featured_image_single_product'),1 );
+
+add_action('admin_footer', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wp_admin_footer_scripts') );
 
 //Ajax Preview gallery
 add_action('wp_ajax_wpsc_dynamic_gallery', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_dynamic_gallery_preview') );
@@ -37,10 +39,14 @@ add_action('wp_ajax_nopriv_wpsc_dynamic_gallery_frontend', array('WPSC_Dynamic_G
 if ( !function_exists( 'gold_shpcrt_display_gallery' ) ){
 	function gold_shpcrt_display_gallery($product_id){
 		if(is_singular('wpsc-product')){
+			WPSC_Dynamic_Gallery_Hook_Filter::dynamic_gallery_frontend_script();
 			echo WPSC_Dynamic_Gallery_Display_Class::wpsc_dynamic_gallery_display($product_id);
 		}
 	}
 }else{
-	add_action('wp_footer', array('WPSC_Dynamic_Gallery_Hook_Filter', 'do_dynamic_gallery') );
+	if(is_singular('wpsc-product')){
+		WPSC_Dynamic_Gallery_Hook_Filter::dynamic_gallery_frontend_script();
+		add_action('wp_footer', array('WPSC_Dynamic_Gallery_Hook_Filter', 'do_dynamic_gallery') );
+	}
 }
 ?>
