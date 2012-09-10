@@ -113,6 +113,7 @@ Support and access to this plugin documents are available from the [HELP tab](ht
 = 1.0.3 - 2012/09/10 =
 * Fixed: Gold Cart Plugin conflict that prevented the Gallery from showing on single products pages when Dynamic gallery plugin is installed.
 * Fixed: Gold Cart plugin compatability. When WP e-Commerce Dymanic Gallery is installed first and Gold Cart Plugin is installed or activated after it was causing the fatal error 'Cannot redeclare gold_shpcrt_display_gallery()' .
+* Feature: Added Lite version 100% 'Gold cart' plugin compatibility.
 
 = 1.0.2 - 2012/09/05 =
 * Fixed: Gallery preview not working on sites that do not have wp_enqueue_script( 'thickbox' ) by default. Added call to wp_enqueue_script( 'thickbox' ) if it does not exist so that preview window can open.
