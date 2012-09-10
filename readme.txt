@@ -37,7 +37,7 @@ A small once only Premium upgrade activates a total of 22 different settings tha
 
 = Gold Cart Compatability =
 
-WP e-Commerce Dynamic Gallery PRO is tested 100% compatible with the getshopped.org Premium 'Gold Cart' plugin. This Free lite available here on Wordpress will not work for you if you have the 'Gold Cart' installed and activated. 
+WP e-Commerce Dynamic Gallery PRO and Lite are tested 100% compatible with the getshopped.org Premium 'Gold Cart' plugin.
 
 = 100% Grid View Compatabile =
 
