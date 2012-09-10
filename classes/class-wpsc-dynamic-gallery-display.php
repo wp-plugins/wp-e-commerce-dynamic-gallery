@@ -295,13 +295,13 @@ class WPSC_Dynamic_Gallery_Display_Class{
 				.product_gallery .slide-ctrl {
 					background: none repeat scroll 0 0 transparent;
 					border: medium none;
-					height: 50px;
-					left: 41.5%;
-					top: 38%;
-					width: 50px;
+					height: 50px !important;
+					left: 41.5% !important;
+					top: 38% !important;
+					width: 50px !important;
 				}';
-				$html .=  '.product_gallery .slide-ctrl .ad-slideshow-start-slide {background: url('.WPSC_DYNAMIC_GALLERY_JS_URL.'/mygallery/play.png);height: 50px;text-indent: -999em; width: 50px;}';
-				$html .=  '.product_gallery .slide-ctrl .ad-slideshow-stop-slide {background: url('.WPSC_DYNAMIC_GALLERY_JS_URL.'/mygallery/pause.png);height: 50px;text-indent: -999em; width: 50px;}';
+				$html .=  '.product_gallery .slide-ctrl .ad-slideshow-start-slide {background: url('.WPSC_DYNAMIC_GALLERY_JS_URL.'/mygallery/play.png) !important;height: 50px !important;text-indent: -999em !important; width: 50px !important;}';
+				$html .=  '.product_gallery .slide-ctrl .ad-slideshow-stop-slide {background: url('.WPSC_DYNAMIC_GALLERY_JS_URL.'/mygallery/pause.png) !important;height: 50px !important;text-indent: -999em !important; width: 50px !important;}';
 			}
 			
 			$html .=  '
@@ -741,13 +741,13 @@ class WPSC_Dynamic_Gallery_Display_Class{
 				.product_gallery .slide-ctrl {
 					background: none repeat scroll 0 0 transparent;
 					border: medium none;
-					height: 50px;
-					left: 41.5%;
-					top: 38%;
-					width: 50px;
+					height: 50px !important;
+					left: 41.5% !important;
+					top: 38% !important;
+					width: 50px !important;
 				}';
-				echo '.product_gallery .slide-ctrl .ad-slideshow-start-slide {background: url('.WPSC_DYNAMIC_GALLERY_JS_URL.'/mygallery/play.png);height: 50px;text-indent: -999em; width: 50px;}';
-				echo '.product_gallery .slide-ctrl .ad-slideshow-stop-slide {background: url('.WPSC_DYNAMIC_GALLERY_JS_URL.'/mygallery/pause.png);height: 50px;text-indent: -999em; width: 50px;}';
+				echo '.product_gallery .slide-ctrl .ad-slideshow-start-slide {background: url('.WPSC_DYNAMIC_GALLERY_JS_URL.'/mygallery/play.png) !important;height: 50px !important;text-indent: -999em !important; width: 50px !important;}';
+				echo '.product_gallery .slide-ctrl .ad-slideshow-stop-slide {background: url('.WPSC_DYNAMIC_GALLERY_JS_URL.'/mygallery/pause.png) !important;height: 50px !important;text-indent: -999em !important; width: 50px !important;}';
 			}
 			
 			echo '

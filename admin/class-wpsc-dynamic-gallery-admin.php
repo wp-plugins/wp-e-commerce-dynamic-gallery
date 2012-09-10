@@ -469,7 +469,7 @@ class WPSC_Settings_Tab_Gallery_Settings {
 		$html .= '<p>';
 		$html .= '<ul style="padding-left:10px;">';
 		$html .= '<li>1. '.__('Unlocks the 22 advanced Gallery settings in this yellow border.', 'wpsc_dgallery').'</li>';
-		$html .= '<li>2. '.__('Lifetime guaranteed same day support.', 'wpsc_dgallery').'</li>';
+		$html .= '<li>2. '.__('Pro version same day support.', 'wpsc_dgallery').'</li>';
 		$html .= '<li>3. '.__('Pro version only future feature enhancements.', 'wpsc_dgallery').'</li>';
 		$html .= '</ul>';
 		$html .= '</p>';

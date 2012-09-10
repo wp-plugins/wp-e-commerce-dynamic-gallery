@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP e-Commerce Dynamic Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-05 15:01+0700\n"
-"PO-Revision-Date: 2012-09-05 15:01+0700\n"
+"POT-Creation-Date: 2012-09-10 13:09+0700\n"
+"PO-Revision-Date: 2012-09-10 13:09+0700\n"
 "Last-Translator: Nguyen Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "MIME-Version: 1.0\n"
@@ -255,7 +255,7 @@ msgid "No Donations Accepted"
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:466
-msgid "We don't ask for or accept donations for our plugins beacuse we do not build them as a hobby and we are not a charity. We are a business that building quality WordPress themes and plugins. I f we were paid to develop this plugin at our client per hour development rate this plugin cost was USD$6,600 to bring from inception to launch."
+msgid "We don't ask for or accept donations for our plugins because we do not build them as a hobby and we are not a charity. We are a business that building quality WordPress themes and plugins. If we were paid to develop this plugin at our client per hour development rate this plugin cost was USD$6,600 to bring from inception to launch."
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:467
