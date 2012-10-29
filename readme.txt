@@ -2,8 +2,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, e-commerce,  wordpress ecommerce
 Requires at least: 3.3
-Tested up to: 3.4.1
-Stable tag: 1.0.3
+Tested up to: 3.4.2
+Stable tag: 1.0.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -15,25 +15,33 @@ As soon as you install WP e-Commerce Dynamic Gallery it <strong>brings your stor
  
 = Key Features =
 
-* Instantly adds a scrolling gallery to every product page and adds all product images to each gallery
-* On-page Gallery easy manager greatly simplifies product image editing and gallery management.
+* Instantly adds a scrolling gallery to every product page and adds all product images each gallery
 * Gallery scales images to fit inside the container no matter what the size or shape.
-* <strong>Search Engine friendly images</strong>. Image Alt tags if set are visible to search engines
-
-Having an image with your products creates more sales. WP e-Commerce Dynamic Gallery allows you to show an unlimited number of images - it shows one image or lots of images in a beautiful and dynamic presentation.  
-
-= More Features =
-
-* Add caption text to images.
+* Search Engine friendly images. Image Alt tags if set are visible to search engines
+* On-page meta Gallery easy manager greatly simplifies product image editing and gallery management.
+* Lazy-load feature - means the gallery loads instantly - no matter how many images in the gallery.
+* Add caption text to images
 * Caption text fades in after image transition effect and out before the next transaction effect begins.
 * Manual image click to scroll next or previous.
 * ZOOM - shows full size image with caption text and manual scroll through entire gallery.
-* START SLIDE SHOW | STOP SLIDESHOW manual control
+* START SLIDE SHOW | STOP SLIDESHOW control
 * Gallery thumbnails scroll left and right on hover.
 
 = Premium Upgrade =
 
-A small once only Premium upgrade activates a total of 22 different settings that allows you to tweak and style the WP e-Commerce Dynamic Gallery to match your theme and your preferences to perfection. You will see all of the available upgrade features on the plugins admin panel.  
+The Premium Gallery upgrade unlocks a host of great premium features. You will see all of the available upgrade features on the plugins admin panel. Those Pro features include:
+
+* Responsive Gallery option. Set gallery wide to % and it becomes fully responsive image product gallery including the image zoom pop up.
+* Option to turn the Gallery off on single product pages. If you only have 1 image on some product pages and don't want the Gallery, just turn it off for that product.
+* Activate these 25 different feature options to create that perfect Gallery to match your theme and your style and present your Product images in the perfect mode.
+        
+ - Image Gallery - 7 Options plus 4 different transition effects.
+ - Caption - 5 Options plus topography editor.
+ - Nav Bar - 7 Option including, disable / enable plus full topography editor.
+ - Lazy-Load scroll bar - 2 Options including enable / disable.
+ - Thumbnails - 4 Options including enable, disable.
+
+Having an image with your products creates more sales. WP e-Commerce Dynamic Gallery allows you to show an unlimited number of images - it shows one image or lots of images in a beautiful and dynamic presentation.  
 
 = Gold Cart Compatability =
 
@@ -90,7 +98,7 @@ The manual installation method involves downloading our plugin and uploading it 
 
 2. Set the wide and tall in px of the image gallery to match your theme.
 
-3. Set the Wide and Tall in px of your gallery Thumbnails and the padding to show between them (at botton of admin page).
+3. Set the Wide and Tall in px of your gallery Thumbnails and the padding to show between them (at bottom of admin page).
 
 4. Use the Click here to preview gallery link to see a pop up preview of your work..
 
@@ -110,9 +118,27 @@ Support and access to this plugin documents are available from the [HELP tab](ht
 
 == Changelog ==
 
+= 1.0.4 -2012/10/28 =
+
+MAJOR OVERHAUL & FEATURE UPGRADE
+
+Fixed: Single image click zoom function. The current image now opens when Zoom or the image is clicked.
+Fixed: Stopped Lazy load scrolling on Gallery initial load for auto start (Lite and Pro Versions) and when Auto Start not activated on Pro Version. Now the Lazy load scroll only starts when transition to second image in the Gallery starts.
+Fixed: Lazy Load scroll duration now sync with and set by the transition effect speed setting (Lite and Pro Versions).
+Fixed: Caption text pop-up now sync with and set by the Time between transitions settings (Lite and Pro Versions). 
+Feature: Upgraded Gallery js to support responsive themes. Gallery and image zoom fully responsive - shows beautifully in even the smallest crappy Android. Activate responsive by setting the Gallery Width to 100%. Choose px for wide and the gallery works for fixed px themes. (PRO version feature)
+Feature: Added option to deactivate the gallery from single product pages. When deactivated the product page defaults to the WP e-Commerce single product page image display. (PRO Version feature)
+Tweak: Added display:inline-block !important; into css file for image class
+Tweak: Update dashboard to show new Pro version features - responsive setting.
+Tweak: Added Pro Version meta check box feature for deactivate gallery on product page gallery manager.
+Tweak: Updated WordPress plugin description.
+
 = 1.0.3 - 2012/09/10 =
+
+
 * Fixed: Gold Cart Plugin conflict that prevented the Gallery from showing on single products pages when Dynamic gallery plugin is installed.
 * Fixed: Gold Cart plugin compatability. When WP e-Commerce Dymanic Gallery is installed first and Gold Cart Plugin is installed or activated after it was causing the fatal error 'Cannot redeclare gold_shpcrt_display_gallery()' .
+
 * Feature: Added Lite version 100% 'Gold cart' plugin compatibility.
 
 = 1.0.2 - 2012/09/05 =

@@ -17,10 +17,15 @@ jQuery(window).load(function(){
 	jQuery(document).mousedown(function(){
 		jQuery('.colorpickdiv').hide();
 	});
-	jQuery('.preview_allery').live('click',function(){
+	jQuery('.preview_gallery').live('click',function(){
 		var url = jQuery(this).attr("href");
 		var data = jQuery('#wpsc-settings-form').serialize();
-		tb_show('Dynamic gallery preview', url+'&'+data+'&width=700&action=wpsc_dynamic_gallery&KeepThis=false');
+		var height = 500;
+		var gallery_height = jQuery('#wpsc-settings-form').find('#product_gallery_height').val();
+		var navbar_height = jQuery('#wpsc-settings-form').find('#navbar_height').val();
+		var thumb_height = jQuery('#wpsc-settings-form').find('#thumb_height').val();
+		height = parseInt(gallery_height) + parseInt(navbar_height) + parseInt(thumb_height) + 80;
+		tb_show('Dynamic gallery preview', url+'&'+data+'&width=700&height='+height+'&action=wpsc_dynamic_gallery&KeepThis=false');
 		return false;
 	});
 });

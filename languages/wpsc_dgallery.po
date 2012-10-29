@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP e-Commerce Dynamic Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-10 13:09+0700\n"
-"PO-Revision-Date: 2012-09-10 13:09+0700\n"
+"POT-Creation-Date: 2012-10-29 15:45+0700\n"
+"PO-Revision-Date: 2012-10-29 15:45+0700\n"
 "Last-Translator: Nguyen Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "MIME-Version: 1.0\n"
@@ -21,339 +21,351 @@ msgstr ""
 msgid "Gallery width"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:187
+#: admin/class-wpsc-dynamic-gallery-admin.php:186
+msgid "Set at 100 and choose % to activate responsive gallery (Pro version feature)"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:190
 msgid "Gallery height"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:196
+#: admin/class-wpsc-dynamic-gallery-admin.php:199
 msgid "Auto start"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:199
+#: admin/class-wpsc-dynamic-gallery-admin.php:202
 msgid "False"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:200
+#: admin/class-wpsc-dynamic-gallery-admin.php:203
 msgid "True"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:205
+#: admin/class-wpsc-dynamic-gallery-admin.php:208
 msgid "Time between transitions"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:208
-#: admin/class-wpsc-dynamic-gallery-admin.php:238
+#: admin/class-wpsc-dynamic-gallery-admin.php:211
+#: admin/class-wpsc-dynamic-gallery-admin.php:241
 msgid "seconds"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:212
+#: admin/class-wpsc-dynamic-gallery-admin.php:215
 msgid "Slide transition effect"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:215
+#: admin/class-wpsc-dynamic-gallery-admin.php:218
 msgid "None"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:216
+#: admin/class-wpsc-dynamic-gallery-admin.php:219
 msgid "Fade"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:217
+#: admin/class-wpsc-dynamic-gallery-admin.php:220
 msgid "Slide Hori"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:218
+#: admin/class-wpsc-dynamic-gallery-admin.php:221
 msgid "Slide vert"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:219
+#: admin/class-wpsc-dynamic-gallery-admin.php:222
 msgid "Resize"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:224
+#: admin/class-wpsc-dynamic-gallery-admin.php:227
 msgid "Transition effect speed"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:242
+#: admin/class-wpsc-dynamic-gallery-admin.php:245
 msgid "Image background colour"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:243
+#: admin/class-wpsc-dynamic-gallery-admin.php:246
 msgid "Gallery image background colour."
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:243
-#: admin/class-wpsc-dynamic-gallery-admin.php:249
-#: admin/class-wpsc-dynamic-gallery-admin.php:314
-#: admin/class-wpsc-dynamic-gallery-admin.php:321
-#: admin/class-wpsc-dynamic-gallery-admin.php:382
-#: admin/class-wpsc-dynamic-gallery-admin.php:389
-#: admin/class-wpsc-dynamic-gallery-admin.php:411
+#: admin/class-wpsc-dynamic-gallery-admin.php:246
+#: admin/class-wpsc-dynamic-gallery-admin.php:252
+#: admin/class-wpsc-dynamic-gallery-admin.php:317
+#: admin/class-wpsc-dynamic-gallery-admin.php:324
+#: admin/class-wpsc-dynamic-gallery-admin.php:385
+#: admin/class-wpsc-dynamic-gallery-admin.php:392
+#: admin/class-wpsc-dynamic-gallery-admin.php:414
 msgid "Default"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:248
+#: admin/class-wpsc-dynamic-gallery-admin.php:251
 msgid "Border colour"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:249
+#: admin/class-wpsc-dynamic-gallery-admin.php:252
 msgid "Gallery border colour."
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:254
+#: admin/class-wpsc-dynamic-gallery-admin.php:257
 msgid "Gallery popup"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:257
+#: admin/class-wpsc-dynamic-gallery-admin.php:260
 msgid "Fancybox"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:258
+#: admin/class-wpsc-dynamic-gallery-admin.php:261
 msgid "Lightbox"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:264
+#: admin/class-wpsc-dynamic-gallery-admin.php:267
 msgid "Caption text"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:267
-#: admin/class-wpsc-dynamic-gallery-admin.php:335
+#: admin/class-wpsc-dynamic-gallery-admin.php:270
+#: admin/class-wpsc-dynamic-gallery-admin.php:338
 msgid "Font"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:284
-#: admin/class-wpsc-dynamic-gallery-admin.php:352
+#: admin/class-wpsc-dynamic-gallery-admin.php:287
+#: admin/class-wpsc-dynamic-gallery-admin.php:355
 msgid "Font size"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:301
-#: admin/class-wpsc-dynamic-gallery-admin.php:369
-msgid "Font style"
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:304
 #: admin/class-wpsc-dynamic-gallery-admin.php:372
-msgid "Normal"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:305
-#: admin/class-wpsc-dynamic-gallery-admin.php:373
-msgid "Italic"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:306
-#: admin/class-wpsc-dynamic-gallery-admin.php:374
-msgid "Bold"
+msgid "Font style"
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:307
 #: admin/class-wpsc-dynamic-gallery-admin.php:375
+msgid "Normal"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:308
+#: admin/class-wpsc-dynamic-gallery-admin.php:376
+msgid "Italic"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:309
+#: admin/class-wpsc-dynamic-gallery-admin.php:377
+msgid "Bold"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:310
+#: admin/class-wpsc-dynamic-gallery-admin.php:378
 msgid "Bold/Italic"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:312
-#: admin/class-wpsc-dynamic-gallery-admin.php:380
-#: admin/class-wpsc-dynamic-gallery-admin.php:409
+#: admin/class-wpsc-dynamic-gallery-admin.php:315
+#: admin/class-wpsc-dynamic-gallery-admin.php:383
+#: admin/class-wpsc-dynamic-gallery-admin.php:412
 msgid "Colour"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:314
+#: admin/class-wpsc-dynamic-gallery-admin.php:317
 msgid "Caption text color."
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:319
+#: admin/class-wpsc-dynamic-gallery-admin.php:322
 msgid "Background"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:321
+#: admin/class-wpsc-dynamic-gallery-admin.php:324
 msgid "Caption text background colour."
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:328
+#: admin/class-wpsc-dynamic-gallery-admin.php:331
 msgid "Nav bar"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:331
-#: admin/class-wpsc-dynamic-gallery-admin.php:405
+#: admin/class-wpsc-dynamic-gallery-admin.php:334
+#: admin/class-wpsc-dynamic-gallery-admin.php:408
 msgid "Control"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:332
+#: admin/class-wpsc-dynamic-gallery-admin.php:335
 msgid "Enable Nav bar Control"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:382
+#: admin/class-wpsc-dynamic-gallery-admin.php:385
 msgid "Nav bar background colour."
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:387
+#: admin/class-wpsc-dynamic-gallery-admin.php:390
 msgid "Text"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:389
+#: admin/class-wpsc-dynamic-gallery-admin.php:392
 msgid "Nav bar text color."
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:394
+#: admin/class-wpsc-dynamic-gallery-admin.php:397
 msgid "Container height"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:402
+#: admin/class-wpsc-dynamic-gallery-admin.php:405
 msgid "Lazy-load scroll"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:406
+#: admin/class-wpsc-dynamic-gallery-admin.php:409
 msgid "Enable lazy-load scroll"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:411
+#: admin/class-wpsc-dynamic-gallery-admin.php:414
 msgid "Scroll bar colour."
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:417
+#: admin/class-wpsc-dynamic-gallery-admin.php:420
 msgid "Image Thumbnails"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:420
+#: admin/class-wpsc-dynamic-gallery-admin.php:423
 msgid "Show thumbnails"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:421
+#: admin/class-wpsc-dynamic-gallery-admin.php:424
 msgid "Enable thumbnail gallery"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:428
+#: admin/class-wpsc-dynamic-gallery-admin.php:431
 msgid "Thumbnail width"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:435
+#: admin/class-wpsc-dynamic-gallery-admin.php:438
 msgid "Thumbnail height"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:442
+#: admin/class-wpsc-dynamic-gallery-admin.php:445
 msgid "Thumbnail spacing"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:450
+#: admin/class-wpsc-dynamic-gallery-admin.php:453
 msgid "Preview"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:453
+#: admin/class-wpsc-dynamic-gallery-admin.php:456
 msgid "Click here to preview gallery"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:462
+#: admin/class-wpsc-dynamic-gallery-admin.php:465
 msgid "Help us help you!"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:463
+#: admin/class-wpsc-dynamic-gallery-admin.php:466
 msgid "Creating a great plugin, keeping it upgraded, giving support. listening to feedback and building in enhancements takes a lot of time and money."
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:464
+#: admin/class-wpsc-dynamic-gallery-admin.php:467
 msgid "No Donations Accepted"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:466
+#: admin/class-wpsc-dynamic-gallery-admin.php:469
 msgid "We don't ask for or accept donations for our plugins because we do not build them as a hobby and we are not a charity. We are a business that building quality WordPress themes and plugins. If we were paid to develop this plugin at our client per hour development rate this plugin cost was USD$6,600 to bring from inception to launch."
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:467
+#: admin/class-wpsc-dynamic-gallery-admin.php:470
 msgid "Lite v Pro version"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:468
+#: admin/class-wpsc-dynamic-gallery-admin.php:471
 msgid "Our Lite version plugins here on WordPress while fully functional are designed to give you a good taste of what the fully featured Pro version of the plugin can do for your WP e-Commerce store. See the list below for the features and benefits to you from upgrading to this plugins Pro version"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:471
+#: admin/class-wpsc-dynamic-gallery-admin.php:474
 msgid "Unlocks the 22 advanced Gallery settings in this yellow border."
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:472
-msgid "Lifetime guaranteed same day support."
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:473
-msgid "Pro version only future feature enhancements."
+#: admin/class-wpsc-dynamic-gallery-admin.php:475
+msgid "Activate Responsive Gallery feature."
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:476
-msgid "See the Pro version on the"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:476
-msgid "A3 market place"
+msgid "Activate option to deactiavte the Gallery on any single product page."
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:477
-msgid "Go Pro and help us help you."
+msgid "Guaranteed Pro version same day support."
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:478
-msgid "Your small once only Pro upgrade license fee help fund and support the maintenance and ongoing development of this plugin"
+msgid "Pro Version only future feature enhancements."
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:479
-msgid "More quality WP e-Commerce Plugins from A3 Rev"
+#: admin/class-wpsc-dynamic-gallery-admin.php:481
+msgid "See the Pro version on the"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:481
+msgid "A3 market place"
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:482
-msgid "WP e-Commerce Catalog Visibility and Email Inquiry"
+msgid "Go Pro and help us help you."
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:483
-msgid "WP e-Commerce Grid View"
+msgid "Your small once only Pro upgrade license fee help fund and support the maintenance and ongoing development of this plugin"
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:484
-msgid "WP e-Commerce Predictive Search"
+msgid "More quality WP e-Commerce Plugins from A3 Rev"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:485
-msgid "WP e-Commerce Compare Products"
+#: admin/class-wpsc-dynamic-gallery-admin.php:487
+msgid "WP e-Commerce Catalog Visibility and Email Inquiry"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:486
-msgid "WP e-Commerce Email Template"
+#: admin/class-wpsc-dynamic-gallery-admin.php:488
+msgid "WP e-Commerce Grid View"
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:489
-msgid "Spreading the Word about this plugin."
+msgid "WP e-Commerce Predictive Search"
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:490
+msgid "WP e-Commerce Compare Products"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:491
+msgid "WP e-Commerce Email Template"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:494
+msgid "Spreading the Word about this plugin."
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:495
 msgid "Things you can do to help others find this plugin"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:492
+#: admin/class-wpsc-dynamic-gallery-admin.php:497
 msgid "Rate this plugin 5"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:492
+#: admin/class-wpsc-dynamic-gallery-admin.php:497
 msgid "on WordPress.org"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:493
+#: admin/class-wpsc-dynamic-gallery-admin.php:498
 msgid "Write about it in your blog"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:496
+#: admin/class-wpsc-dynamic-gallery-admin.php:501
 msgid "Thank you for your support!"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-display.php:328
-#: classes/class-wpsc-dynamic-gallery-display.php:774
+#: classes/class-wpsc-dynamic-gallery-display.php:329
+#: classes/class-wpsc-dynamic-gallery-display.php:781
 msgid "START SLIDESHOW"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-display.php:329
-#: classes/class-wpsc-dynamic-gallery-display.php:775
+#: classes/class-wpsc-dynamic-gallery-display.php:330
+#: classes/class-wpsc-dynamic-gallery-display.php:782
 msgid "STOP SLIDESHOW"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-display.php:330
-#: classes/class-wpsc-dynamic-gallery-display.php:776
+#: classes/class-wpsc-dynamic-gallery-display.php:331
+#: classes/class-wpsc-dynamic-gallery-display.php:783
 msgid "ZOOM +"
 msgstr ""
 
@@ -378,7 +390,7 @@ msgid "Support"
 msgstr ""
 
 #: classes/class-wpsc-dynamic-gallery-metaboxes.php:27
-msgid "Gallery Images"
+msgid "A3 Dynamic Image Gallery activated"
 msgstr ""
 
 #: classes/class-wpsc-dynamic-gallery-metaboxes.php:28

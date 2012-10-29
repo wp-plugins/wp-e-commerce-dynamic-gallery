@@ -134,6 +134,7 @@ class WPSC_Dynamic_Gallery_Display_Class{
                     border:1px solid #'.$border_image_wrapper_color.';
 					z-index:8 !important;
                 }
+				.ad-gallery .ad-image-wrapper .ad-image{width:100% !important;text-align:center;}
                 .ad-image img{
                     max-width:'.$g_width.'px !important;
                 }
@@ -392,8 +393,10 @@ class WPSC_Dynamic_Gallery_Display_Class{
 								$script_fancybox .= '(function($){';		  
                                 $script_lightbox .= '$(function(){';
 								$script_fancybox .= '$(function(){';
-                                $script_lightbox .= '$(".ad-gallery .lightbox").live("click",function(ev) {';
-								$script_fancybox .= '$(".ad-gallery .lightbox").live("click",function(ev) {';
+                                $script_lightbox .= '$(".ad-gallery .lightbox").live("click",function(ev) { if( $(this).attr("rel") == "gallery_'.$product_id.'") {
+									var idx = $("#gallery_'.$product_id.' .ad-image img").attr("idx");';
+								$script_fancybox .= '$(".ad-gallery .lightbox").live("click",function(ev) { if( $(this).attr("rel") == "gallery_'.$product_id.'") {
+									var idx = $("#gallery_'.$product_id.' .ad-image img").attr("idx");';
                                 if(count($attached_thumb) <= 1 ){
                                     $script_lightbox .= '$.lightbox(';
 									$script_fancybox .= '$.fancybox(';
@@ -404,7 +407,7 @@ class WPSC_Dynamic_Gallery_Display_Class{
                                 $common = '';
                                 
 								if($attached_thumb){
-							
+									$idx = 0;
                                 foreach($attached_thumb as $item_thumb){
 									if ( get_post_meta( $item_thumb->ID, '_wpsc_exclude_image', true ) == 1 ) continue;
                                     $li_class = '';
@@ -440,7 +443,7 @@ class WPSC_Dynamic_Gallery_Display_Class{
 									   $img_description = $alt;
 								   }
                                             
-                                    $html .=  '<li class="'.$li_class.'"><a alt="'.$alt.'" class="" title="'.$img_description.'" rel="gallery_product_'.$product_id.'" href="'.$image_lager_default_url.'"><div><img style="width:'.$thumb_width.'px !important;height:'.$thumb_height.'px !important" src="'.$image_lager_default_url.'" alt="'.$img_description.'" class="image'.$i.'" width="'.$thumb_width.'" height="'.$thumb_height.'"></div></a></li>';
+                                    $html .=  '<li class="'.$li_class.'"><a alt="'.$alt.'" class="" title="'.$img_description.'" rel="gallery_product_'.$product_id.'" href="'.$image_lager_default_url.'"><div><img idx="'.$idx.'" style="width:'.$thumb_width.'px !important;height:'.$thumb_height.'px !important" src="'.$image_lager_default_url.'" alt="'.$img_description.'" class="image'.$i.'" width="'.$thumb_width.'" height="'.$thumb_height.'"></div></a></li>';
                                     $img_description = trim(strip_tags(stripslashes(str_replace("'","", str_replace('"', '', $img_description)))));
                                     if($img_description != ''){
                                         $script_lightbox .= $common.'"'.$image_lager_default_url.'?lightbox[title]='.$img_description.'"';
@@ -451,6 +454,7 @@ class WPSC_Dynamic_Gallery_Display_Class{
                                     }
                                     $common = ',';
                                     $i++;
+									$idx++;
                                  }
 								}
 								 //$.fancybox([ {href : 'img1.jpg', title : 'Title'}, {href : 'img2.jpg', title : 'Title'} ])
@@ -459,11 +463,13 @@ class WPSC_Dynamic_Gallery_Display_Class{
 									$script_fancybox .= ');';
                                 }else{
                                     $script_lightbox .= ']);';
-									$script_fancybox .= ']);';
+									$script_fancybox .= '],{
+										 \'index\': idx
+      								});';
                                 }
                                 $script_lightbox .= 'ev.preventDefault();';
-                                $script_lightbox .= '});';
-								$script_fancybox .= '});';
+                                $script_lightbox .= '} });';
+								$script_fancybox .= '} });';
                                 $script_lightbox .= '});';
 								$script_fancybox .= '});';
                                 $script_lightbox .= '})(jQuery);';
@@ -574,6 +580,7 @@ class WPSC_Dynamic_Gallery_Display_Class{
                     border:1px solid #'.$border_image_wrapper_color.';
 					z-index:1000 !important;
                 }
+				.ad-gallery .ad-image-wrapper .ad-image{width:100% !important;text-align:center;}
                 .ad-image img{
                     max-width:'.$g_width.'px !important;
                 }
@@ -816,7 +823,8 @@ class WPSC_Dynamic_Gallery_Display_Class{
                                 $script_lightbox .= '$(function(){';
 								$script_fancybox .= '$(function(){';
                                 $script_lightbox .= '$(".ad-gallery .lightbox").live("click",function(ev) { if( $(this).attr("rel") == "gallery_'.$product_id.'") {';
-								$script_fancybox .= '$(".ad-gallery .lightbox").live("click",function(ev) { if( $(this).attr("rel") == "gallery_'.$product_id.'") {';
+								$script_fancybox .= '$(".ad-gallery .lightbox").live("click",function(ev) { if( $(this).attr("rel") == "gallery_'.$product_id.'") {
+								var idx = $(".ad-image img").attr("idx");';
                                 if(count($imgs) <= 1 ){
                                     $script_lightbox .= '$.lightbox(';
 									$script_fancybox .= '$.fancybox(';
@@ -825,7 +833,7 @@ class WPSC_Dynamic_Gallery_Display_Class{
 									$script_fancybox .= '$.fancybox([';
                                 }
                                 $common = '';
-                                
+                                $idx = 0;
                                 foreach($imgs as $item_thumb){
                                     $li_class = '';
                                     if($i == 0){ $li_class = 'first_item';}elseif($i == count($imgs)-1){$li_class = 'last_item';}
@@ -861,7 +869,7 @@ class WPSC_Dynamic_Gallery_Display_Class{
                                         
                                     $img_description = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.';
                                             
-                                    echo '<li class="'.$li_class.'"><a class="" title="'.$img_description.'" rel="gallery_product_'.$product_id.'" href="'.$image_lager_default_url.'"><div><img style="width:'.$thumb_width.'px !important;height:'.$thumb_height.'px !important" src="'.$image_lager_default_url.'" alt="'.$img_description.'" class="image'.$i.'" width="'.$thumb_width.'" height="'.$thumb_height.'"></div></a></li>';
+                                    echo '<li class="'.$li_class.'"><a class="" title="'.$img_description.'" rel="gallery_product_'.$product_id.'" href="'.$image_lager_default_url.'"><div><img idx="'.$idx.'" style="width:'.$thumb_width.'px !important;height:'.$thumb_height.'px !important" src="'.$image_lager_default_url.'" alt="'.$img_description.'" class="image'.$i.'" width="'.$thumb_width.'" height="'.$thumb_height.'"></div></a></li>';
                                     $img_description = trim(strip_tags(stripslashes(str_replace("'","", str_replace('"', '', $img_description)))));
                                     if($img_description != ''){
                                         $script_lightbox .= $common.'"'.$image_lager_default_url.'?lightbox[title]='.$img_description.'"';
@@ -872,6 +880,7 @@ class WPSC_Dynamic_Gallery_Display_Class{
                                     }
                                     $common = ',';
                                     $i++;
+									$idx++;
                                  }
 								 //$.fancybox([ {href : 'img1.jpg', title : 'Title'}, {href : 'img2.jpg', title : 'Title'} ])
                                 if(count($imgs) <= 1 ){
@@ -879,7 +888,9 @@ class WPSC_Dynamic_Gallery_Display_Class{
 									$script_fancybox .= ');';
                                 }else{
                                     $script_lightbox .= ']);';
-									$script_fancybox .= ']);';
+									$script_fancybox .= '],{
+        \'index\': idx
+      });';
                                 }
                                 $script_lightbox .= 'ev.preventDefault();';
                                 $script_lightbox .= '} });';

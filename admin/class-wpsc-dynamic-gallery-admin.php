@@ -54,7 +54,7 @@ class WPSC_Settings_Tab_Gallery_Settings {
 		}
 
 		if( trim(get_option('product_gallery_speed')) == '' || $reset ){
-			update_option('product_gallery_speed',5);
+			update_option('product_gallery_speed',4);
 		}
 		if( trim(get_option('product_gallery_effect')) == '' || $reset ){
 			update_option('product_gallery_effect','slide-vert');
@@ -179,8 +179,11 @@ class WPSC_Settings_Tab_Gallery_Settings {
 		  <tr>
 		    <th scope="row"><?php _e('Gallery width', 'wpsc_dgallery');?>	</th>
 		    <td>
-              <input type="text" value="<?php echo get_option('product_gallery_width');?>" style="width:7em;" id="product_gallery_width" name="product_gallery_width">
-              <span class="description">px</span>
+              <input type="text" value="<?php echo get_option('product_gallery_width');?>" style="width:7em;" id="product_gallery_width" name="product_gallery_width"> 
+              <select name="width_type" id="width_type">
+                	<option value="px" selected="selected">px</option>
+					<option value="%">%</option>
+				</select> <span class="description"><?php _e('Set at 100 and choose % to activate responsive gallery (Pro version feature)', 'wpsc_dgallery'); ?></span>
             </td>
 		  </tr>
           <tr>
@@ -450,7 +453,7 @@ class WPSC_Settings_Tab_Gallery_Settings {
         <h3><?php _e('Preview', 'wpsc_dgallery'); ?></h3>
 		<table class="form-table">
 		  <tr>
-		    <th scope="row" style="margin:0;padding:0"><a href="<?php echo admin_url("admin-ajax.php")?>?security=<?php echo $wpsc_dynamic_gallery;?>" class="preview_allery"><?php _e('Click here to preview gallery', 'wpsc_dgallery');?></a></th>
+		    <th scope="row" style="margin:0;padding:0"><a href="<?php echo admin_url("admin-ajax.php")?>?security=<?php echo $wpsc_dynamic_gallery;?>" class="preview_gallery"><?php _e('Click here to preview gallery', 'wpsc_dgallery');?></a></th>
 		  </tr>
           
 		</table>
@@ -469,8 +472,10 @@ class WPSC_Settings_Tab_Gallery_Settings {
 		$html .= '<p>';
 		$html .= '<ul style="padding-left:10px;">';
 		$html .= '<li>1. '.__('Unlocks the 22 advanced Gallery settings in this yellow border.', 'wpsc_dgallery').'</li>';
-		$html .= '<li>2. '.__('Pro version same day support.', 'wpsc_dgallery').'</li>';
-		$html .= '<li>3. '.__('Pro version only future feature enhancements.', 'wpsc_dgallery').'</li>';
+		$html .= '<li>2. '.__('Activate Responsive Gallery feature.', 'wpsc_dgallery').'</li>';
+		$html .= '<li>3. '.__('Activate option to deactiavte the Gallery on any single product page.', 'wpsc_dgallery').'</li>';
+		$html .= '<li>4. '.__('Guaranteed Pro version same day support.', 'wpsc_dgallery').'</li>';
+		$html .= '<li>5. '.__('Pro Version only future feature enhancements.', 'wpsc_dgallery').'</li>';
 		$html .= '</ul>';
 		$html .= '</p>';
 		$html .= '<p>* '.__('See the Pro version on the', 'wpsc_dgallery').' <a href="http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/" target="_blank">'.__('A3 market place', 'wpsc_dgallery').'</a></p>';

@@ -1,5 +1,6 @@
 <?php
 function wpsc_dynamic_gallery_install(){
+	update_option('a3rev_wpsc_dgallery_version', '1.0.4');
 	WPSC_Settings_Tab_Gallery_Settings::wpsc_dynamic_gallery_set_setting(true, true);
 }
 
@@ -49,8 +50,17 @@ function wpsc_show_dynamic_gallery_with_goldcart() {
 	}else{
 		if(is_singular('wpsc-product')){
 			WPSC_Dynamic_Gallery_Hook_Filter::dynamic_gallery_frontend_script();
-			add_action('wp_footer', array('WPSC_Dynamic_Gallery_Hook_Filter', 'do_dynamic_gallery'), 8 );
+			add_action('get_footer', array('WPSC_Dynamic_Gallery_Hook_Filter', 'do_dynamic_gallery'), 8 );
 		}
 	}	
 }
+
+// Upgrade to 1.0.4
+if(version_compare(get_option('a3rev_wpsc_dgallery_version'), '1.0.4') === -1){
+	update_option('width_type','px');
+	WPSC_Settings_Tab_Gallery_Settings::wpsc_dynamic_gallery_set_setting(true, true);
+	update_option('a3rev_wpsc_dgallery_version', '1.0.4');
+}
+
+update_option('a3rev_wpsc_dgallery_version', '1.0.4');
 ?>
