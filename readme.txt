@@ -122,16 +122,17 @@ Support and access to this plugin documents are available from the [HELP tab](ht
 
 MAJOR OVERHAUL & FEATURE UPGRADE
 
-Fixed: Single image click zoom function. The current image now opens when Zoom or the image is clicked.
-Fixed: Stopped Lazy load scrolling on Gallery initial load for auto start (Lite and Pro Versions) and when Auto Start not activated on Pro Version. Now the Lazy load scroll only starts when transition to second image in the Gallery starts.
-Fixed: Lazy Load scroll duration now sync with and set by the transition effect speed setting (Lite and Pro Versions).
-Fixed: Caption text pop-up now sync with and set by the Time between transitions settings (Lite and Pro Versions). 
-Feature: Upgraded Gallery js to support responsive themes. Gallery and image zoom fully responsive - shows beautifully in even the smallest crappy Android. Activate responsive by setting the Gallery Width to 100%. Choose px for wide and the gallery works for fixed px themes. (PRO version feature)
-Feature: Added option to deactivate the gallery from single product pages. When deactivated the product page defaults to the WP e-Commerce single product page image display. (PRO Version feature)
-Tweak: Added display:inline-block !important; into css file for image class
-Tweak: Update dashboard to show new Pro version features - responsive setting.
-Tweak: Added Pro Version meta check box feature for deactivate gallery on product page gallery manager.
-Tweak: Updated WordPress plugin description.
+* Fixed: Single image click zoom function. The current image now opens when Zoom or the image is clicked.
+* Fixed: Stopped Lazy load scrolling on Gallery initial load for auto start (Lite and Pro Versions) and when Auto Start not activated on Pro Version. Now the Lazy load scroll only starts when transition to second image in the Gallery starts.
+* Fixed: Lazy Load scroll duration now sync with and set by the transition effect speed setting (Lite and Pro Versions).
+* Fixed: Caption text pop-up now sync with and set by the Time between transitions settings (Lite and Pro Versions). 
+* Fixed: Make center for image in gallery frame
+* Feature: Upgraded Gallery js to support responsive themes. Gallery and image zoom fully responsive - shows beautifully in even the smallest crappy Android. Activate responsive by setting the Gallery Width to 100%. Choose px for wide and the gallery works for fixed px themes. (PRO version feature)
+* Feature: Added option to deactivate the gallery from single product pages. When deactivated the product page defaults to the WP e-Commerce single product page image display. (PRO Version feature)
+* Tweak: Added display:inline-block !important; into css file for image class
+* Tweak: Update dashboard to show new Pro version features - responsive setting.
+* Tweak: Added Pro Version meta check box feature for deactivate gallery on product page gallery manager.
+* Tweak: Updated WordPress plugin description.
 
 = 1.0.3 - 2012/09/10 =
 
