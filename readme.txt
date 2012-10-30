@@ -3,7 +3,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, e-commerce,  wordpress ecommerce
 Requires at least: 3.3
 Tested up to: 3.4.2
-Stable tag: 1.0.4
+Stable tag: 1.0.4.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -117,6 +117,9 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 Support and access to this plugin documents are available from the [HELP tab](http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/#help) on the Pro Versions Home page.
 
 == Changelog ==
+
+= 1.0.4.1 -2012/10/30 =
+* Fixed: Fatal error: Class 'WPSC_Settings_Tab_Gallery_Settings' not found in /wp-content/plugins/wp-e-commerce-dynamic-gallery/admin/wpsc-dynamic-gallery-admin.php on line 61
 
 = 1.0.4 -2012/10/28 =
 
