@@ -58,7 +58,6 @@ function wpsc_show_dynamic_gallery_with_goldcart() {
 // Upgrade to 1.0.4
 if(version_compare(get_option('a3rev_wpsc_dgallery_version'), '1.0.4') === -1){
 	update_option('width_type','px');
-	WPSC_Settings_Tab_Gallery_Settings::wpsc_dynamic_gallery_set_setting(true, true);
 	update_option('a3rev_wpsc_dgallery_version', '1.0.4');
 }
 

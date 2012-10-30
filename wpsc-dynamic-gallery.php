@@ -40,8 +40,8 @@ include( 'classes/class-wpsc-dynamic-gallery-hook-filter.php' );
 include( 'classes/class-wpsc-dynamic-gallery-metaboxes.php' );
 include( 'classes/class-wpsc-dynamic-gallery-display.php' );
 
-include( 'admin/wpsc-dynamic-gallery-admin.php' );
 include( 'admin/class-wpsc-dynamic-gallery-admin.php' );
+include( 'admin/wpsc-dynamic-gallery-admin.php' );
 
 /**
 * Call when the plugin is activated
