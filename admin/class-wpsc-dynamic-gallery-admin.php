@@ -196,6 +196,12 @@ class WPSC_Settings_Tab_Gallery_Settings {
         <table class="form-table"><tr valign="top"><td style="padding:0;"><div id="wpsc_dgallery_upgrade_area"><?php echo WPSC_Settings_Tab_Gallery_Settings::wpsc_dynamic_gallery_extension(); ?><div id="wpsc_dgallery_upgrade_inner">
         <table class="form-table">
           <tr>
+		    <th scope="row"><label for="dynamic_gallery_show_variation"><?php _e('Product Variation images', 'wpsc_dgallery');?></label></th>
+		    <td>
+              <input type="checkbox" value="yes" id="dynamic_gallery_show_variation" name="dynamic_gallery_show_variation" disabled="disabled"> <span class="description"><?php _e('Show Product Variation images in Gallery. Can disable this feature of individual products from product edit page.', 'wpsc_dgallery');?></span>
+            </td>
+		  </tr>
+          <tr>
 		    <th scope="row"><?php _e('Auto start', 'wpsc_dgallery');?>	</th>
 		    <td>
               <select class="" style="width:7em;" id="product_gallery_auto_start" name="product_gallery_auto_start" disabled="disabled">
@@ -430,15 +436,15 @@ class WPSC_Settings_Tab_Gallery_Settings {
           <tr>
 		    <th scope="row"><?php _e('Thumbnail width', 'wpsc_dgallery');?>	</th>
 		    <td>
-              <input type="text" value="<?php echo get_option('thumb_width');?>" style="width:7em;" id="thumb_width" name="thumb_width">
-              <span class="description">px</span>
+              <input type="text" value="<?php echo get_option('thumb_width');?>" style="width:7em;" id="thumb_width" name="thumb_width"> px &nbsp;
+              <span class="description"><?php _e("IMPORTANT! Do not set this value to '0' or empty. A &lt;not divisible by 0&gt; error will show instead of the Gallery if you do.", 'wpsc_dgallery'); ?></span>
             </td>
 		  </tr>
           <tr>
 		    <th scope="row"><?php _e('Thumbnail height', 'wpsc_dgallery');?>	</th>
 		    <td>
-              <input type="text" value="<?php echo get_option('thumb_height');?>" style="width:7em;" id="thumb_height" name="thumb_height">
-              <span class="description">px</span>
+              <input type="text" value="<?php echo get_option('thumb_height');?>" style="width:7em;" id="thumb_height" name="thumb_height"> px &nbsp;
+              <span class="description"><?php _e("IMPORTANT! Do not set this value to '0' or empty. A &lt;not divisible by 0&gt; error will show instead of the Gallery if you do.", 'wpsc_dgallery'); ?></span>
             </td>
 		  </tr>
           <tr>
@@ -467,15 +473,13 @@ class WPSC_Settings_Tab_Gallery_Settings {
 		$html .= '<h3>'.__('No Donations Accepted', 'wpsc_dgallery').'</h3>';
 		$html .= '<img src="'.WPSC_DYNAMIC_GALLERY_IMAGES_URL.'/btn_donate.png" />';
 		$html .= '<p>'.__("We don't ask for or accept donations for our plugins because we do not build them as a hobby and we are not a charity. We are a business that building quality WordPress themes and plugins. If we were paid to develop this plugin at our client per hour development rate this plugin cost was USD$6,600 to bring from inception to launch.", 'wpsc_dgallery').'</p>';
-		$html .= '<h3>'.__('Lite v Pro version', 'wpsc_dgallery').'</h3>';
-		$html .= '<p>'.__('Our Lite version plugins here on WordPress while fully functional are designed to give you a good taste of what the fully featured Pro version of the plugin can do for your WP e-Commerce store. See the list below for the features and benefits to you from upgrading to this plugins Pro version', 'wpsc_dgallery').'</p>';
+		$html .= '<h3>'.__('PRO UPGRADE FEATURES', 'wpsc_dgallery').'</h3>';
 		$html .= '<p>';
 		$html .= '<ul style="padding-left:10px;">';
-		$html .= '<li>1. '.__('Unlocks the 22 advanced Gallery settings in this yellow border.', 'wpsc_dgallery').'</li>';
-		$html .= '<li>2. '.__('Activate Responsive Gallery feature.', 'wpsc_dgallery').'</li>';
-		$html .= '<li>3. '.__('Activate option to deactiavte the Gallery on any single product page.', 'wpsc_dgallery').'</li>';
-		$html .= '<li>4. '.__('Guaranteed Pro version same day support.', 'wpsc_dgallery').'</li>';
-		$html .= '<li>5. '.__('Pro Version only future feature enhancements.', 'wpsc_dgallery').'</li>';
+		$html .= '<li>1. '.__('Show Multiple Product Variation images in Gallery. As users selects options from the drop down menu that options product image auto shows in the Dynamic Gallery complete with caption text.', 'wpsc_dgallery').'</li>';
+		$html .= '<li>2. '.__('Fully Responsive Gallery option. Set gallery wide to % and it becomes fully responsive image product gallery including the image zoom pop up.', 'wpsc_dgallery').'</li>';
+		$html .= '<li>3. '.__('Activate all of the Gallery customization settings you see here on this page to style and fine tune your product presentation.', 'wpsc_dgallery').'</li>';
+		$html .= '<li>4. '.__('Option to Deactivate the Gallery on any Single product page - default WP e-Commerce product image will show.', 'wpsc_dgallery').'</li>';
 		$html .= '</ul>';
 		$html .= '</p>';
 		$html .= '<p>* '.__('See the Pro version on the', 'wpsc_dgallery').' <a href="http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/" target="_blank">'.__('A3 market place', 'wpsc_dgallery').'</a></p>';

@@ -108,7 +108,7 @@ class WPSC_Dynamic_Gallery_Hook_Filter {
 				'input' => 'html',
 				'html' =>  $html,
 				'value' => '',
-				'helps' => __('Enabling this option will hide it from the product page image gallery.', 'wpsc_dgallery')
+				'helps' => __('Enabling this option will hide it from the product page image gallery. If assigned to variations below the image will show when option is selected. (Show Product Variations in Gallery is a', 'wpsc_dgallery').' <a href="http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/" target="_blank">'.__('Pro Version', 'wpsc_dgallery').'</a> '.__('only feature', 'wpsc_dgallery').')'
 		);
 		
 		return $form_fields;
@@ -135,7 +135,7 @@ class WPSC_Dynamic_Gallery_Hook_Filter {
 	function wpsc_dynamic_gallery_preview(){
 		global $post;
 		check_ajax_referer( 'wpsc_dynamic_gallery', 'security' );
-		WPSC_Dynamic_Gallery_Display_Class::wpsc_dynamic_gallery_preview($_REQUEST);
+		WPSC_Dynamic_Gallery_Preview_Display::wpsc_dynamic_gallery_preview($_REQUEST);
 		die();
 	}
 	

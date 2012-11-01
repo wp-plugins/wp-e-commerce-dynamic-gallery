@@ -3,7 +3,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, e-commerce,  wordpress ecommerce
 Requires at least: 3.3
 Tested up to: 3.4.2
-Stable tag: 1.0.4.1
+Stable tag: 1.0.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -30,6 +30,12 @@ As soon as you install WP e-Commerce Dynamic Gallery it <strong>brings your stor
 = Premium Upgrade =
 
 The Premium Gallery upgrade unlocks a host of great premium features. You will see all of the available upgrade features on the plugins admin panel. Those Pro features include:
+
+* <strong>Show Multiple Product Variation images in gallery</strong> 
+
+Ever wished that on your products that have variations - that when users select an Option that the Variation image would just auto show in the image gallery? That is right - if they select a Blue Shirt with short sleeves in size large they can see that Large Blue Short Sleeve shirt in the image gallery or Green or Red or Black - whatever it is they want to see. .Well now they can with this brand new feature we have added to the Dynamic gallery. 
+
+Check this incredible new Pro Version feature out on our <strong>[DEMO SITE](http://compare.a3rev.com/shop/plain-t-shirts)</strong>
 
 * Responsive Gallery option. Set gallery wide to % and it becomes fully responsive image product gallery including the image zoom pop up.
 * Option to turn the Gallery off on single product pages. If you only have 1 image on some product pages and don't want the Gallery, just turn it off for that product.
@@ -118,8 +124,15 @@ Support and access to this plugin documents are available from the [HELP tab](ht
 
 == Changelog ==
 
+= 1.0.5 - 2012/11/01 =
+
+* Tweak - Added Thumbnail help text warning not to set width and height to '0' empty as it causes a <division by 0> error message to show instead to the Gallery.
+* Upgrade - Tested Gallery compatibility with WP e-Commerce new release Version 3.8.9 and made a few tweaks.
+* Upgrade - Code upgrade with new PRO Version Variation Products Image manager to allow for seamless upgrade from lite to Pro version.
+
 = 1.0.4.1 -2012/10/30 =
-* Fixed: Fatal error: Class 'WPSC_Settings_Tab_Gallery_Settings' not found in /wp-content/plugins/wp-e-commerce-dynamic-gallery/admin/wpsc-dynamic-gallery-admin.php on line 61
+
+* Fixed: Fatal error: Class 'WPSC_Settings_Tab_Gallery_Settings' not found in /wp-content/plugins/wp-e-commerce-dynamic-gallery/admin/wpsc-dynamic-gallery-admin.php on line 61
 
 = 1.0.4 -2012/10/28 =
 

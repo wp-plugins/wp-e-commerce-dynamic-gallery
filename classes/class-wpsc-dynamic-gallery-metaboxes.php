@@ -24,7 +24,7 @@ class WPSC_Dynamic_Gallery_Metaboxes_Class{
 	
 	function wpsc_meta_boxes_image() {
 		global $post;
-		add_meta_box( 'wpsc_product_image_forms', __('A3 Dynamic Image Gallery activated', 'wpsc_dgallery').' : <span><input style="position: relative; top: 3px; left: 5px; margin-right: 50px;" type="checkbox" checked="checked" value="1" name="_actived_d_gallery" /></span> ', array('WPSC_Dynamic_Gallery_Metaboxes_Class','wpsc_product_image_box'), 'wpsc-product', 'normal', 'high' );
+		add_meta_box( 'wpsc_product_image_forms', __('A3 Dynamic Image Gallery activated', 'wpsc_dgallery').' : <span><input disabled="disabled" style="position: relative; top: 3px; left: 5px; margin-right: 50px;" type="checkbox" checked="checked" value="1" name="_actived_d_gallery" /></span> '.__('Product Variation Images activated', 'wpsc_dgallery').' : <span><input disabled="disabled" style="position:relative;top:3px;left:5px" type="checkbox" value="1" name="_show_variation" /></span>', array('WPSC_Dynamic_Gallery_Metaboxes_Class','wpsc_product_image_box'), 'wpsc-product', 'normal', 'high' );
 		add_meta_box( 'wpsc_product_download_forms', __('Product Download', 'wpsc'), 'wpsc_product_download_forms', 'wpsc-product', 'normal', 'high' );
 		add_meta_box( 'wpsc_product_shipping_forms', __('Shipping', 'wpsc'), 'wpsc_product_shipping_forms', 'wpsc-product', 'normal', 'high' );
 	}
@@ -44,17 +44,15 @@ class WPSC_Dynamic_Gallery_Metaboxes_Class{
 		
 		</script>';
 		echo '<div class="wpsc_options_panel">';
-	
+		$attached_images = (array)get_posts( array(
+			'post_type'   => 'attachment',
+			'numberposts' => -1,
+			'post_status' => null,
+			'post_parent' => $post->ID ,
+			'orderby'     => 'menu_order',
+			'order'       => 'ASC',
+		) );
 		
-		$args = array(
-					'post_type'      => 'attachment',
-					'post_parent'    => $post->ID,
-					'post_mime_type' => 'image',
-					'orderby'        => 'menu_order',
-					'order'          => 'ASC',
-					'numberposts'    => -1
-				); 
-		$attached_images = get_posts($args);
 		$featured_img = get_post_meta($post->ID, '_thumbnail_id');
 		$attached_thumb = array();
 		if( count($attached_images) > 0 ){

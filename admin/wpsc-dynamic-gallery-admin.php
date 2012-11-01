@@ -1,6 +1,6 @@
 <?php
 function wpsc_dynamic_gallery_install(){
-	update_option('a3rev_wpsc_dgallery_version', '1.0.4');
+	update_option('a3rev_wpsc_dgallery_version', '1.0.5');
 	WPSC_Settings_Tab_Gallery_Settings::wpsc_dynamic_gallery_set_setting(true, true);
 }
 
@@ -23,6 +23,9 @@ add_filter( 'wpsc_settings_tabs', array('WPSC_Dynamic_Gallery_Hook_Filter', 'add
 add_filter( 'attachment_fields_to_edit', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_attachment_fields_filter'), 12, 2 );
 add_filter( 'attachment_fields_to_save', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_exclude_image_from_product_page_field_save'), 1, 2 );
 add_action( 'add_attachment', array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_exclude_image_from_product_page_field_add') );
+
+// Version 1.0.5
+add_filter( 'attachment_fields_to_edit', array('WPSC_Dynamic_Gallery_Variations', 'media_fields'), 13, 2 );
 
 add_action( 'wp_head',array('WPSC_Dynamic_Gallery_Hook_Filter', 'wpsc_hide_featured_image_single_product'),1 );
 
@@ -61,5 +64,5 @@ if(version_compare(get_option('a3rev_wpsc_dgallery_version'), '1.0.4') === -1){
 	update_option('a3rev_wpsc_dgallery_version', '1.0.4');
 }
 
-update_option('a3rev_wpsc_dgallery_version', '1.0.4');
+update_option('a3rev_wpsc_dgallery_version', '1.0.5');
 ?>
