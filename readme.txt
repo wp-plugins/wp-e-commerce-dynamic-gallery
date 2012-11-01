@@ -35,7 +35,7 @@ The Premium Gallery upgrade unlocks a host of great premium features. You will s
 
 Ever wished that on your products that have variations - that when users select an Option that the Variation image would just auto show in the image gallery? That is right - if they select a Blue Shirt with short sleeves in size large they can see that Large Blue Short Sleeve shirt in the image gallery or Green or Red or Black - whatever it is they want to see. .Well now they can with this brand new feature we have added to the Dynamic gallery. 
 
-Check this incredible new Pro Version feature out on our <strong>[DEMO SITE](http://compare.a3rev.com/shop/plain-t-shirts)</strong>
+Check this incredible new Pro Version feature out on our <strong>[DEMO SITE](http://wpeccompare.a3dev.net/products-page/clothes/plain-t-shirt)</strong>
 
 * Responsive Gallery option. Set gallery wide to % and it becomes fully responsive image product gallery including the image zoom pop up.
 * Option to turn the Gallery off on single product pages. If you only have 1 image on some product pages and don't want the Gallery, just turn it off for that product.
