@@ -17,7 +17,7 @@ class WPSC_Dynamic_Gallery_Variations{
 				
 		$product_id = $parent->ID;
 		
-		if( get_post_type($product_id) == 'wpsc-product' && class_exists('wpsc_variations') ) {
+		if( get_post_type($product_id) == 'wpsc-product' && class_exists('wpsc_variations') && wp_attachment_is_image($attachment->ID) ) {
 			global $wpsc_variations;
 			$wpsc_variations = new wpsc_variations( $product_id );
 												
@@ -33,9 +33,11 @@ class WPSC_Dynamic_Gallery_Variations{
 					
 					$html = "<style>.in_variations_".wpsc_vargrp_id()." {border-width:0 2px;border-style:solid ;border-color:#E6DB55;}</style>";
 					
+					$html .= "<input disabled='disabled' type='checkbox' id='".$attachment->ID."_".wpsc_vargrp_id()."' name='".$attachment->ID."_".wpsc_vargrp_id()."' value=''> <label for='".$attachment->ID."_".wpsc_vargrp_id()."'><strong>".__('Apply to All', 'wpsc_dgallery')."</strong></label><br />";
+					
 					while ( wpsc_have_variations() ): wpsc_the_variation();
 						if (wpsc_the_variation_id() > 0 ) {
-							$html .= "<input disabled='disabled' type='checkbox' id='".$attachment->ID."_".wpsc_vargrp_id()."_".wpsc_the_variation_id()."'> <label for='".$attachment->ID."_".wpsc_vargrp_id()."_".wpsc_the_variation_id()."'>".esc_html( wpsc_the_variation_name() )."</label><br />";
+							$html .= "&nbsp;- &nbsp; <input disabled='disabled' type='checkbox' id='".$attachment->ID."_".wpsc_vargrp_id()."_".wpsc_the_variation_id()."'> <label for='".$attachment->ID."_".wpsc_vargrp_id()."_".wpsc_the_variation_id()."'>".esc_html( wpsc_the_variation_name() )."</label><br />";
 						}
 					endwhile;
 						

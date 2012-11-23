@@ -468,11 +468,9 @@ class WPSC_Settings_Tab_Gallery_Settings {
 	
 	function wpsc_dynamic_gallery_extension() {
 		$html = '';
-		$html .= '<div id="wpsc_dynamic_gallery_extensions"><h3>'.__('Help us help you!', 'wpsc_dgallery').'</h3>';
-		$html .= '<p>'.__('Creating a great plugin, keeping it upgraded, giving support. listening to feedback and building in enhancements takes a lot of time and money.', 'wpsc_dgallery').'</p>';
+		$html .= '<div id="wpsc_dynamic_gallery_extensions">';
 		$html .= '<h3>'.__('No Donations Accepted', 'wpsc_dgallery').'</h3>';
 		$html .= '<img src="'.WPSC_DYNAMIC_GALLERY_IMAGES_URL.'/btn_donate.png" />';
-		$html .= '<p>'.__("We don't ask for or accept donations for our plugins because we do not build them as a hobby and we are not a charity. We are a business that building quality WordPress themes and plugins. If we were paid to develop this plugin at our client per hour development rate this plugin cost was USD$6,600 to bring from inception to launch.", 'wpsc_dgallery').'</p>';
 		$html .= '<h3>'.__('PRO UPGRADE FEATURES', 'wpsc_dgallery').'</h3>';
 		$html .= '<p>';
 		$html .= '<ul style="padding-left:10px;">';

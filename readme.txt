@@ -3,7 +3,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, e-commerce,  wordpress ecommerce
 Requires at least: 3.3
 Tested up to: 3.4.2
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -123,6 +123,12 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 Support and access to this plugin documents are available from the [HELP tab](http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/#help) on the Pro Versions Home page.
 
 == Changelog ==
+
+= 1.0.6 - 2012/11/23 =
+
+* Feature: Dynamic Gallery now only recognizes image formats .jpg, .jpeg, .gif, .png. It won't recognize another file and won't show in gallery, or on Image gallery manager meta box. Mean that files like PDF's can be uploaded and the gallery does not show them or on the Pro version create variations for them in the pop up image manager.
+* Feature: PRO version now supports WPMU - Pro Version Single License now works on any domain or sub domain that the Plugin is installed on with the WPMU environment. Note it only works on 1. WPMU license option coming soon.
+* Feature: Added 'Apply to All' option on Gallery Image manager pop-up - this feature allows PRO Version user to Apply all variations in a set to the selected image with one click - Thanks to Shawn for the feedback and the idea.
 
 = 1.0.5 - 2012/11/01 =
 

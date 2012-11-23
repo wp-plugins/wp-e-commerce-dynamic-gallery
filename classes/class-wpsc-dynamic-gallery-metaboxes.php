@@ -46,6 +46,7 @@ class WPSC_Dynamic_Gallery_Metaboxes_Class{
 		echo '<div class="wpsc_options_panel">';
 		$attached_images = (array)get_posts( array(
 			'post_type'   => 'attachment',
+			'post_mime_type' => 'image',
 			'numberposts' => -1,
 			'post_status' => null,
 			'post_parent' => $post->ID ,
