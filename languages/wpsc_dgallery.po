@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP e-Commerce Dynamic Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-23 17:08+0700\n"
-"PO-Revision-Date: 2012-11-23 17:08+0700\n"
+"POT-Creation-Date: 2013-01-09 10:53+0700\n"
+"PO-Revision-Date: 2013-01-09 10:53+0700\n"
 "Last-Translator: Nguyen Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "MIME-Version: 1.0\n"
@@ -259,12 +259,20 @@ msgstr ""
 msgid "Click here to preview gallery"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:472
-msgid "No Donations Accepted"
+#: admin/class-wpsc-dynamic-gallery-admin.php:473
+msgid "Upgrade to Dynamic Gallery Pro"
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:474
-msgid "PRO UPGRADE FEATURES"
+msgid "Visit the"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:474
+msgid "a3rev website"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:474
+msgid "to see all the extra features the Pro version of this plugin offers like"
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:477
@@ -284,67 +292,107 @@ msgid "Option to Deactivate the Gallery on any Single product page - default WP 
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:483
-msgid "See the Pro version on the"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:483
-msgid "A3 market place"
+msgid "Plugin Documentation"
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:484
-msgid "Go Pro and help us help you."
+msgid "All of our plugins have comprehensive online documentation. Please refer to the plugins docs before raising a support request"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:484
+msgid "Visit the a3rev wiki."
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:485
-msgid "Your small once only Pro upgrade license fee help fund and support the maintenance and ongoing development of this plugin"
+msgid "More a3rev Quality Plugins"
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:486
-msgid "More quality WP e-Commerce Plugins from A3 Rev"
+msgid "Below is a list of the a3rev plugins that are available for free download from wordpress.org"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:489
-msgid "WP e-Commerce Catalog Visibility and Email Inquiry"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:490
-msgid "WP e-Commerce Grid View"
+#: admin/class-wpsc-dynamic-gallery-admin.php:488
+msgid "WP e-Commerce Plugins"
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:491
-msgid "WP e-Commerce Predictive Search"
+msgid "WP e-Commerce Dynamic Gallery"
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:492
-msgid "WP e-Commerce Compare Products"
+msgid "WP e-Commerce Predictive Search"
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:493
-msgid "WP e-Commerce Email Template"
+msgid "WP e-Commerce Compare Products"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:496
-msgid "Spreading the Word about this plugin."
+#: admin/class-wpsc-dynamic-gallery-admin.php:494
+msgid "WP e-Commerce Catalog Visibility & Email Inquiry"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:497
-msgid "Things you can do to help others find this plugin"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:499
-msgid "Rate this plugin 5"
+#: admin/class-wpsc-dynamic-gallery-admin.php:495
+msgid "WP e-Commerce Grid View"
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:499
-msgid "on WordPress.org"
+msgid "WordPress Plugins"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:500
-msgid "Write about it in your blog"
+#: admin/class-wpsc-dynamic-gallery-admin.php:502
+msgid "WordPress Email Template"
 msgstr ""
 
 #: admin/class-wpsc-dynamic-gallery-admin.php:503
-msgid "Thank you for your support!"
+msgid "Page View Count"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:507
+msgid "WooCommerce Plugins"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:510
+msgid "WooCommerce Dynamic Products Gallery"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:511
+msgid "WooCommerce Predictive Search"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:512
+msgid "WooCommerce Compare Products"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:513
+msgid "WooCommerce Widget Product Slideshow"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:514
+msgid "WooCommerce Email Inquiry & Cart Options"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:514
+msgid " - Pro Version only from a3rev"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:518
+msgid "Help spread the Word about this plugin"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:519
+msgid "Things you can do to help others find this plugin"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:521
+msgid "Rate this plugin 5"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:521
+msgid "on WordPress.org"
+msgstr ""
+
+#: admin/class-wpsc-dynamic-gallery-admin.php:522
+msgid "Mark the plugin as a fourite"
 msgstr ""
 
 #: classes/class-wpsc-dynamic-gallery-display.php:331

@@ -1,8 +1,9 @@
 <?php
 /*
 Plugin Name: WP e-Commerce Dynamic Gallery LITE
+Plugin URI: http://a3rev.com/shop/wp-e-commerce-dynamic-gallery/
 Description: Bring your product pages and presentation alive with WP e-Commerce Dynamic Gallery. Simply and Beautifully.
-Version: 1.0.6
+Version: 1.0.7
 Author: A3 Revolution
 Author URI: http://www.a3rev.com/
 License: GPLv2 or later
@@ -17,13 +18,6 @@ License: GPLv2 or later
 	PO Box 1170
 	Gympie 4570
 	QLD Australia
-*/
-
-/*
-== Changelog ==
-
-= 1.0.0 - 16/07/2012 =
-* First working release of the modification
 */
 ?>
 <?php

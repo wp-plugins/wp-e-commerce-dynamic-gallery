@@ -108,7 +108,7 @@ class WPSC_Dynamic_Gallery_Hook_Filter {
 				'input' => 'html',
 				'html' =>  $html,
 				'value' => '',
-				'helps' => __('Enabling this option will hide it from the product page image gallery. If assigned to variations below the image will show when option is selected. (Show Product Variations in Gallery is a', 'wpsc_dgallery').' <a href="http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/" target="_blank">'.__('Pro Version', 'wpsc_dgallery').'</a> '.__('only feature', 'wpsc_dgallery').')'
+				'helps' => __('Enabling this option will hide it from the product page image gallery. If assigned to variations below the image will show when option is selected. (Show Product Variations in Gallery is a', 'wpsc_dgallery').' <a href="http://a3rev.com/shop/wp-e-commerce-dynamic-gallery/" target="_blank">'.__('Pro Version', 'wpsc_dgallery').'</a> '.__('only feature', 'wpsc_dgallery').')'
 		);
 		
 		return $form_fields;
@@ -173,7 +173,7 @@ class WPSC_Dynamic_Gallery_Hook_Filter {
 			return $links;
 		}
 		$links[] = '<a href="http://docs.a3rev.com/user-guides/wp-e-commerce/wpec-dynamic-gallery/" target="_blank">'.__('Documentation', 'wpsc_dgallery').'</a>';
-		$links[] = '<a href="http://a3rev.com/products-page/wp-e-commerce/wp-e-commerce-dynamic-gallery/#help" target="_blank">'.__('Support', 'wpsc_dgallery').'</a>';
+		$links[] = '<a href="http://a3rev.com/shop/wp-e-commerce-dynamic-gallery/#tab-reviews" target="_blank">'.__('Support', 'wpsc_dgallery').'</a>';
 		return $links;
 	}
 }
