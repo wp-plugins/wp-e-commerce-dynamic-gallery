@@ -248,6 +248,12 @@ class WPSC_Settings_Tab_Gallery_Settings {
             </td>
 		  </tr>
           <tr>
+		    <th scope="row"><label for="dynamic_gallery_stop_scroll_1image"><?php _e('Single Image Transition', 'wpsc_dgallery');?></label></th>
+		    <td>
+              <input type="checkbox" disabled="disabled" value="yes" id="dynamic_gallery_stop_scroll_1image" name="dynamic_gallery_stop_scroll_1image"> <span class="description"><?php _e('Check to auto deactivate image transition effect when only 1 image is loaded to gallery.', 'wpsc_dgallery');?></span>
+            </td>
+		  </tr>
+          <tr>
 		    <th scope="row"><?php _e('Image background colour', 'wpsc_dgallery');?>	</th>
 		    <td><input type="text" class="colorpick" value="<?php echo get_option('bg_image_wrapper');?>" style="width: 7em;" id="bg_image_wrapper" name="bg_image_wrapper" disabled="disabled" /> <span class="description"><?php _e('Gallery image background colour.', 'wpsc_dgallery');?> <?php _e('Default', 'wpsc_dgallery');?> <code>#FFFFFF</code>.</span>
             <div id="colorPickerDiv_bg_image_wrapper" class="colorpickdiv" style="z-index: 100;background:#eee;border:1px solid #ccc;position:absolute;display:none;"></div>
@@ -265,6 +271,7 @@ class WPSC_Settings_Tab_Gallery_Settings {
               <select class="" style="width:7em;" id="popup_gallery" name="popup_gallery" disabled="disabled">
                 <option <?php if(get_option('popup_gallery') == 'fb'){ echo 'selected="selected" ';} ?>value="fb"><?php _e('Fancybox', 'wpsc_dgallery');?></option>
                 <option <?php if(get_option('popup_gallery') == 'lb'){ echo 'selected="selected" ';} ?>value="lb"><?php _e('Lightbox', 'wpsc_dgallery');?></option>
+                <option <?php if(get_option('popup_gallery') == 'deactivate'){ echo 'selected="selected" ';} ?>value="deactivate"><?php _e('Deactivate', 'wpsc_dgallery');?></option>
               </select>
             </td>
 		  </tr>
