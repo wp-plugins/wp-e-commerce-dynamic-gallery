@@ -436,6 +436,10 @@ class WPSC_Settings_Tab_Gallery_Settings {
 		    <th scope="row"><?php _e('Show thumbnails', 'wpsc_dgallery');?>	</th>
 		    <td><input type="checkbox" <?php if( get_option('enable_gallery_thumb') == 'yes' ){echo 'checked="checked" ';}?>value="yes" id="enable_gallery_thumb" name="enable_gallery_thumb" disabled="disabled" /> <span class="description"><?php _e('Enable thumbnail gallery', 'wpsc_dgallery');?></span></td>
 		  </tr>
+          <tr>
+		    <th scope="row"><?php _e('Single Image Thumbnail', 'wpsc_dgallery');?>	</th>
+		    <td><input type="checkbox" <?php if( get_option('dynamic_gallery_hide_thumb_1image') == 'yes' ){echo 'checked="checked" ';}?>value="yes" id="dynamic_gallery_hide_thumb_1image" name="dynamic_gallery_hide_thumb_1image" disabled="disabled" /> <span class="description"><?php _e("Check to hide thumbnail when only 1 image is loaded to gallery.", 'wpsc_dgallery');?></span></td>
+		  </tr>
         </table>
         </div></div>
         </td></tr></table>
