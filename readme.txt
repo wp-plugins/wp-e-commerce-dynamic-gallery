@@ -3,7 +3,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, e-commerce,  wordpress ecommerce
 Requires at least: 3.3
 Tested up to: 3.5
-Stable tag: 1.0.8
+Stable tag: 1.0.8.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -123,6 +123,11 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 Support and access to this plugin documents are available from the [HELP tab](http://a3rev.com/shop/wp-e-commerce-dynamic-gallery/#tab-reviews) on the Pro Versions Home page.
 
 == Changelog ==
+
+= 1.0.8.1 - 2013/02/13 =
+
+* Fixed: The Flat Rate Shipping work for single product when the gallery is activated.
+
 
 = 1.0.8 - 2013/01/23 =
 
