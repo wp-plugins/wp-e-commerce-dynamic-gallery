@@ -522,7 +522,7 @@ class WPSC_Settings_Tab_Gallery_Settings {
 		$html .= '<li>* <a href="http://wordpress.org/extend/plugins/woocommerce-predictive-search/" target="_blank">'.__('WooCommerce Predictive Search', 'wpsc_dgallery').'</a></li>';
 		$html .= '<li>* <a href="http://wordpress.org/extend/plugins/woocommerce-compare-products/" target="_blank">'.__('WooCommerce Compare Products', 'wpsc_dgallery').'</a></li>';
 		$html .= '<li>* <a href="http://wordpress.org/extend/plugins/woo-widget-product-slideshow/" target="_blank">'.__('WooCommerce Widget Product Slideshow', 'wpsc_dgallery').'</a></li>';
-		$html .= '<li>* <a href="http://a3rev.com/shop/woocommerce-email-inquiry-and-cart-options/" target="_blank">'.__('WooCommerce Email Inquiry & Cart Options', 'wpsc_dgallery').'</a>'.__(' - Pro Version only from a3rev', 'wpsc_dgallery').'</li>';
+		$html .= '<li>* <a href="http://wordpress.org/extend/plugins/woocommerce-email-inquiry-cart-options/" target="_blank">'.__('WooCommerce Email Inquiry & Cart Options', 'wpsc_dgallery').'</a></li>';
 		$html .= '</ul>';
 		$html .= '</p>';
 		
