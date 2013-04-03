@@ -2,8 +2,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, e-commerce,  wordpress ecommerce
 Requires at least: 3.3
-Tested up to: 3.5
-Stable tag: 1.0.8.1
+Tested up to: 3.5.1
+Stable tag: 1.1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,6 +16,8 @@ As soon as you install WP e-Commerce Dynamic Gallery it <strong>brings your stor
 = Key Features =
 
 * Instantly adds a scrolling gallery to every product page and adds all product images each gallery
+* Dynamic product image Gallery that displays beautifully in Firefox, Safari, Chrome and Opera on Apple OS X and on Widows XP to Windows 8 in IE7 to IE10.
+* Full mobile device oprimization for IOS mobile Safari - all iPads and iPhones, Android Browser all Tablets and mobiles and Opera Mobile all tablets and mobiles.
 * Gallery scales images to fit inside the container no matter what the size or shape.
 * Search Engine friendly images. Image Alt tags if set are visible to search engines
 * On-page meta Gallery easy manager greatly simplifies product image editing and gallery management.
@@ -27,27 +29,29 @@ As soon as you install WP e-Commerce Dynamic Gallery it <strong>brings your stor
 * START SLIDE SHOW | STOP SLIDESHOW control
 * Gallery thumbnails scroll left and right on hover.
 
+= Support =
+
+If you have any problem with setting up the Free lite version please post your support request here on the WordPress support forum. PLEASE if you have a problem DO NOT just give the plugin a bad star rating and review without first requesting support. Giving the plugin a bagging without affording us the opportunity to help solve the issue is in our opinion just incredibly unfair.
+
+Once you have the plugin installed and activated please refer to the plugins [comprehensive Online Documentation](http://docs.a3rev.com/user-guides/wp-e-commerce/wpec-dynamic-gallery/) and guide to setting up the WP e-Commerce Dynamic Gallery plugin on your WP e-Commerce store. If you have questions - again please post them to the support forum here.
+
 = Premium Upgrade =
 
-The Premium Gallery upgrade unlocks a host of great premium features. You will see all of the available upgrade features on the plugins admin panel. Those Pro features include:
+When you install WP e-Commerce Dynamic Gallery you will see on the admin panel all of the added functionality that the PRO Version offers. The plugin is designed so that upgrading is completely seamless. Nothing changes except all the features of WP e-Commerce Dynamic Gallery that you see on the Lite version are activated. Many thousands of WP e-Commerce store owners find the Free version has all the features that they need and never upgrade. If you find you want the added features and functionality that you see below and on the plugins dashboard you can upgrade at any time, completely risk free.
 
-* <strong>Show Multiple Product Variation images in gallery</strong> 
-
-Ever wished that on your products that have variations - that when users select an Option that the Variation image would just auto show in the image gallery? That is right - if they select a Blue Shirt with short sleeves in size large they can see that Large Blue Short Sleeve shirt in the image gallery or Green or Red or Black - whatever it is they want to see. .Well now they can with this brand new feature we have added to the Dynamic gallery. 
-
-Check this incredible new Pro Version feature out on our <strong>[DEMO SITE](http://wpeccompare.a3dev.net/products-page/clothes/plain-t-shirt)</strong>
-
+* The Only WP e-Commerce Product gallery that shows Variation images in gallery when the variation or combination of variations is selected by user.
+* Check this incredible new Pro Version feature out on our <strong>[DEMO SITE](http://wpeccompare.a3dev.net/products-page/clothes/plain-t-shirt)</strong>
 * Responsive Gallery option. Set gallery wide to % and it becomes fully responsive image product gallery including the image zoom pop up.
+* Meet all customers needs and sell more - works beautifully on PCs, laptops, tablets and mobiles.
+* When variations are created they auto show on the Gallery Image Manager. Allows you to upload images using the WordPress media uploader or Dynamic Gallery image uploader and assign images to variations or variation sets. Makes handling variation images very quick and easy. Users see Product variation images in gallery as they select options. Variation Product Images auto show in gallery as user selects variations, including caption text
 * Option to turn the Gallery off on single product pages. If you only have 1 image on some product pages and don't want the Gallery, just turn it off for that product.
-* Activate these 25 different feature options to create that perfect Gallery to match your theme and your style and present your Product images in the perfect mode.
+* Completely Customize the look and feel of your product page Dynamic Gallery without writing a single line of code. Featuring 25 different WYSIWYG options to style your gallery.
         
- - Image Gallery - 7 Options plus 4 different transition effects.
- - Caption - 5 Options plus topography editor.
- - Nav Bar - 7 Option including, disable / enable plus full topography editor.
- - Lazy-Load scroll bar - 2 Options including enable / disable.
- - Thumbnails - 4 Options including enable, disable.
-
-Having an image with your products creates more sales. WP e-Commerce Dynamic Gallery allows you to show an unlimited number of images - it shows one image or lots of images in a beautiful and dynamic presentation.  
+ - Image Gallery - 7 Custom Options - Auto Start, Image transition timing, Transition effects (5 available effects), Transition effect speed, Gallery main image background colour, Border Colour, Gallery pop-up tool.
+ - Caption Text - 5 Options - Font type (17 Web browser friendly fonts), Font size, Font styler, Font Colour and caption background colour.
+ - Nav Bar - 7 Option - Activate / Deactivate, Font type (17 Web browser friendly fonts), Font size, Font styler, Font Colour, Nav bar background colour, Nav bar tall.
+ - Lazy-Load scroll bar - 2 Options - Activate / Deactivate, Scroll Bar Colour
+ - Thumbnails - 4 Options - Activate / Deactivate, thumbnail wide. thumbnail tall and spacing between thumbnails.  
 
 = Gold Cart Compatability =
 
@@ -60,6 +64,7 @@ WP e-Commerce Dynamic Gallery is 100% compatabile with [WP e-Commerce Grid View]
 = Localization =
 
 English (default) - always include.
+
 .po file (wpsc_dgallery.po) in languages folder for translations.
 If you do a translation of this plugin for your site [please send it to us](http://a3rev.com/contact/) for inclusion in the plugins language folder. We'll acknowledge your work and link to your site. 
 
@@ -67,8 +72,7 @@ If you do a translation of this plugin for your site [please send it to us](http
 
 [Pro Upgrade](http://a3rev.com/shop/wp-e-commerce-dynamic-gallery/) |
 [Plugin Documentation](http://docs.a3rev.com/user-guides/wp-e-commerce/wpec-dynamic-gallery/) |
-[Support](http://a3rev.com/shop/wp-e-commerce-dynamic-gallery/#tab-reviews)
-
+ 
 == Installation ==
 
 = Minimum Requirements =
@@ -97,6 +101,8 @@ The manual installation method involves downloading our plugin and uploading it 
 2. WP e-Commerce Dynamic Gallery activated admin settings (cut down view)
 3. WP e-Commerce Dynamic Gallery on-page Gallery Image easy manager
 4. WP e-Commerce Dynamic Gallery image editor - Add Caption text and exclude images from gallery feature.
+5. Optimized in all major legacy browsers.
+6. Optimized for IOS, Android and Opera mobile platforms.
 
 == Usage ==
 
@@ -124,40 +130,44 @@ Support and access to this plugin documents are available from the [HELP tab](ht
 
 == Changelog ==
 
-= 1.0.8.1 - 2013/02/13 =
+= 1.1.1 - 2013/04/04 =
+* Fixed: Long standing issue with Gallery main image not showing in bespoke themes in Windows 7 and Widows 8 with IE browsers 8.0, 9.0, 10.0 and 10.0 Desktop. Many thanks to Nemanja from the Art Binaire Team for providing the solution.
+* Feature: The above fixed allowed us to complete full Gallery Optimization in Windows XP, IE 7, IE8, Windows 7, IE8 and IE9 and Windows 8, IE10 and IE10 Desktop. 
+* Feature: Full Gallery test and optimization for  all 3 Windows operating systems - for these legacy browsers - Firefox, Safari, Chrome and Opera.
+* Feature: Fully Gallery test and optimization for Apple OS X operating systems. Snow leopard, Lion and Mountain Lion using these legacy Browsers - Firefox, Safari, Chrome and Opera
+* Feature: Full Gallery test and optimization for Apple IOS Mobile Safari in iPhones and all iPads.
+* Feature: Fully Gallery test and optimization for Android Browser on all models of these manufacturers tablets that use the Android operating system - Amazon Kindle Fire, Google Nexus 7, Samsung Galaxy Note, Samsung Galaxy Tab 2
+* Feature: Fully Gallery test and optimization for Android Browser on all models of these manufacturers phone that use the Android operating system (to many to list)  mobile phones that support - Samsung Galaxy, Motorola, HTC, Sony and LG
+* Feature: Full Gallery test and optimization for Opera Mobile - Samsung Galaxy Tablet and Mobiles HTC Wildfire. Nokia 5800, Samsung Galaxy S II, Motorola Droid X and Motorola Atrix 4G  
+* Fixed: Conflict with Chrome browser add on AdBlocker. Chrome extension Adblocker was hiding the gallery class name ad-images which was causing the main gallery images not to show. Edited style so now gallery shows with that add-on activated.
+* Fixed: Bug for users who have https: (SSL) on their sites wp-admin but have http on sites front end. This was causing a -1 to show in the Gallery Container instead of the current image because wp-admin with SSL applied only allows https:, but the url of admin-ajax.php is http: and it is denied hence returning the ajax -1 error. Fixed by writing a filter to recognize when https is configured on wp-admin  and parsing correctly. If you do not have this configuration nothing changes for you, if you do have https on your wp-admin (or install it in the future) and http on the front end then Dynamic Gallery will automatically detect that and works as it should.  
+* Tweak: Jumped version from 1.0.8.1 to 1.1.0 to keep in synch with the Pro Version.
 
+= 1.0.8.1 - 2013/02/13 =
 * Fixed: The Flat Rate Shipping work for single product when the gallery is activated.
 
-
 = 1.0.8 - 2013/01/23 =
-
 * Feature: Massive 2 times improvement in gallery image load times. Reworked the way that the Gallery image thumbnails are loaded with a resulting doubling of loading speed.
-* Tweak: Tested gallery on default WordPress Twenty Twelve  theme for 100% compatibility in Fire Fox, Google Chrome, Safari, IE8  , IE9, ios5, ios6 and Android.
-= 1.0.7 - 2013/01/09 =
+* Tweak: Tested gallery on default WordPress Twenty Twelve  theme for 100% compatibility in Fire Fox, Google Chrome, Safari, IE8  , IE9, ios5, ios6 and Android.
 
+= 1.0.7 - 2013/01/09 =
 * Tweak: Updated Support and Pro Version link URL's on wordpress.org description, plugins and plugins dashboard. Links were returning 404 errors since the launch of the all new a3rev.com mobile responsive site as the base e-commerce permalinks is changed.
 
-
 = 1.0.6 - 2012/11/23 =
-
 * Feature: Dynamic Gallery now only recognizes image formats .jpg, .jpeg, .gif, .png. It won't recognize another file and won't show in gallery, or on Image gallery manager meta box. Mean that files like PDF's can be uploaded and the gallery does not show them or on the Pro version create variations for them in the pop up image manager.
 * Feature: PRO version now supports WPMU - Pro Version Single License now works on any domain or sub domain that the Plugin is installed on with the WPMU environment. Note it only works on 1. WPMU license option coming soon.
 * Feature: Added 'Apply to All' option on Gallery Image manager pop-up - this feature allows PRO Version user to Apply all variations in a set to the selected image with one click - Thanks to Shawn for the feedback and the idea.
 
 = 1.0.5 - 2012/11/01 =
-
 * Tweak - Added Thumbnail help text warning not to set width and height to '0' empty as it causes a <division by 0> error message to show instead to the Gallery.
 * Upgrade - Tested Gallery compatibility with WP e-Commerce new release Version 3.8.9 and made a few tweaks.
 * Upgrade - Code upgrade with new PRO Version Variation Products Image manager to allow for seamless upgrade from lite to Pro version.
 
 = 1.0.4.1 -2012/10/30 =
-
 * Fixed: Fatal error: Class 'WPSC_Settings_Tab_Gallery_Settings' not found in /wp-content/plugins/wp-e-commerce-dynamic-gallery/admin/wpsc-dynamic-gallery-admin.php on line 61
 
 = 1.0.4 -2012/10/28 =
-
 MAJOR OVERHAUL & FEATURE UPGRADE
-
 * Fixed: Single image click zoom function. The current image now opens when Zoom or the image is clicked.
 * Fixed: Stopped Lazy load scrolling on Gallery initial load for auto start (Lite and Pro Versions) and when Auto Start not activated on Pro Version. Now the Lazy load scroll only starts when transition to second image in the Gallery starts.
 * Fixed: Lazy Load scroll duration now sync with and set by the transition effect speed setting (Lite and Pro Versions).
@@ -171,11 +181,8 @@ MAJOR OVERHAUL & FEATURE UPGRADE
 * Tweak: Updated WordPress plugin description.
 
 = 1.0.3 - 2012/09/10 =
-
-
 * Fixed: Gold Cart Plugin conflict that prevented the Gallery from showing on single products pages when Dynamic gallery plugin is installed.
 * Fixed: Gold Cart plugin compatability. When WP e-Commerce Dymanic Gallery is installed first and Gold Cart Plugin is installed or activated after it was causing the fatal error 'Cannot redeclare gold_shpcrt_display_gallery()' .
-
 * Feature: Added Lite version 100% 'Gold cart' plugin compatibility.
 
 = 1.0.2 - 2012/09/05 =

@@ -156,7 +156,7 @@ class WPSC_Dynamic_Gallery_Hook_Filter {
 			jQuery(window).load(function(){
 				var container_image = jQuery('.single_product_display .imagecol');
 				container_image.html('<div style=\'display: block; width: 100%; height: 16px; text-align: center; position: absolute; top: 48%;\'><img src=\'".WPSC_DYNAMIC_GALLERY_JS_URL."/mygallery/ajax-loader.gif\' style=\'width:16px !important;height:16px !important;margin:auto !important;padding:0 !important;border:0 !important;\' /></div>').css('position','relative').css('width','".$g_width."px').css('min-height','".$g_height."px');
-				jQuery.post('".admin_url('admin-ajax.php')."?security=".$wpsc_dynamic_gallery_frontend."&action=wpsc_dynamic_gallery_frontend&product_id=".$post->ID."', function(data) {
+				jQuery.post('".( ( is_ssl() || force_ssl_admin() || force_ssl_login() ) ? str_replace( 'http:', 'https:', admin_url( 'admin-ajax.php' ) ) : str_replace( 'https:', 'http:', admin_url( 'admin-ajax.php' ) ) )."?security=".$wpsc_dynamic_gallery_frontend."&action=wpsc_dynamic_gallery_frontend&product_id=".$post->ID."', function(data) {
 					container_image.html(data);
 				});
 			});

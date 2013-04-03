@@ -470,7 +470,7 @@ class WPSC_Settings_Tab_Gallery_Settings {
         <h3><?php _e('Preview', 'wpsc_dgallery'); ?></h3>
 		<table class="form-table">
 		  <tr>
-		    <th scope="row" style="margin:0;padding:0"><a href="<?php echo admin_url("admin-ajax.php")?>?security=<?php echo $wpsc_dynamic_gallery;?>" class="preview_gallery"><?php _e('Click here to preview gallery', 'wpsc_dgallery');?></a></th>
+		    <th scope="row" style="margin:0;padding:0"><a href="<?php echo ( ( is_ssl() || force_ssl_admin() || force_ssl_login() ) ? str_replace( 'http:', 'https:', admin_url( 'admin-ajax.php' ) ) : str_replace( 'https:', 'http:', admin_url( 'admin-ajax.php' ) ) ); ?>?security=<?php echo $wpsc_dynamic_gallery;?>" class="preview_gallery"><?php _e('Click here to preview gallery', 'wpsc_dgallery');?></a></th>
 		  </tr>
           
 		</table>
