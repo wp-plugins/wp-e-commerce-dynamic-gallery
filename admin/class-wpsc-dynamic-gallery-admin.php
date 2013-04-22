@@ -128,7 +128,7 @@ class WPSC_Settings_Tab_Gallery_Settings {
 		return true;
 	}
 	public function is_update_message_displayed() {
-		if(isset($_REQUEST['updateoption'])){
+		if(isset($_REQUEST['wpsc-update-options'])){
 			$this->update_settings($_POST);
 			$this->wpsc_dynamic_gallery_set_setting(true, true);
 		}

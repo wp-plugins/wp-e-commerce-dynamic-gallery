@@ -3,7 +3,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, e-commerce,  wordpress ecommerce
 Requires at least: 3.3
 Tested up to: 3.5.1
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -130,6 +130,9 @@ Support and access to this plugin documents are available from the [HELP tab](ht
 
 == Changelog ==
 
+= 1.1.2 - 2013/04/22 =
+* Feature: Updated all plugin code to be 100% compatible with the new WP e-Commerce version 3.8.10. The plugin is backward compatible with older version to 3.8.5
+
 = 1.1.1 - 2013/04/04 =
 * Fixed: Long standing issue with Gallery main image not showing in bespoke themes in Windows 7 and Widows 8 with IE browsers 8.0, 9.0, 10.0 and 10.0 Desktop. Many thanks to Nemanja from the Art Binaire Team for providing the solution.
 * Feature: The above fixed allowed us to complete full Gallery Optimization in Windows XP, IE 7, IE8, Windows 7, IE8 and IE9 and Windows 8, IE10 and IE10 Desktop. 
@@ -201,4 +204,10 @@ MAJOR OVERHAUL & FEATURE UPGRADE
 * Fix: Thumbnails show after editing thumbnail settings in the Store > Dynamic Gallery tab.
 
 = 1.0 - 2012/07/18 =
-* Initial release. 
+* Initial release.
+
+
+== Upgrade Notice ==
+
+= 1.1.2 =
+Important upgrade! Install now to ensure this plugin continues to work when you upgrade WP e-Commerce to new version 3.8.10.
