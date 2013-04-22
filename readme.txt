@@ -133,6 +133,7 @@ Support and access to this plugin documents are available from the [HELP tab](ht
 = 1.1.2 - 2013/04/22 =
 * Feature: Updated all plugin code to be 100% compatible with the new WP e-Commerce version 3.8.10. The plugin is backward compatible with older version to 3.8.5
 
+
 = 1.1.1 - 2013/04/04 =
 * Fixed: Long standing issue with Gallery main image not showing in bespoke themes in Windows 7 and Widows 8 with IE browsers 8.0, 9.0, 10.0 and 10.0 Desktop. Many thanks to Nemanja from the Art Binaire Team for providing the solution.
 * Feature: The above fixed allowed us to complete full Gallery Optimization in Windows XP, IE 7, IE8, Windows 7, IE8 and IE9 and Windows 8, IE10 and IE10 Desktop. 
