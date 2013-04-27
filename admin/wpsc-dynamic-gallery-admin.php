@@ -1,13 +1,20 @@
 <?php
 function wpsc_dynamic_gallery_install(){
-	update_option('a3rev_wpsc_dgallery_version', '1.1.2');
+	update_option('a3rev_wpsc_dgallery_version', '1.1.3');
 	WPSC_Settings_Tab_Gallery_Settings::wpsc_dynamic_gallery_set_setting(true, true);
+	
+	update_option('a3rev_wpsc_dgallery_just_installed', true);
 }
 
 /**
  * Load languages file
  */
 function wpsc_dynamic_gallery_init() {
+	if ( get_option('a3rev_wpsc_dgallery_just_installed') ) {
+		delete_option('a3rev_wpsc_dgallery_just_installed');
+		wp_redirect( ( ( is_ssl() || force_ssl_admin() || force_ssl_login() ) ? str_replace( 'http:', 'https:', admin_url( 'options-general.php?page=wpsc-settings&tab=gallery_settings' ) ) : str_replace( 'https:', 'http:', admin_url( 'options-general.php?page=wpsc-settings&tab=gallery_settings' ) ) ) );
+		exit;
+	}
 	load_plugin_textdomain( 'wpsc_dgallery', false, WPSC_DYNAMIC_GALLERY_FOLDER.'/languages' );
 	$thumb_width = get_option('thumb_width');
 	$thumb_height = get_option('thumb_height');
@@ -67,5 +74,5 @@ if(version_compare(get_option('a3rev_wpsc_dgallery_version'), '1.0.4') === -1){
 	update_option('a3rev_wpsc_dgallery_version', '1.0.4');
 }
 
-update_option('a3rev_wpsc_dgallery_version', '1.1.2');
+update_option('a3rev_wpsc_dgallery_version', '1.1.3');
 ?>
