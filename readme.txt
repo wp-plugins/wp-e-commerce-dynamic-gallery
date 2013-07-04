@@ -1,9 +1,9 @@
 === WP e-Commerce Dynamic Gallery  ===
 Contributors: a3rev, A3 Revolution Software Development team
-Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, e-commerce,  wordpress ecommerce
+Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, WP e-commerce product images,  wordpress ecommerce
 Requires at least: 3.3
-Tested up to: 3.5.1
-Stable tag: 1.1.3
+Tested up to: 3.5.2
+Stable tag: 1.1.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -15,9 +15,9 @@ As soon as you install WP e-Commerce Dynamic Gallery it <strong>brings your stor
  
 = Key Features =
 
-* Instantly adds a scrolling gallery to every product page and adds all product images each gallery
+* Instantly adds a scrolling gallery to every product page.
+* Automatically shows every image in each product gallery that has been uploaded to the post (product).
 * Dynamic product image Gallery that displays beautifully in Firefox, Safari, Chrome and Opera on Apple OS X and on Widows XP to Windows 8 in IE7 to IE10.
-* Full mobile device oprimization for IOS mobile Safari - all iPads and iPhones, Android Browser all Tablets and mobiles and Opera Mobile all tablets and mobiles.
 * Gallery scales images to fit inside the container no matter what the size or shape.
 * Search Engine friendly images. Image Alt tags if set are visible to search engines
 * On-page meta Gallery easy manager greatly simplifies product image editing and gallery management.
@@ -29,48 +29,100 @@ As soon as you install WP e-Commerce Dynamic Gallery it <strong>brings your stor
 * START SLIDE SHOW | STOP SLIDESHOW control
 * Gallery thumbnails scroll left and right on hover.
 
-= Support =
+= Beautifully Lightweight Product Gallery =
 
-If you have any problem with setting up the Free lite version please post your support request here on the WordPress support forum. PLEASE if you have a problem DO NOT just give the plugin a bad star rating and review without first requesting support. Giving the plugin a bagging without affording us the opportunity to help solve the issue is in our opinion just incredibly unfair.
+WP e-Commerce Dynamic Gallery is a beautifully lightweight Product Gallery plugin that won't slow your site page load speed. Extensively road tested using the GoDaddy [P3 Plugin Performance Profiler](http://wordpress.org/plugins/p3-profiler/). We recommend you get and install this mighty plugin. You will soon get rid of any badly coded plugin that is slowing your site load speed. Cumulative testing of the Dynamic Gallery shows: 
 
-Once you have the plugin installed and activated please refer to the plugins [comprehensive Online Documentation](http://docs.a3rev.com/user-guides/wp-e-commerce/wpec-dynamic-gallery/) and guide to setting up the WP e-Commerce Dynamic Gallery plugin on your WP e-Commerce store. If you have questions - again please post them to the support forum here.
+* Dynamic Gallery (on a fully functional live store) average page load time is just 0.0155 seconds
 
-= Premium Upgrade =
+To give you an idea of how that compares here are some other results on the same site over a number tests
+* WordPress Core load time 0.1097 seconds
+* WP e-Commerce load time 0.1752 seconds.
+* WordPress SEO load time 0.031 seconds
+* Contact Form 7 load time 0.0148 seconds
 
-When you install WP e-Commerce Dynamic Gallery you will see on the admin panel all of the added functionality that the PRO Version offers. The plugin is designed so that upgrading is completely seamless. Nothing changes except all the features of WP e-Commerce Dynamic Gallery that you see on the Lite version are activated. Many thousands of WP e-Commerce store owners find the Free version has all the features that they need and never upgrade. If you find you want the added features and functionality that you see below and on the plugins dashboard you can upgrade at any time, completely risk free.
+= Plugin Security =
+
+At a3rev we take plugin security very seriously. This plugins code is hardened with all inputs sanitized and outputs escaped in accordance with the WordPress codex. We welcome security mined developers reviewing the code.
+
+= Trusted WordPress / WP e-Commerce Plugin Developers =
+
+We are one of only 12 [WP e-Commerce recommended developers](http://getshopped.org/consultant/) world wide. This plugins source code strictly adheres to the WordPress coding standards:
+
+* Source code written using consistent spacing, indenting, for ease of understanding and editing.
+* Namespacing with registered Class names and commenting. 
+* Where applicable all JavaScript uses the WordPress jQuery Lib
+* Functions use the WordPress API. 
+* Scripts enqueued and only called when and where needed (Key to optimizing plugin resource use and hence average load time)
+* Internationalization. Plugin includes language folder and coded ready for localization using poeditor (WordPress Codex)
+* Cleans Up After Itself. The plugin has an option which when set completely removes any and all code and tables it has created in your WordPress site.       
+
+= Documentation and Lite Version Support =
+
+Please refer to the plugins [comprehensive Online Documentation](http://docs.a3rev.com/user-guides/wp-e-commerce/wpec-dynamic-gallery/) for a guide to setting up and using the WP e-Commerce Dynamic Gallery plugin on your WP e-Commerce store. 
+
+If you have a support request post it here on the plugins [WordPress support forum](http://wordpress.org/plugins/wp-e-commerce-dynamic-gallery/). Please note that this Free Lite Version of the plugin has no support guarantee from us. The plugins Pro Version License includes guaranteed same day priority support.   
+
+
+= Pro Version Additional Functionality =
+
+This plugin features a Pro version upgrade that adds extra functionality. You will see all of the available upgrade features inside of the Yellow border areas on the Free Lite Version admin panel. Some of those advanced features include:
+
+= Product Variation Images =
 
 * The Only WP e-Commerce Product gallery that shows Variation images in gallery when the variation or combination of variations is selected by user.
 * Check this incredible new Pro Version feature out on our <strong>[DEMO SITE](http://wpeccompare.a3dev.net/products-page/clothes/plain-t-shirt)</strong>
+* Front end Users see Product variation images in gallery as they select options.
+* Show Multiple images per variation. 
+* Exclude Variation images from main gallery Ð only show when variation is selected.
+* When variations are created they auto show on the Gallery Image Manager.
+* Upload images using the WordPress media uploader or Dynamic Gallery image uploader and assign images to variations or variation sets. 
+* Makes handling variation images very quick and easy. 
+
+= Responsive Ð All Browsers and Mobiles =
+
 * Responsive Gallery option. Set gallery wide to % and it becomes fully responsive image product gallery including the image zoom pop up.
 * Meet all customers needs and sell more - works beautifully on PCs, laptops, tablets and mobiles.
-* When variations are created they auto show on the Gallery Image Manager. Allows you to upload images using the WordPress media uploader or Dynamic Gallery image uploader and assign images to variations or variation sets. Makes handling variation images very quick and easy. Users see Product variation images in gallery as they select options. Variation Product Images auto show in gallery as user selects variations, including caption text
+
+= Product by Product Activation = 
+
 * Option to turn the Gallery off on single product pages. If you only have 1 image on some product pages and don't want the Gallery, just turn it off for that product.
-* Completely Customize the look and feel of your product page Dynamic Gallery without writing a single line of code. Featuring 25 different WYSIWYG options to style your gallery.
+* Global Enable / Disable of Gallery - including Global Custom Product activation reset.
+* Global Enable / Disable of Variations feature - including Global custom product variation reset.
+
+= Custom WYSIWYG Gallery Styling =
+
+* Completely Customize the look and feel of your product page Dynamic Gallery without writing a single line of code. 
+* Featuring 25 different WYSIWYG options to style your gallery.
         
  - Image Gallery - 7 Custom Options - Auto Start, Image transition timing, Transition effects (5 available effects), Transition effect speed, Gallery main image background colour, Border Colour, Gallery pop-up tool.
  - Caption Text - 5 Options - Font type (17 Web browser friendly fonts), Font size, Font styler, Font Colour and caption background colour.
  - Nav Bar - 7 Option - Activate / Deactivate, Font type (17 Web browser friendly fonts), Font size, Font styler, Font Colour, Nav bar background colour, Nav bar tall.
  - Lazy-Load scroll bar - 2 Options - Activate / Deactivate, Scroll Bar Colour
- - Thumbnails - 4 Options - Activate / Deactivate, thumbnail wide. thumbnail tall and spacing between thumbnails.  
+ - Thumbnails - 4 Options - Activate / Deactivate, thumbnail wide. thumbnail tall and spacing between thumbnails.
 
-= Gold Cart Compatability =
+= Same Day Priority Support =
+
+The Pro Version license not only adds extra functionality to the Dynamic Gallery but includes same day priority plugin support.   
+
+= Gold Cart Compatibility =
 
 WP e-Commerce Dynamic Gallery PRO and Lite are tested 100% compatible with the getshopped.org Premium 'Gold Cart' plugin.
 
-= 100% Grid View Compatabile =
+= 100% Grid View Compatible =
 
-WP e-Commerce Dynamic Gallery is 100% compatabile with [WP e-Commerce Grid View](http://wordpress.org/extend/plugins/wp-e-commerce-grid-view/)
+WP e-Commerce Dynamic Gallery is 100% compatible with [WP e-Commerce Grid View](http://wordpress.org/extend/plugins/wp-e-commerce-grid-view/)
 
 = Localization =
 
-English (default) - always include.
+* English (default) - always included.
+* .po file (wpsc_dgallery.po) in languages folder for translations.
 
-.po file (wpsc_dgallery.po) in languages folder for translations.
 If you do a translation of this plugin for your site [please send it to us](http://a3rev.com/contact/) for inclusion in the plugins language folder. We'll acknowledge your work and link to your site. 
 
 = Plugins Resources =
 
-[Pro Upgrade](http://a3rev.com/shop/wp-e-commerce-dynamic-gallery/) |
+[Pro Version Upgrade](http://a3rev.com/shop/wp-e-commerce-dynamic-gallery/) |
 [Plugin Documentation](http://docs.a3rev.com/user-guides/wp-e-commerce/wpec-dynamic-gallery/) |
  
 == Installation ==
@@ -89,7 +141,7 @@ In the search field type "WP e-Commerce Dynamic Gallery" and click Search Plugin
 
 = Manual installation =
 
-The manual installation method involves downloading our plugin and uploading it to your web server via your favorite FTP application.
+The manual installation method involves downloading our plugin and uploading it to your web server via your favourite FTP application.
 
 1. Download the plugin file to your computer and unzip it
 2. Using an FTP program, or your hosting control panel, upload the unzipped plugin folder to your WordPress installations wp-content/plugins/ directory.
@@ -124,18 +176,31 @@ The manual installation method involves downloading our plugin and uploading it 
 
 You can use this plugin only when you have installed the WP e-Commerce plugin.
  
-== Support ==
-
-Support and access to this plugin documents are available from the [HELP tab](http://a3rev.com/shop/wp-e-commerce-dynamic-gallery/#tab-reviews) on the Pro Versions Home page.
-
 == Changelog ==
+
+= 1.1.4 - 2013/07/04 =
+* Features :
+	* Complete UI overhaul and renovation of the plugins admin dashboard.
+	* Admin dashboard content broken up into sub nav tabs for ease of feature management. Gallery | Global Settings | Caption text | Nav Bar | Lazy-load scroll | Image Thumbnails
+	* Added Chosen script for beautiful dropdowns and options feature selection.
+	* Added House Keeping function to settings. Clean up on Deletion. Option - Choose if you ever delete this plugin it will completely remove all code and tables it has created, (not product images) leaving no trace it was ever here. Added to Global Settings sub tab.   
+  
+* Tweaks :
+	* Replaced all global option keys with plugin registered prefix wpsc_dgallery to prevent other plugins conflicting with input options.
+	* Comprehensive line by line review and tidy up of the plugins source code.
+	* Ran full WP_DEBUG All Uncaught exceptions errors and warnings fixed.
+	* Added PHP Public Static to functions in Class. Done so that PHP Public Static warnings don't show in DE_BUG mode.
+	* Updated the plugins support links to the plugins WordPress support forum.
+	* Updated the plugins WordPress description.
+
+* Fixes :
+	* Fixed not divisible by zero error message that showed when 0 value entered or for thumbnail wide and tall. Updated feature help text. 
 
 = 1.1.3 - 2013/04/26 =
 * Feature: Added when install and activate plugin link redirects to WP e-Commerce Gallery admin panel instead of the wp-plugins dashboard.
 
 = 1.1.2 - 2013/04/22 =
 * Feature: Updated all plugin code to be 100% compatible with the new WP e-Commerce version 3.8.10. The plugin is backward compatible with older version to 3.8.5
-
 
 = 1.1.1 - 2013/04/04 =
 * Fixed: Long standing issue with Gallery main image not showing in bespoke themes in Windows 7 and Widows 8 with IE browsers 8.0, 9.0, 10.0 and 10.0 Desktop. Many thanks to Nemanja from the Art Binaire Team for providing the solution.
@@ -189,7 +254,7 @@ MAJOR OVERHAUL & FEATURE UPGRADE
 
 = 1.0.3 - 2012/09/10 =
 * Fixed: Gold Cart Plugin conflict that prevented the Gallery from showing on single products pages when Dynamic gallery plugin is installed.
-* Fixed: Gold Cart plugin compatability. When WP e-Commerce Dymanic Gallery is installed first and Gold Cart Plugin is installed or activated after it was causing the fatal error 'Cannot redeclare gold_shpcrt_display_gallery()' .
+* Fixed: Gold Cart plugin compatibility. When WP e-Commerce Dymanic Gallery is installed first and Gold Cart Plugin is installed or activated after it was causing the fatal error 'Cannot redeclare gold_shpcrt_display_gallery()' .
 * Feature: Added Lite version 100% 'Gold cart' plugin compatibility.
 
 = 1.0.2 - 2012/09/05 =
@@ -212,6 +277,9 @@ MAJOR OVERHAUL & FEATURE UPGRADE
 
 
 == Upgrade Notice ==
+
+= 1.1.4 =
+Comprehensive review and upgrade of source code. All new admin panel interface, 3 brand new features, 1 bug fix - Update and upgrade your plugin now.
 
 = 1.1.3 =
 Install this upgrade for vastly improved UX when activating the plugin.

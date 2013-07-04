@@ -7,74 +7,86 @@
  *
  * wpsc_dynamic_gallery_preview()
  */
-class WPSC_Dynamic_Gallery_Preview_Display {
+class WPSC_Dynamic_Gallery_Preview_Display
+{
 	
-	function wpsc_dynamic_gallery_preview($request = ''){
+	public static function wpsc_dynamic_gallery_preview( $request = '' ) {
 		/**
 		 * Single Product Image
 		 */
 		$lightbox_class = 'lightbox';
+		global $wpsc_dgallery_container_settings, $wpsc_dgallery_global_settings, $wpsc_dgallery_caption_settings, $wpsc_dgallery_navbar_settings, $wpsc_dgallery_lazyload_settings, $wpsc_dgallery_thumbnail_settings;
+		
+		$wpsc_dgallery_container_settings_live = $request['wpsc_dgallery_container_settings'];
+		$wpsc_dgallery_thumbnail_settings_live = $request['wpsc_dgallery_thumbnail_settings'];
+		
 		?>
-        <div class="images" style="width:<?php echo $request['product_gallery_width'].'px';?>;margin:30px auto;">
+        <div class="images" style="width:<?php echo $wpsc_dgallery_container_settings['product_gallery_width'].'px';?>;margin:30px auto;">
           <div class="product_gallery">
             <?php
 			//Gallery settings
-            $g_width = $request['product_gallery_width'];
-            $g_height = $request['product_gallery_height'];
+            $g_width = $wpsc_dgallery_container_settings_live['product_gallery_width'];
+            $g_height = $wpsc_dgallery_container_settings_live['product_gallery_height'];
 			
-			$g_auto = get_option('product_gallery_auto_start');
-			$g_speed = get_option('product_gallery_speed');
-			$g_effect = get_option('product_gallery_effect');
-			$g_animation_speed = get_option('product_gallery_animation_speed');
-			$bg_image_wrapper = get_option('bg_image_wrapper');
-			$border_image_wrapper_color = get_option('border_image_wrapper_color');
-			$popup_gallery = get_option('popup_gallery');
-				
+			$g_auto = $wpsc_dgallery_container_settings['product_gallery_auto_start'];
+            $g_speed = $wpsc_dgallery_container_settings['product_gallery_speed'];
+            $g_effect = $wpsc_dgallery_container_settings['product_gallery_effect'];
+            $g_animation_speed = $wpsc_dgallery_container_settings['product_gallery_animation_speed'];
+			$bg_image_wrapper = $wpsc_dgallery_container_settings['bg_image_wrapper'];
+			$border_image_wrapper_color = $wpsc_dgallery_container_settings['border_image_wrapper_color'];
+			$popup_gallery = $wpsc_dgallery_global_settings['popup_gallery'];
+			
 			//Caption text settings
-			$caption_font = htmlspecialchars_decode( get_option('caption_font') );
-			$caption_font_size = get_option('caption_font_size');
-			$caption_font_style = get_option('caption_font_style');
-			$product_gallery_text_color = get_option('product_gallery_text_color');
-			$product_gallery_bg_des = get_option('product_gallery_bg_des');
-			$bg_des = WPSC_Dynamic_Gallery_Display_Class::html2rgb($product_gallery_bg_des,true);
+			$caption_font = htmlspecialchars_decode( $wpsc_dgallery_caption_settings['caption_font'] );
+			$caption_font_size = $wpsc_dgallery_caption_settings['caption_font_size'];
+			$caption_font_style = $wpsc_dgallery_caption_settings['caption_font_style'];
+			$product_gallery_text_color = $wpsc_dgallery_caption_settings['product_gallery_text_color'];
+			$product_gallery_bg_des = $wpsc_dgallery_caption_settings['product_gallery_bg_des'];
+			$bg_des = WPSC_Dynamic_Gallery_Functions::html2rgb($product_gallery_bg_des,true);
 			$des_background =str_replace('#','',$product_gallery_bg_des);
-				
+			
 			//Nav bar settings
-			if(get_option('product_gallery_nav') == 'yes'){
-				$product_gallery_nav = get_option('product_gallery_nav');
-			}else{
+			if ( isset( $wpsc_dgallery_navbar_settings['product_gallery_nav'] ) ) {
+				$product_gallery_nav = $wpsc_dgallery_navbar_settings['product_gallery_nav'];
+			} else {
 				$product_gallery_nav = 'no';
 			}
-			$navbar_font = htmlspecialchars_decode (get_option('navbar_font'));
-			$navbar_font_size = get_option('navbar_font_size');
-			$navbar_font_style = get_option('navbar_font_style');
-			$bg_nav_color = get_option('bg_nav_color');
-			$bg_nav_text_color = get_option('bg_nav_text_color');
-			$navbar_height = get_option('navbar_height');
-			if($product_gallery_nav == 'yes'){
+			$navbar_font = htmlspecialchars_decode ($wpsc_dgallery_navbar_settings['navbar_font']);
+			$navbar_font_size = $wpsc_dgallery_navbar_settings['navbar_font_size'];
+			$navbar_font_style = $wpsc_dgallery_navbar_settings['navbar_font_style'];
+			$bg_nav_color = $wpsc_dgallery_navbar_settings['bg_nav_color'];
+			$bg_nav_text_color = $wpsc_dgallery_navbar_settings['bg_nav_text_color'];
+			$navbar_height = $wpsc_dgallery_navbar_settings['navbar_height'];
+			if ( $product_gallery_nav == 'yes' ) {
 				$display_ctrl = 'display:block !important;';
 				$mg = $navbar_height;
-				$ldm = $navbar_height;		
-			}else{
+				$ldm = $navbar_height;
+				
+			} else {
 				$display_ctrl = 'display:none !important;';
 				$mg = '0';
 				$ldm = '0';
 			}
-				
+			
 			//Lazy-load scroll settings
-			$transition_scroll_bar = get_option('transition_scroll_bar');
-			$lazy_load_scroll = get_option('lazy_load_scroll');
-				
-			//Image Thumbnails settings
-			if(get_option('enable_gallery_thumb') == 'yes'){
-				$enable_gallery_thumb = get_option('enable_gallery_thumb');
-			}else{
-				$enable_gallery_thumb = 'no';
+			$transition_scroll_bar = $wpsc_dgallery_lazyload_settings['transition_scroll_bar'];
+			if ( isset( $wpsc_dgallery_lazyload_settings['lazy_load_scroll'] ) ) {
+				$lazy_load_scroll = $wpsc_dgallery_lazyload_settings['lazy_load_scroll'];
+			} else {
+				$lazy_load_scroll = 'no';
 			}
 			
-            $g_thumb_width = $request['thumb_width'];
-            $g_thumb_height = $request['thumb_height'];
-            $g_thumb_spacing = $request['thumb_spacing'];
+			//Image Thumbnails settings
+			if (isset($wpsc_dgallery_thumbnail_settings['enable_gallery_thumb']) ) {
+				$enable_gallery_thumb = $wpsc_dgallery_thumbnail_settings['enable_gallery_thumb'];
+			} else{
+				$enable_gallery_thumb = 'no';
+			}
+            $g_thumb_width = $wpsc_dgallery_thumbnail_settings_live['thumb_width'];
+			if ( $g_thumb_width <= 0 ) $g_thumb_width = 105;
+            $g_thumb_height = $wpsc_dgallery_thumbnail_settings_live['thumb_height'];
+			if ( $g_thumb_height <= 0 ) $g_thumb_height = 75;
+            $g_thumb_spacing = $wpsc_dgallery_thumbnail_settings_live['thumb_spacing'];
                 
             $product_id = rand(10, 10000);
             echo '<style>
@@ -194,14 +206,14 @@ class WPSC_Dynamic_Gallery_Preview_Display {
 					border: 1px solid '.$border_image_wrapper_color.' !important;
 					padding-bottom:'.$mg.'px;
 				}';
-				if($lazy_load_scroll == 'yes'){
+				if ( $lazy_load_scroll == 'yes' ) {
 					echo '.ad-gallery .lazy-load{
 						background:'.$transition_scroll_bar.' !important;
 						top:'.($g_height + 9).'px !important;
 						opacity:1 !important;
 						margin-top:'.$ldm.'px !important;
 					}';
-				}else{
+				} else {
 					echo '.ad-gallery .lazy-load{display:none!important;}';
 				}
 				echo'
@@ -212,13 +224,13 @@ class WPSC_Dynamic_Gallery_Preview_Display {
 					height: '.($navbar_height-16).'px !important;
 					line-height: '.($navbar_height-16).'px !important;';
 					
-					if($navbar_font_style == 'bold'){
+					if ( $navbar_font_style == 'bold' ) {
 						echo 'font-weight:bold !important;';
-					}elseif($navbar_font_style == 'normal'){
+					} elseif ( $navbar_font_style == 'normal' ) {
 						echo 'font-weight:normal !important;';
-					}elseif($navbar_font_style == 'italic'){
+					} elseif ( $navbar_font_style == 'italic' ) {
 						echo 'font-style:italic !important;';
-					}elseif($navbar_font_style == 'bold_italic'){
+					} elseif ( $navbar_font_style == 'bold_italic' ) {
 						echo 'font-weight:bold !important;';
 						echo 'font-style:italic !important;';
 					}
@@ -251,11 +263,11 @@ class WPSC_Dynamic_Gallery_Preview_Display {
 					border: 1px solid '.$transition_scroll_bar.' !important;
 					/*border: 1px solid '.$bg_nav_color.' !important;*/
 				}';
-			if($enable_gallery_thumb == 'no'){
+			if ( $enable_gallery_thumb == 'no' ) {
 				echo '.ad-nav{display:none;}.woocommerce .images { margin-bottom: 15px;}';
 			}	
 			
-			if($product_gallery_nav == 'no'){
+			if ( $product_gallery_nav == 'no' ) {
 				echo '
 				.ad-image-wrapper:hover .slide-ctrl{display: block !important;}
 				.product_gallery .slide-ctrl {
@@ -275,9 +287,9 @@ class WPSC_Dynamic_Gallery_Preview_Display {
             
             echo '<script type="text/javascript">
                 jQuery(function() {
-                    var settings_defaults_'.$product_id.' = { loader_image: \''.WPSC_DYNAMIC_GALLERY_JS_URL.'/mygallery/loader.gif\',
+                    var settings_defaults_'.$product_id.' = { loader_image: "'.WPSC_DYNAMIC_GALLERY_JS_URL.'/mygallery/loader.gif",
                         start_at_index: 0,
-                        gallery_ID: \''.$product_id.'\',
+                        gallery_ID: "'.$product_id.'",
 						lightbox_class: "'.$lightbox_class.'",
                         description_wrapper: false,
                         thumb_opacity: 0.5,
@@ -287,7 +299,7 @@ class WPSC_Dynamic_Gallery_Preview_Display {
                         height: false,
                         display_next_and_prev: true,
                         display_back_and_forward: true,
-                        scroll_jump: 0, // If 0, it jumps the width of the container
+                        scroll_jump: 0,
                         slideshow: {
                             enable: true,
                             autostart: '.$g_auto.',
@@ -296,12 +308,12 @@ class WPSC_Dynamic_Gallery_Preview_Display {
                             stop_label: "'.__('STOP SLIDESHOW', 'wpsc_dgallery').'",
 							zoom_label: "'.__('ZOOM +', 'wpsc_dgallery').'",
                             stop_on_scroll: true,
-                            countdown_prefix: \'(\',
-                            countdown_sufix: \')\',
+                            countdown_prefix: "(",
+                            countdown_sufix: ")",
                             onStart: false,
                             onStop: false
                         },
-                        effect: \''.$g_effect.'\', 
+                        effect: "'.$g_effect.'",
                         enable_keyboard_move: true,
                         cycle: true,
                         callbacks: {
@@ -325,11 +337,11 @@ class WPSC_Dynamic_Gallery_Preview_Display {
                         
                         $script_lightbox = '';
 						$script_fancybox = '';
-                        if ( !empty( $imgs ) ){	
+                        if ( !empty( $imgs ) ) {	
                             $i = 0;
                             $display = '';
 			
-                            if(is_array($imgs) && count($imgs)>0){
+                            if ( is_array($imgs) && count($imgs) > 0 ) {
                                 $script_lightbox .= '<script type="text/javascript">';
 								$script_fancybox .= '<script type="text/javascript">';
                                 $script_lightbox .= '(function($){';		  
@@ -339,18 +351,18 @@ class WPSC_Dynamic_Gallery_Preview_Display {
                                 $script_lightbox .= '$(".ad-gallery .lightbox").live("click",function(ev) { if( $(this).attr("rel") == "gallery_'.$product_id.'") {';
 								$script_fancybox .= '$(".ad-gallery .lightbox").live("click",function(ev) { if( $(this).attr("rel") == "gallery_'.$product_id.'") {
 								var idx = $(".ad-image img").attr("idx");';
-                                if(count($imgs) <= 1 ){
+                                if ( count($imgs) <= 1 ) {
                                     $script_lightbox .= '$.lightbox(';
 									$script_fancybox .= '$.fancybox(';
-                                }else{
+                                } else {
                                     $script_lightbox .= '$.lightbox([';
 									$script_fancybox .= '$.fancybox([';
                                 }
                                 $common = '';
                                 $idx = 0;
-                                foreach($imgs as $item_thumb){
+                                foreach ( $imgs as $item_thumb ) {
                                     $li_class = '';
-                                    if($i == 0){ $li_class = 'first_item';}elseif($i == count($imgs)-1){$li_class = 'last_item';}
+                                    if ( $i == 0 ) { $li_class = 'first_item'; } elseif ( $i == count($imgs)-1 ) { $li_class = 'last_item'; }
                                     $image_attribute = getimagesize( WPSC_DYNAMIC_GALLERY_DIR . $item_thumb);
                                     $image_lager_default_url = WPSC_DYNAMIC_GALLERY_URL . $item_thumb;
 									
@@ -359,22 +371,22 @@ class WPSC_Dynamic_Gallery_Preview_Display {
                                     $thumb_width = $g_thumb_width;
                                     $width_old = $image_attribute[0];
                                     $height_old = $image_attribute[1];
-                                     if($width_old > $g_thumb_width || $height_old > $g_thumb_height){
-                                        if($height_old > $g_thumb_height) {
+                                    if( $width_old > $g_thumb_width || $height_old > $g_thumb_height ) {
+                                        if ( $height_old > $g_thumb_height && $g_thumb_height > 0 ) {
                                             $factor = ($height_old / $g_thumb_height);
                                             $thumb_height = $g_thumb_height;
                                             $thumb_width = $width_old / $factor;
                                         }
-                                        if($thumb_width > $g_thumb_width){
+                                        if ( $thumb_width > $g_thumb_width && $g_thumb_width > 0 ) {
                                             $factor = ($width_old / $g_thumb_width);
                                             $thumb_height = $height_old / $factor;
                                             $thumb_width = $g_thumb_width;
-                                        }elseif($thumb_width == $g_thumb_width && $width_old > $g_thumb_width){
+                                        } elseif ( $thumb_width == $g_thumb_width && $width_old > $g_thumb_width && $g_thumb_width > 0 ) {
                                             $factor = ($width_old / $g_thumb_width);
                                             $thumb_height = $height_old / $factor;
                                             $thumb_width = $g_thumb_width;
                                         }						
-                                    }else{
+                                    } else {
                                          $thumb_height = $height_old;
                                         $thumb_width = $width_old;
                                     }
@@ -385,10 +397,10 @@ class WPSC_Dynamic_Gallery_Preview_Display {
                                             
                                     echo '<li class="'.$li_class.'"><a class="" title="'.$img_description.'" rel="gallery_product_'.$product_id.'" href="'.$image_lager_default_url.'"><div><img idx="'.$idx.'" style="width:'.$thumb_width.'px !important;height:'.$thumb_height.'px !important" src="'.$image_lager_default_url.'" alt="'.$img_description.'" class="image'.$i.'" width="'.$thumb_width.'" height="'.$thumb_height.'"></div></a></li>';
                                     $img_description = trim(strip_tags(stripslashes(str_replace("'","", str_replace('"', '', $img_description)))));
-                                    if($img_description != ''){
+                                    if ( $img_description != '' ) {
                                         $script_lightbox .= $common.'"'.$image_lager_default_url.'?lightbox[title]='.$img_description.'"';
 										$script_fancybox .= $common.'{href:\''.$image_lager_default_url.'\',title:\''.$img_description.'\'}';
-                                    }else{
+                                    } else {
                                         $script_lightbox .= $common.'"'.$image_lager_default_url.'"';
 										$script_fancybox .= $common.'{href:\''.$image_lager_default_url.'\',title:\'\'}';
                                     }
@@ -397,10 +409,10 @@ class WPSC_Dynamic_Gallery_Preview_Display {
 									$idx++;
                                  }
 								 //$.fancybox([ {href : 'img1.jpg', title : 'Title'}, {href : 'img2.jpg', title : 'Title'} ])
-                                if(count($imgs) <= 1 ){
+                                if ( count($imgs) <= 1 ) {
                                     $script_lightbox .= ');';
 									$script_fancybox .= ');';
-                                }else{
+                                } else {
                                     $script_lightbox .= ']);';
 									$script_fancybox .= '],{
         \'index\': idx
@@ -416,13 +428,13 @@ class WPSC_Dynamic_Gallery_Preview_Display {
                                 $script_lightbox .= '</script>';
 								$script_fancybox .= '</script>';
                             }
-                        }else{
+                        } else {
                             echo '<li> <a class="lightbox" rel="gallery_product_'.$product_id.'" href="'.WPSC_DYNAMIC_GALLERY_JS_URL . '/mygallery/no-image.png"> <img src="'.WPSC_DYNAMIC_GALLERY_JS_URL . '/mygallery/no-image.png" class="image" alt=""> </a> </li>';
 									
                         }
-						if($popup_gallery == 'lb'){
+						if ( $popup_gallery == 'lb' ) {
                         	echo $script_lightbox;
-						}else{
+						} else {
 							echo $script_fancybox;
 						}
                         echo '</ul>

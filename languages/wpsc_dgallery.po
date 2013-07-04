@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP e-Commerce Dynamic Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-24 15:27+0700\n"
-"PO-Revision-Date: 2013-01-24 15:27+0700\n"
+"POT-Creation-Date: 2013-07-04 17:27+0700\n"
+"PO-Revision-Date: 2013-07-04 17:27+0700\n"
 "Last-Translator: Nguyen Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "MIME-Version: 1.0\n"
@@ -13,476 +13,584 @@ msgstr ""
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:177
+#: admin/class-wpsc-dynamic-gallery-admin.php:64
 msgid "Gallery"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:180
-msgid "Gallery width"
+#: admin/class-wpsc-dynamic-gallery-admin.php:65
+msgid "Global Settings"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:186
-msgid "Set at 100 and choose % to activate responsive gallery (Pro version feature)"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:190
-msgid "Gallery height"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:199
-msgid "Product Variation images"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:201
-msgid "Show Product Variation images in Gallery. Can disable this feature of individual products from product edit page."
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:205
-msgid "Auto start"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:208
-msgid "False"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:209
-msgid "True"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:214
-msgid "Time between transitions"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:217
-#: admin/class-wpsc-dynamic-gallery-admin.php:247
-msgid "seconds"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:221
-msgid "Slide transition effect"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:224
-msgid "None"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:225
-msgid "Fade"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:226
-msgid "Slide Hori"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:227
-msgid "Slide vert"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:228
-msgid "Resize"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:233
-msgid "Transition effect speed"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:251
-msgid "Single Image Transition"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:253
-msgid "Check to auto deactivate image transition effect when only 1 image is loaded to gallery."
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:257
-msgid "Image background colour"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:258
-msgid "Gallery image background colour."
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:258
-#: admin/class-wpsc-dynamic-gallery-admin.php:264
-#: admin/class-wpsc-dynamic-gallery-admin.php:330
-#: admin/class-wpsc-dynamic-gallery-admin.php:337
-#: admin/class-wpsc-dynamic-gallery-admin.php:398
-#: admin/class-wpsc-dynamic-gallery-admin.php:405
-#: admin/class-wpsc-dynamic-gallery-admin.php:427
-msgid "Default"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:263
-msgid "Border colour"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:264
-msgid "Gallery border colour."
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:269
-msgid "Gallery popup"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:272
-msgid "Fancybox"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:273
-msgid "Lightbox"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:274
-msgid "Deactivate"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:280
+#: admin/class-wpsc-dynamic-gallery-admin.php:66
 msgid "Caption text"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:283
-#: admin/class-wpsc-dynamic-gallery-admin.php:351
-msgid "Font"
+#: admin/class-wpsc-dynamic-gallery-admin.php:67
+#: admin/sub-panel/class-navbar-settings.php:68
+msgid "Nav Bar"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:300
-#: admin/class-wpsc-dynamic-gallery-admin.php:368
-msgid "Font size"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:317
-#: admin/class-wpsc-dynamic-gallery-admin.php:385
-msgid "Font style"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:320
-#: admin/class-wpsc-dynamic-gallery-admin.php:388
-msgid "Normal"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:321
-#: admin/class-wpsc-dynamic-gallery-admin.php:389
-msgid "Italic"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:322
-#: admin/class-wpsc-dynamic-gallery-admin.php:390
-msgid "Bold"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:323
-#: admin/class-wpsc-dynamic-gallery-admin.php:391
-msgid "Bold/Italic"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:328
-#: admin/class-wpsc-dynamic-gallery-admin.php:396
-#: admin/class-wpsc-dynamic-gallery-admin.php:425
-msgid "Colour"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:330
-msgid "Caption text color."
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:335
-msgid "Background"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:337
-msgid "Caption text background colour."
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:344
-msgid "Nav bar"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:347
-#: admin/class-wpsc-dynamic-gallery-admin.php:421
-msgid "Control"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:348
-msgid "Enable Nav bar Control"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:398
-msgid "Nav bar background colour."
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:403
-msgid "Text"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:405
-msgid "Nav bar text color."
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:410
-msgid "Container height"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:418
+#: admin/class-wpsc-dynamic-gallery-admin.php:68
+#: admin/sub-panel/class-lazyload-settings.php:61
 msgid "Lazy-load scroll"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:422
-msgid "Enable lazy-load scroll"
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:427
-msgid "Scroll bar colour."
-msgstr ""
-
-#: admin/class-wpsc-dynamic-gallery-admin.php:433
+#: admin/class-wpsc-dynamic-gallery-admin.php:69
+#: admin/sub-panel/class-thumbnail-settings.php:96
 msgid "Image Thumbnails"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:436
-msgid "Show thumbnails"
+#: admin/sub-panel/class-caption-settings.php:66
+msgid "Caption Text"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:437
-msgid "Enable thumbnail gallery"
+#: admin/sub-panel/class-caption-settings.php:69
+#: admin/sub-panel/class-navbar-settings.php:77
+msgid "Font"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:440
-msgid "Single Image Thumbnail"
+#: admin/sub-panel/class-caption-settings.php:79
+#: admin/sub-panel/class-navbar-settings.php:87
+msgid "Font size"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:441
-msgid "Check to hide thumbnail when only 1 image is loaded to gallery."
+#: admin/sub-panel/class-caption-settings.php:89
+#: admin/sub-panel/class-navbar-settings.php:97
+msgid "Font style"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:448
-msgid "Thumbnail width"
+#: admin/sub-panel/class-caption-settings.php:92
+#: admin/sub-panel/class-navbar-settings.php:100
+msgid "Normal"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:451
-#: admin/class-wpsc-dynamic-gallery-admin.php:458
-msgid "IMPORTANT! Do not set this value to '0' or empty. A &lt;not divisible by 0&gt; error will show instead of the Gallery if you do."
+#: admin/sub-panel/class-caption-settings.php:93
+#: admin/sub-panel/class-navbar-settings.php:101
+msgid "Italic"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:455
-msgid "Thumbnail height"
+#: admin/sub-panel/class-caption-settings.php:94
+#: admin/sub-panel/class-navbar-settings.php:102
+msgid "Bold"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:462
-msgid "Thumbnail spacing"
+#: admin/sub-panel/class-caption-settings.php:95
+#: admin/sub-panel/class-navbar-settings.php:103
+msgid "Bold/Italic"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:470
+#: admin/sub-panel/class-caption-settings.php:100
+#: admin/sub-panel/class-navbar-settings.php:108
+msgid "Font colour"
+msgstr ""
+
+#: admin/sub-panel/class-caption-settings.php:102
+msgid "Caption text color."
+msgstr ""
+
+#: admin/sub-panel/class-caption-settings.php:102
+#: admin/sub-panel/class-caption-settings.php:109
+#: admin/sub-panel/class-gallery-container-settings.php:178
+#: admin/sub-panel/class-gallery-container-settings.php:185
+#: admin/sub-panel/class-lazyload-settings.php:72
+#: admin/sub-panel/class-navbar-settings.php:110
+#: admin/sub-panel/class-navbar-settings.php:117
+msgid "Default"
+msgstr ""
+
+#: admin/sub-panel/class-caption-settings.php:107
+#: admin/sub-panel/class-navbar-settings.php:115
+msgid "Background"
+msgstr ""
+
+#: admin/sub-panel/class-caption-settings.php:109
+msgid "Caption text background colour."
+msgstr ""
+
+#: admin/sub-panel/class-gallery-container-settings.php:101
 msgid "Preview"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:473
+#: admin/sub-panel/class-gallery-container-settings.php:102
 msgid "Click here to preview gallery"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:484
-msgid "Upgrade to Dynamic Gallery Pro"
+#: admin/sub-panel/class-gallery-container-settings.php:104
+msgid "Gallery Dimensions"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:485
-msgid "Visit the"
+#: admin/sub-panel/class-gallery-container-settings.php:107
+msgid "Gallery width"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:485
-msgid "a3rev website"
+#: admin/sub-panel/class-gallery-container-settings.php:113
+msgid "Set at 100 and choose % to activate responsive gallery (Pro version feature)"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:485
-msgid "to see all the extra features the Pro version of this plugin offers like"
+#: admin/sub-panel/class-gallery-container-settings.php:117
+msgid "Gallery height"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:488
-msgid "Show Multiple Product Variation images in Gallery. As users selects options from the drop down menu that options product image auto shows in the Dynamic Gallery complete with caption text."
+#: admin/sub-panel/class-gallery-container-settings.php:125
+msgid "Gallery Special Effects"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:489
-msgid "Fully Responsive Gallery option. Set gallery wide to % and it becomes fully responsive image product gallery including the image zoom pop up."
+#: admin/sub-panel/class-gallery-container-settings.php:128
+msgid "Auto start"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:490
-msgid "Activate all of the Gallery customization settings you see here on this page to style and fine tune your product presentation."
+#: admin/sub-panel/class-gallery-container-settings.php:131
+msgid "False"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:491
-msgid "Option to Deactivate the Gallery on any Single product page - default WP e-Commerce product image will show."
+#: admin/sub-panel/class-gallery-container-settings.php:132
+msgid "True"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:494
-msgid "Plugin Documentation"
+#: admin/sub-panel/class-gallery-container-settings.php:137
+msgid "Time between transitions"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:495
-msgid "All of our plugins have comprehensive online documentation. Please refer to the plugins docs before raising a support request"
+#: admin/sub-panel/class-gallery-container-settings.php:139
+#: admin/sub-panel/class-gallery-container-settings.php:162
+msgid "seconds"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:495
-msgid "Visit the a3rev wiki."
+#: admin/sub-panel/class-gallery-container-settings.php:143
+msgid "Slide transition effect"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:496
-msgid "More a3rev Quality Plugins"
+#: admin/sub-panel/class-gallery-container-settings.php:146
+msgid "None"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:497
-msgid "Below is a list of the a3rev plugins that are available for free download from wordpress.org"
+#: admin/sub-panel/class-gallery-container-settings.php:147
+msgid "Fade"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:499
-msgid "WP e-Commerce Plugins"
+#: admin/sub-panel/class-gallery-container-settings.php:148
+msgid "Slide Hori"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:502
-msgid "WP e-Commerce Dynamic Gallery"
+#: admin/sub-panel/class-gallery-container-settings.php:149
+msgid "Slide vert"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:503
-msgid "WP e-Commerce Predictive Search"
+#: admin/sub-panel/class-gallery-container-settings.php:150
+msgid "Resize"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:504
-msgid "WP e-Commerce Compare Products"
+#: admin/sub-panel/class-gallery-container-settings.php:155
+msgid "Transition effect speed"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:505
-msgid "WP e-Commerce Catalog Visibility & Email Inquiry"
+#: admin/sub-panel/class-gallery-container-settings.php:166
+msgid "Single Image Transition"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:506
-msgid "WP e-Commerce Grid View"
+#: admin/sub-panel/class-gallery-container-settings.php:168
+msgid "Check to auto deactivate image transition effect when only 1 image is loaded to gallery."
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:510
-msgid "WordPress Plugins"
+#: admin/sub-panel/class-gallery-container-settings.php:173
+msgid "Gallery Style"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:513
-msgid "WordPress Email Template"
+#: admin/sub-panel/class-gallery-container-settings.php:176
+msgid "Image background colour"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:514
-msgid "Page View Count"
+#: admin/sub-panel/class-gallery-container-settings.php:178
+msgid "Gallery image background colour."
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:518
-msgid "WooCommerce Plugins"
+#: admin/sub-panel/class-gallery-container-settings.php:183
+msgid "Border colour"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:521
-msgid "WooCommerce Dynamic Products Gallery"
+#: admin/sub-panel/class-gallery-container-settings.php:185
+msgid "Gallery border colour."
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:522
-msgid "WooCommerce Predictive Search"
+#: admin/sub-panel/class-global-settings.php:80
+msgid "Image Zoom Function"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:523
-msgid "WooCommerce Compare Products"
+#: admin/sub-panel/class-global-settings.php:83
+msgid "Gallery popup"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:524
-msgid "WooCommerce Widget Product Slideshow"
+#: admin/sub-panel/class-global-settings.php:86
+msgid "Fancybox"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:525
-msgid "WooCommerce Email Inquiry & Cart Options"
+#: admin/sub-panel/class-global-settings.php:87
+msgid "Lightbox"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:525
-msgid " - Pro Version only from a3rev"
+#: admin/sub-panel/class-global-settings.php:88
+msgid "Deactivate"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:529
-msgid "Help spread the Word about this plugin"
+#: admin/sub-panel/class-global-settings.php:94
+msgid "Gallery On / Off"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:530
-msgid "Things you can do to help others find this plugin"
+#: admin/sub-panel/class-global-settings.php:97
+msgid "Gallery Activation Default"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:532
-msgid "Rate this plugin 5"
+#: admin/sub-panel/class-global-settings.php:99
+msgid "Checked = Gallery Activated on Product Pages. Unchecked = Deactivated. Note: Changing this setting will not over-ride any custom Gallery activation settings made on single product pages."
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:532
-msgid "on WordPress.org"
+#: admin/sub-panel/class-global-settings.php:103
+#: admin/sub-panel/class-global-settings.php:119
+msgid "Reset Activation to default"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:533
-msgid "Mark the plugin as a fourite"
+#: admin/sub-panel/class-global-settings.php:105
+msgid "Checked this box and 'Save Changes' to reset ALL products to the default 'Gallery Activation' status you set above including ALL individual custom Product Page Gallery activation settings."
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-display.php:331
-#: classes/class-wpsc-dynamic-gallery-preview.php:295
+#: admin/sub-panel/class-global-settings.php:110
+msgid "Image Variation Feature"
+msgstr ""
+
+#: admin/sub-panel/class-global-settings.php:113
+msgid "Variations Activation Default"
+msgstr ""
+
+#: admin/sub-panel/class-global-settings.php:115
+msgid "Checked = Variation Images Activated on Product Pages. Unchecked = Deactivated. Note: Changing this setting will not over-ride any custom Variation Images activation settings made on single product pages."
+msgstr ""
+
+#: admin/sub-panel/class-global-settings.php:121
+msgid "Checked this box and 'Save Changes' to reset ALL products to the default 'Variations Activation' status you set above. NOTE: ALL individual custom Product Page Variation Images Activation settings will be changed to the default."
+msgstr ""
+
+#: admin/sub-panel/class-global-settings.php:127
+msgid "House Keeping"
+msgstr ""
+
+#: admin/sub-panel/class-global-settings.php:130
+msgid "Clean up on Deletion"
+msgstr ""
+
+#: admin/sub-panel/class-global-settings.php:132
+msgid "Check this box and if you ever delete this plugin it will completely remove all of its code and tables it has created, leaving no trace it was ever here. It will not delete your product images! <strong>WARNING</strong> All of the gallery settings you have made will be deleted forever. If you ever reinstall the gallery you will have to reset them all."
+msgstr ""
+
+#: admin/sub-panel/class-lazyload-settings.php:64
+#: admin/sub-panel/class-navbar-settings.php:71
+msgid "Control"
+msgstr ""
+
+#: admin/sub-panel/class-lazyload-settings.php:66
+msgid "Enable lazy-load scroll"
+msgstr ""
+
+#: admin/sub-panel/class-lazyload-settings.php:70
+msgid "Colour"
+msgstr ""
+
+#: admin/sub-panel/class-lazyload-settings.php:72
+msgid "Scroll bar colour."
+msgstr ""
+
+#: admin/sub-panel/class-navbar-settings.php:73
+msgid "Enable Nav bar Control"
+msgstr ""
+
+#: admin/sub-panel/class-navbar-settings.php:110
+msgid "Nav bar text color."
+msgstr ""
+
+#: admin/sub-panel/class-navbar-settings.php:117
+msgid "Nav bar background colour."
+msgstr ""
+
+#: admin/sub-panel/class-navbar-settings.php:122
+msgid "Container height"
+msgstr ""
+
+#: admin/sub-panel/class-thumbnail-settings.php:100
+msgid "Show thumbnails"
+msgstr ""
+
+#: admin/sub-panel/class-thumbnail-settings.php:102
+msgid "Enable thumbnail gallery"
+msgstr ""
+
+#: admin/sub-panel/class-thumbnail-settings.php:106
+msgid "Single Image Thumbnail"
+msgstr ""
+
+#: admin/sub-panel/class-thumbnail-settings.php:108
+msgid "Check to hide thumbnail when only 1 image is loaded to gallery."
+msgstr ""
+
+#: admin/sub-panel/class-thumbnail-settings.php:116
+#: admin/sub-panel/class-thumbnail-settings.php:128
+msgid "Thumbnail width"
+msgstr ""
+
+#: admin/sub-panel/class-thumbnail-settings.php:118
+msgid "Setting 0px will show at default 105px. Hiding thumbnails is a Pro Version feature."
+msgstr ""
+
+#: admin/sub-panel/class-thumbnail-settings.php:122
+msgid "Thumbnail height"
+msgstr ""
+
+#: admin/sub-panel/class-thumbnail-settings.php:124
+msgid "Setting 0px will show at default 75px. Hiding thumbnails is a Pro Version feature."
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-display.php:328
+#: classes/class-wpsc-dynamic-gallery-preview.php:307
 msgid "START SLIDESHOW"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-display.php:332
-#: classes/class-wpsc-dynamic-gallery-preview.php:296
+#: classes/class-wpsc-dynamic-gallery-display.php:329
+#: classes/class-wpsc-dynamic-gallery-preview.php:308
 msgid "STOP SLIDESHOW"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-display.php:333
-#: classes/class-wpsc-dynamic-gallery-preview.php:297
+#: classes/class-wpsc-dynamic-gallery-display.php:330
+#: classes/class-wpsc-dynamic-gallery-preview.php:309
 msgid "ZOOM +"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-hook-filter.php:20
+#: classes/class-wpsc-dynamic-gallery-functions.php:77
+msgid "Arial"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:78
+msgid "Verdana"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:79
+msgid "Trebuchet"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:80
+msgid "Georgia"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:81
+msgid "Times New Roman"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:82
+msgid "Tahoma"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:83
+msgid "Palatino"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:84
+msgid "Helvetica*"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:85
+msgid "Calibri*"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:86
+msgid "Myriad Pro*"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:87
+msgid "Lucida"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:88
+msgid "Arial Black"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:89
+msgid "Gill Sans*"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:90
+msgid "Geneva*"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:91
+msgid "Impact"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:92
+msgid "Courier"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:93
+msgid "Century Gothic"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:112
+msgid "Upgrade available for WPEC Dynamic Gallery Pro"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:113
+msgid "<strong>NOTE:</strong> All the functions inside the Yellow border on the plugins admin panel are extra functionality that is activated by upgrading to the Pro version"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:114
+msgid "WPEC Dynamic Gallery Pro"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:114
+msgid "Features"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:117
+msgid "Show Multiple Product Variation images in Gallery. As users selects options from the drop down menu that options product image auto shows in the Dynamic Gallery complete with caption text."
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:118
+msgid "Fully Responsive Gallery option. Set gallery wide to % and it becomes fully responsive image product gallery including the image zoom pop up."
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:119
+msgid "Activate all of the Gallery customization settings you see here on this page to style and fine tune your product presentation."
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:120
+msgid "Option to Deactivate the Gallery on any Single product page - default WP e-Commerce product image will show."
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:123
+msgid "View this plugins"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:123
+msgid "documentation"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:124
+msgid "Visit this plugins"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:124
+msgid "support forum"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:125
+msgid "More FREE a3rev WP e-Commerce Plugins"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:128
+msgid "WP e-Commerce Dynamic Gallery"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:129
+msgid "WP e-Commerce Predictive Search"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:130
+msgid "WP e-Commerce Compare Products"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:131
+msgid "WP e-Commerce Catalog Visibility & Email Inquiry"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:132
+msgid "WP e-Commerce Grid View"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:136
+msgid "FREE a3rev WordPress plugins"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:139
+msgid "Contact Us Page - Contact People"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:140
+msgid "WordPress Email Template"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:141
+msgid "Page View Count"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:145
+msgid "Help spread the Word about this plugin"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:146
+msgid "Things you can do to help others find this plugin"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:148
+msgid "Rate this plugin 5"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:148
+msgid "on WordPress.org"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:149
+msgid "Mark the plugin as a fourite"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:150
+msgid "Follow a3rev on facebook"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-functions.php:151
+msgid "Follow a3rev on Twitter"
+msgstr ""
+
+#: classes/class-wpsc-dynamic-gallery-hook-filter.php:21
 msgid "Dynamic Gallery"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-hook-filter.php:102
+#: classes/class-wpsc-dynamic-gallery-hook-filter.php:114
 msgid "Exclude image"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-hook-filter.php:111
+#: classes/class-wpsc-dynamic-gallery-hook-filter.php:123
 msgid "Enabling this option will hide it from the product page image gallery. If assigned to variations below the image will show when option is selected. (Show Product Variations in Gallery is a"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-hook-filter.php:111
+#: classes/class-wpsc-dynamic-gallery-hook-filter.php:123
 msgid "Pro Version"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-hook-filter.php:111
+#: classes/class-wpsc-dynamic-gallery-hook-filter.php:123
 msgid "only feature"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-hook-filter.php:175
+#: classes/class-wpsc-dynamic-gallery-hook-filter.php:185
 msgid "Documentation"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-hook-filter.php:176
+#: classes/class-wpsc-dynamic-gallery-hook-filter.php:186
 msgid "Support"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-metaboxes.php:27
+#: classes/class-wpsc-dynamic-gallery-metaboxes.php:26
 msgid "A3 Dynamic Image Gallery activated"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-metaboxes.php:27
+#: classes/class-wpsc-dynamic-gallery-metaboxes.php:26
 msgid "Product Variation Images activated"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-metaboxes.php:28
-msgid "Product Download"
-msgstr ""
-
-#: classes/class-wpsc-dynamic-gallery-metaboxes.php:29
-msgid "Shipping"
-msgstr ""
-
-#: classes/class-wpsc-dynamic-gallery-variations.php:26
+#: classes/class-wpsc-dynamic-gallery-variations.php:27
 msgid "Variations"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-variations.php:30
+#: classes/class-wpsc-dynamic-gallery-variations.php:31
 msgid "Upgrade to the PRO version to use this feature."
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-variations.php:36
+#: classes/class-wpsc-dynamic-gallery-variations.php:37
 msgid "Apply to All"
 msgstr ""
 
