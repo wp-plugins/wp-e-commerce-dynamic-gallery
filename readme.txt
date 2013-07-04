@@ -74,12 +74,12 @@ This plugin features a Pro version upgrade that adds extra functionality. You wi
 * Check this incredible new Pro Version feature out on our <strong>[DEMO SITE](http://wpeccompare.a3dev.net/products-page/clothes/plain-t-shirt)</strong>
 * Front end Users see Product variation images in gallery as they select options.
 * Show Multiple images per variation. 
-* Exclude Variation images from main gallery Ð only show when variation is selected.
+* Exclude Variation images from main gallery - only show when variation is selected.
 * When variations are created they auto show on the Gallery Image Manager.
 * Upload images using the WordPress media uploader or Dynamic Gallery image uploader and assign images to variations or variation sets. 
 * Makes handling variation images very quick and easy. 
 
-= Responsive Ð All Browsers and Mobiles =
+= Responsive - All Browsers and Mobiles =
 
 * Responsive Gallery option. Set gallery wide to % and it becomes fully responsive image product gallery including the image zoom pop up.
 * Meet all customers needs and sell more - works beautifully on PCs, laptops, tablets and mobiles.
@@ -179,22 +179,22 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 == Changelog ==
 
 = 1.1.4 - 2013/07/04 =
-* Features :
-	* Complete UI overhaul and renovation of the plugins admin dashboard.
-	* Admin dashboard content broken up into sub nav tabs for ease of feature management. Gallery | Global Settings | Caption text | Nav Bar | Lazy-load scroll | Image Thumbnails
-	* Added Chosen script for beautiful dropdowns and options feature selection.
-	* Added House Keeping function to settings. Clean up on Deletion. Option - Choose if you ever delete this plugin it will completely remove all code and tables it has created, (not product images) leaving no trace it was ever here. Added to Global Settings sub tab.   
+* Features:
+ * Complete UI overhaul and renovation of the plugins admin dashboard.
+ * Admin dashboard content broken up into sub nav tabs for ease of feature management. Gallery | Global Settings | Caption text | Nav Bar | Lazy-load scroll | Image Thumbnails
+ * Added Chosen script for beautiful dropdowns and options feature selection.
+ * Added House Keeping function to settings. Clean up on Deletion. Option - Choose if you ever delete this plugin it will completely remove all code and tables it has created, (not product images) leaving no trace it was ever here. Added to Global Settings sub tab.   
   
-* Tweaks :
-	* Replaced all global option keys with plugin registered prefix wpsc_dgallery to prevent other plugins conflicting with input options.
-	* Comprehensive line by line review and tidy up of the plugins source code.
-	* Ran full WP_DEBUG All Uncaught exceptions errors and warnings fixed.
-	* Added PHP Public Static to functions in Class. Done so that PHP Public Static warnings don't show in DE_BUG mode.
-	* Updated the plugins support links to the plugins WordPress support forum.
-	* Updated the plugins WordPress description.
+* Tweaks:
+ * Replaced all global option keys with plugin registered prefix wpsc_dgallery to prevent other plugins conflicting with input options.
+ * Comprehensive line by line review and tidy up of the plugins source code.
+ * Ran full WP_DEBUG All Uncaught exceptions errors and warnings fixed.
+ * Added PHP Public Static to functions in Class. Done so that PHP Public Static warnings don't show in DE_BUG mode.
+ * Updated the plugins support links to the plugins WordPress support forum.
+ * Updated the plugins WordPress description.
 
-* Fixes :
-	* Fixed not divisible by zero error message that showed when 0 value entered or for thumbnail wide and tall. Updated feature help text. 
+* Fixes:
+ * Fixed not divisible by zero error message that showed when 0 value entered or for thumbnail wide and tall. Updated feature help text. 
 
 = 1.1.3 - 2013/04/26 =
 * Feature: Added when install and activate plugin link redirects to WP e-Commerce Gallery admin panel instead of the wp-plugins dashboard.
