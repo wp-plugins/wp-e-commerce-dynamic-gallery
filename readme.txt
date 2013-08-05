@@ -2,8 +2,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, WP e-commerce product images,  wordpress ecommerce
 Requires at least: 3.3
-Tested up to: 3.5.2
-Stable tag: 1.1.4
+Tested up to: 3.6
+Stable tag: 1.1.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -178,6 +178,15 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
  
 == Changelog ==
 
+= 1.1.5 - 2013/08/05 =
+* Tweaks :
+	* Plugin in code tested fully compatible with WordPress v3.6.0
+* Fixes :
+	* Update Gallery script to work with the new WordPress jQuery v1.10.2. Changed .live to .on
+	* Replaced old Lightbox pop-up script with new Colorbox script. 
+	* Replacing Lightbox script with Colorbox fixes issue of the Lightbox script not opening the current image on Zoom. Lightbox always opened pop-up at first image in the Gallery.
+	* Added Product Gallery Class attribute box-sizing:content-box for compatibility with new WordPress Twenty Thirteen default theme.
+
 = 1.1.4 - 2013/07/04 =
 * Features :
 	* Complete UI overhaul and renovation of the plugins admin dashboard.
@@ -275,6 +284,9 @@ MAJOR OVERHAUL & FEATURE UPGRADE
 
 
 == Upgrade Notice ==
+
+= 1.1.5 =
+Upgrade your plugin now for full compatibility with WordPress v3.6.0 - Includes 2 important bug fixes.
 
 = 1.1.4 =
 Comprehensive review and upgrade of source code. All new admin panel interface, 3 brand new features, 1 bug fix - Update and upgrade your plugin now.

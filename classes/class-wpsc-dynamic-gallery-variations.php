@@ -11,6 +11,9 @@ class WPSC_Dynamic_Gallery_Variations
 {
 	
 	public static function media_fields( $form_fields, $attachment ) {
+		
+		if ( !isset( $_GET['post_id'] ) ) return $form_fields;
+		$product_id = $_GET['post_id'];
 	
 		if (!$attachment->post_parent) return $form_fields;
 		$parent = get_post( $attachment->post_parent );
@@ -18,7 +21,7 @@ class WPSC_Dynamic_Gallery_Variations
 				
 		$product_id = $parent->ID;
 		
-		if ( get_post_type($product_id) == 'wpsc-product' && class_exists('wpsc_variations') && wp_attachment_is_image($attachment->ID) ) {
+		if ( isset($_GET['tab']) && $_GET['tab'] == 'gallery' && get_post_type($product_id) == 'wpsc-product' && class_exists('wpsc_variations') && wp_attachment_is_image($attachment->ID) ) {
 			global $wpsc_variations;
 			$wpsc_variations = new wpsc_variations( $product_id );
 												

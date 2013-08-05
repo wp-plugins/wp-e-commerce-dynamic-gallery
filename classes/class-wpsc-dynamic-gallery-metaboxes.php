@@ -29,10 +29,10 @@ class WPSC_Dynamic_Gallery_Metaboxes_Class
 	public static function wpsc_product_image_box() {
 		global $post, $thepostid;
 		echo '<script type="text/javascript">
-		jQuery("#wpsc_product_gallery_image_forms h3").live("click", function(){
+		jQuery(document).on("click", "#wpsc_product_gallery_image_forms h3", function(){
 			jQuery("#wpsc_product_gallery_image_forms").removeClass("closed");
 		});
-		jQuery(".upload_image_button").live("click", function(){
+		jQuery(document).on("click", ".upload_image_button", function(){
 			var post_id = '.$post->ID.';
 			//window.send_to_editor = window.send_to_termmeta;
 			tb_show("", "media-upload.php?parent_page=wpsc-edit-products&post_id=" + post_id + "&type=image&tab=gallery&TB_iframe=true");

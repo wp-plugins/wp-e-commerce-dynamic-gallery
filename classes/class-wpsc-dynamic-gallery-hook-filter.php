@@ -36,8 +36,8 @@ class WPSC_Dynamic_Gallery_Hook_Filter
 		wp_enqueue_style( 'ad-gallery-style', WPSC_DYNAMIC_GALLERY_JS_URL . '/mygallery/jquery.ad-gallery.css' );
 		wp_enqueue_script( 'ad-gallery-script', WPSC_DYNAMIC_GALLERY_JS_URL . '/mygallery/jquery.ad-gallery.js', array(), false, true );
 		
-		wp_enqueue_style( 'a3_lightbox_style', WPSC_DYNAMIC_GALLERY_JS_URL . '/lightbox/themes/default/jquery.lightbox.css' );
-		wp_enqueue_script( 'lightbox2_script', WPSC_DYNAMIC_GALLERY_JS_URL . '/lightbox/jquery.lightbox'.$suffix.'.js', array(), false, true );
+		wp_enqueue_style( 'a3_colorbox_style', WPSC_DYNAMIC_GALLERY_JS_URL . '/colorbox/colorbox.css' );
+		wp_enqueue_script( 'colorbox_script', WPSC_DYNAMIC_GALLERY_JS_URL . '/colorbox/jquery.colorbox'.$suffix.'.js', array(), false, true );
 			
 		wp_enqueue_style( 'woocommerce_fancybox_styles', WPSC_DYNAMIC_GALLERY_JS_URL . '/fancybox/fancybox.css' );
 		wp_enqueue_script( 'fancybox', WPSC_DYNAMIC_GALLERY_JS_URL . '/fancybox/fancybox'.$suffix.'.js', array(), false, true );
@@ -59,9 +59,9 @@ class WPSC_Dynamic_Gallery_Hook_Filter
 		wp_enqueue_script( 'filter-gallery-script', WPSC_DYNAMIC_GALLERY_JS_URL . '/filter_gallery.js', array(), false, true );
 		
 		$popup_gallery = $wpsc_dgallery_global_settings['popup_gallery'];
-		if ( $popup_gallery == 'lb' ) {
-			wp_enqueue_style( 'a3_lightbox_style', WPSC_DYNAMIC_GALLERY_JS_URL . '/lightbox/themes/default/jquery.lightbox.css' );
-			wp_enqueue_script( 'lightbox2_script', WPSC_DYNAMIC_GALLERY_JS_URL . '/lightbox/jquery.lightbox'.$suffix.'.js', array(), false, true );
+		if ( $popup_gallery == 'colorbox' ) {
+			wp_enqueue_style( 'a3_colorbox_style', WPSC_DYNAMIC_GALLERY_JS_URL . '/colorbox/colorbox.css' );
+			wp_enqueue_script( 'colorbox_script', WPSC_DYNAMIC_GALLERY_JS_URL . '/colorbox/jquery.colorbox'.$suffix.'.js', array(), false, true );
 		} else {
 			wp_enqueue_style( 'woocommerce_fancybox_styles', WPSC_DYNAMIC_GALLERY_JS_URL . '/fancybox/fancybox.css' );
 			wp_enqueue_script( 'fancybox', WPSC_DYNAMIC_GALLERY_JS_URL . '/fancybox/fancybox'.$suffix.'.js', array(), false, true );

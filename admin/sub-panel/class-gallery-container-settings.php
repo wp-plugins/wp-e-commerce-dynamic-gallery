@@ -75,7 +75,7 @@ class WPSC_Dynamic_Gallery_Container_Settings
 	
 	public static function save_settings_action() {
 		$option_name = 'wpsc_dgallery_container_settings';
-		if (isset($_REQUEST['wpsc-update-options'])) {
+		if ( isset($_REQUEST['wpsc-update-options']) && isset($_REQUEST[$option_name]) ) {
 			$customized_settings = $_REQUEST[$option_name];
 						
 			update_option($option_name, $customized_settings);

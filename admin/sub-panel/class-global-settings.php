@@ -51,7 +51,7 @@ class WPSC_Dynamic_Gallery_Global_Settings
 	
 	public static function save_settings_action() {
 		$option_name = 'wpsc_dgallery_global_settings';
-		if (isset($_REQUEST['wpsc-update-options'])) {
+		if ( isset($_REQUEST['wpsc-update-options']) && isset($_REQUEST[$option_name]) ) {
 			WPSC_Dynamic_Gallery_Global_Settings::set_settings_default(true);
 			
 			if ( isset($_REQUEST['wpsc_dgallery_clean_on_deletion']) ) {
@@ -84,7 +84,7 @@ class WPSC_Dynamic_Gallery_Global_Settings
 		    	<td class="forminp">                    
                     <select class="chzn-select" name="<?php echo $option_name; ?>[popup_gallery]" id="popup_gallery" style="width:120px;">
                     	<option <?php selected( $popup_gallery, 'fb' ); ?> value="fb"><?php _e('Fancybox', 'wpsc_dgallery');?></option>
-                		<option <?php selected( $popup_gallery, 'lb' ); ?>  value="lb"><?php _e('Lightbox', 'wpsc_dgallery');?></option>
+                		<option <?php selected( $popup_gallery, 'colorbox' ); ?>  value="colorbox"><?php _e('ColorBox', 'wpsc_dgallery');?></option>
                 		<option <?php selected( $popup_gallery, 'deactivate' ); ?>  value="deactivate"><?php _e('Deactivate', 'wpsc_dgallery');?></option>
                     </select>
 				</td>

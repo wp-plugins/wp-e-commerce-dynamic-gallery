@@ -217,5 +217,13 @@ class WPSC_Dynamic_Gallery_Functions
 		$wpdb->query( "UPDATE ".$wpdb->postmeta." SET meta_key='_wpsc_dgallery_show_variation' WHERE meta_key='_show_variation' " );
 		$wpdb->query( "UPDATE ".$wpdb->postmeta." SET meta_key='_wpsc_dgallery_in_variations' WHERE meta_key='_in_variations' " );
 	}
+	
+	public static function upgrade_1_1_5() {
+		$wpsc_dgallery_global_settings = get_option('wpsc_dgallery_global_settings', array() );
+		if ( isset( $wpsc_dgallery_global_settings['popup_gallery'] ) && $wpsc_dgallery_global_settings['popup_gallery'] == 'lb' ) {
+			$wpsc_dgallery_global_settings['popup_gallery'] = 'colorbox';
+			update_option('wpsc_dgallery_global_settings', $wpsc_dgallery_global_settings );	
+		}
+	}
 }
 ?>

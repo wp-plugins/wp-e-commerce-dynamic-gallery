@@ -353,27 +353,27 @@ class WPSC_Dynamic_Gallery_Display_Class
                     <div class="ad-thumbs">
                       <ul class="ad-thumb-list">';
                         
-						$script_lightbox = '';
+						$script_colorbox = '';
 						$script_fancybox = '';
                         if ( is_array($attached_thumb) && count($attached_thumb) > 0 ) {	
                             $i = 0;
                             $display = '';
 							
-                                $script_lightbox .= '<script type="text/javascript">';
+                                $script_colorbox .= '<script type="text/javascript">';
 								$script_fancybox .= '<script type="text/javascript">';
-                                $script_lightbox .= '(function($){';		  
+                                $script_colorbox .= '(function($){';		  
 								$script_fancybox .= '(function($){';		  
-                                $script_lightbox .= '$(function(){';
+                                $script_colorbox .= '$(function(){';
 								$script_fancybox .= '$(function(){';
-                                $script_lightbox .= '$(".ad-gallery .lightbox").live("click",function(ev) { if( $(this).attr("rel") == "gallery_'.$product_id.'") {
+                                $script_colorbox .= '$(document).on("click", ".ad-gallery .lightbox", function(ev) { if( $(this).attr("rel") == "gallery_'.$product_id.'") {
 									var idx = $("#gallery_'.$product_id.' .ad-image img").attr("idx");';
-								$script_fancybox .= '$(".ad-gallery .lightbox").live("click",function(ev) { if( $(this).attr("rel") == "gallery_'.$product_id.'") {
+								$script_fancybox .= '$(document).on("click", ".ad-gallery .lightbox", function(ev) { if( $(this).attr("rel") == "gallery_'.$product_id.'") {
 									var idx = $("#gallery_'.$product_id.' .ad-image img").attr("idx");';
                                 if (count($attached_thumb) <= 1 ) {
-                                    $script_lightbox .= '$.lightbox(';
+                                   $script_colorbox .= '$(".gallery_product_'.$product_id.'").colorbox({open:true, maxWidth:"100%", title: function() { return "&nbsp;";} });';
 									$script_fancybox .= '$.fancybox(';
                                 } else {
-                                    $script_lightbox .= '$.lightbox([';
+                                    $script_colorbox .= '$(".gallery_product_'.$product_id.'").colorbox({rel:"gallery_product_'.$product_id.'", maxWidth:"100%", title: function() { return "&nbsp;";} }); $(".gallery_product_'.$product_id.'_"+idx).colorbox({open:true, maxWidth:"100%", title: function() { return "&nbsp;";} });';
 									$script_fancybox .= '$.fancybox([';
                                 }
                                 $common = '';
@@ -418,13 +418,11 @@ class WPSC_Dynamic_Gallery_Display_Class
 									   $img_description = $alt;
 								   }
                                             
-                                    $html .=  '<li class="'.$li_class.'"><a alt="'.$alt.'" class="" title="'.$img_description.'" rel="gallery_product_'.$product_id.'" href="'.$image_lager_default_url.'"><div><img idx="'.$idx.'" style="width:'.$thumb_width.'px !important;height:'.$thumb_height.'px !important" src="'.$image_thumb_default_url.'" alt="'.$img_description.'" class="image'.$i.'" width="'.$thumb_width.'" height="'.$thumb_height.'"></div></a></li>';
+                                    $html .=  '<li class="'.$li_class.'"><a alt="'.$alt.'" class="gallery_product_'.$product_id.' gallery_product_'.$product_id.'_'.$idx.'"  title="'.$img_description.'" rel="gallery_product_'.$product_id.'" href="'.$image_lager_default_url.'"><div><img idx="'.$idx.'" style="width:'.$thumb_width.'px !important;height:'.$thumb_height.'px !important" src="'.$image_thumb_default_url.'" alt="'.$img_description.'" class="image'.$i.'" width="'.$thumb_width.'" height="'.$thumb_height.'"></div></a></li>';
                                     $img_description = trim(strip_tags(stripslashes(str_replace("'","", str_replace('"', '', $img_description)))));
                                     if ( $img_description != '' ) {
-                                        $script_lightbox .= $common.'"'.$image_lager_default_url.'?lightbox[title]='.$img_description.'"';
 										$script_fancybox .= $common.'{href:\''.$image_lager_default_url.'\',title:\''.$img_description.'\'}';
                                     } else {
-                                        $script_lightbox .= $common.'"'.$image_lager_default_url.'"';
 										$script_fancybox .= $common.'{href:\''.$image_lager_default_url.'\',title:\'\'}';
                                     }
                                     $common = ',';
@@ -433,28 +431,26 @@ class WPSC_Dynamic_Gallery_Display_Class
 								}
 								 //$.fancybox([ {href : 'img1.jpg', title : 'Title'}, {href : 'img2.jpg', title : 'Title'} ])
                                 if ( count($attached_thumb) <= 1 ) {
-                                    $script_lightbox .= ');';
 									$script_fancybox .= ');';
                                 } else {
-                                    $script_lightbox .= ']);';
 									$script_fancybox .= '],{
 										 \'index\': idx
       								});';
                                 }
-                                $script_lightbox .= 'ev.preventDefault();';
-                                $script_lightbox .= '} });';
+                                $script_colorbox .= 'ev.preventDefault();';
+                                $script_colorbox .= '} });';
 								$script_fancybox .= '} });';
-                                $script_lightbox .= '});';
+                                $script_colorbox .= '});';
 								$script_fancybox .= '});';
-                                $script_lightbox .= '})(jQuery);';
+                                $script_colorbox .= '})(jQuery);';
 								$script_fancybox .= '})(jQuery);';
-                                $script_lightbox .= '</script>';
+                                $script_colorbox .= '</script>';
 								$script_fancybox .= '</script>';
                         } else {
                             $html .=  '<li style="width:'.$g_thumb_width.'px;height:'.$g_thumb_height.'px;"> <a style="width:'.($g_thumb_width-2).'px !important;height:'.($g_thumb_height - 2).'px !important;overflow:hidden;float:left !important" class="" rel="gallery_product_'.$product_id.'" href="'.WPSC_DYNAMIC_GALLERY_JS_URL . '/mygallery/no-image.png"> <div><img style="width:'.$g_thumb_width.'px;height:'.$g_thumb_height.'px;" src="'.WPSC_DYNAMIC_GALLERY_JS_URL . '/mygallery/no-image.png" class="image" alt=""> </div></a> </li>';	
                         }
-						if ( $popup_gallery == 'lb' ) {
-                        	$html .=  $script_lightbox;
+						if ( $popup_gallery == 'colorbox' ) {
+                        	$html .=  $script_colorbox;
 						} else {
 							$html .=  $script_fancybox;
 						}

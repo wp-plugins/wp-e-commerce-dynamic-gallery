@@ -46,7 +46,7 @@ class WPSC_Dynamic_Gallery_Caption_Settings
 	
 	public static function save_settings_action() {
 		$option_name = 'wpsc_dgallery_caption_settings';
-		if (isset($_REQUEST['wpsc-update-options'])) {
+		if ( isset($_REQUEST['wpsc-update-options']) && isset($_REQUEST[$option_name]) ) {
 			WPSC_Dynamic_Gallery_Caption_Settings::set_settings_default(true);
 		} elseif ( isset($_REQUEST['bt_reset_settings']) ) {
 			WPSC_Dynamic_Gallery_Caption_Settings::set_settings_default(true);

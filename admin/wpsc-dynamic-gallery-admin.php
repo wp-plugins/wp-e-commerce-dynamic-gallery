@@ -1,6 +1,6 @@
 <?php
 function wpsc_dynamic_gallery_install(){
-	update_option('a3rev_wpsc_dgallery_version', '1.1.4');
+	update_option('a3rev_wpsc_dgallery_version', '1.1.5');
 	WPSC_Dynamic_Gallery_Container_Settings::set_settings_default();
 	WPSC_Dynamic_Gallery_Global_Settings::set_settings_default();
 	WPSC_Dynamic_Gallery_Caption_Settings::set_settings_default();
@@ -90,5 +90,12 @@ if (version_compare(get_option('a3rev_wpsc_dgallery_version'), '1.1.4') === -1 )
 	update_option('a3rev_wpsc_dgallery_version', '1.1.4');
 }
 
-update_option('a3rev_wpsc_dgallery_version', '1.1.4');
+// Upgrade to 1.1.5
+if (version_compare(get_option('a3rev_wpsc_dgallery_version'), '1.1.5') === -1) {
+	WPSC_Dynamic_Gallery_Functions::upgrade_1_1_5();
+	
+	update_option('a3rev_wpsc_dgallery_version', '1.1.5');
+}
+
+update_option('a3rev_wpsc_dgallery_version', '1.1.5');
 ?>

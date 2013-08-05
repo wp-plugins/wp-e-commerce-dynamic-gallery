@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP e-Commerce Dynamic Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-04 17:27+0700\n"
-"PO-Revision-Date: 2013-07-04 17:27+0700\n"
+"POT-Creation-Date: 2013-08-05 13:08+0700\n"
+"PO-Revision-Date: 2013-08-05 13:08+0700\n"
 "Last-Translator: Nguyen Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "MIME-Version: 1.0\n"
@@ -225,7 +225,7 @@ msgid "Fancybox"
 msgstr ""
 
 #: admin/sub-panel/class-global-settings.php:87
-msgid "Lightbox"
+msgid "ColorBox"
 msgstr ""
 
 #: admin/sub-panel/class-global-settings.php:88
@@ -582,15 +582,15 @@ msgstr ""
 msgid "Product Variation Images activated"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-variations.php:27
+#: classes/class-wpsc-dynamic-gallery-variations.php:30
 msgid "Variations"
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-variations.php:31
+#: classes/class-wpsc-dynamic-gallery-variations.php:34
 msgid "Upgrade to the PRO version to use this feature."
 msgstr ""
 
-#: classes/class-wpsc-dynamic-gallery-variations.php:37
+#: classes/class-wpsc-dynamic-gallery-variations.php:40
 msgid "Apply to All"
 msgstr ""
 
