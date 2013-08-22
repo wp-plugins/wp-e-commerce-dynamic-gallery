@@ -3,7 +3,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, WP e-commerce product images,  wordpress ecommerce
 Requires at least: 3.3
 Tested up to: 3.6
-Stable tag: 1.1.5
+Stable tag: 1.1.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -178,6 +178,10 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
  
 == Changelog ==
 
+= 1.1.6 - 2013/08/22 =
+* Fixes :
+	* Gallery images can't show on some bespoke themes that have #aside img { visibility: hidden; added  visibility: visible !important; to over ride the themes code and gallery images can show.
+
 = 1.1.5 - 2013/08/05 =
 * Tweaks :
 	* Plugin in code tested fully compatible with WordPress v3.6.0
@@ -284,6 +288,9 @@ MAJOR OVERHAUL & FEATURE UPGRADE
 
 
 == Upgrade Notice ==
+
+= 1.1.6 =
+Upgrade now for 1 new bug fix.
 
 = 1.1.5 =
 Upgrade your plugin now for full compatibility with WordPress v3.6.0 - Includes 2 important bug fixes.
