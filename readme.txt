@@ -3,7 +3,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, WP e-commerce product images,  wordpress ecommerce
 Requires at least: 3.3
 Tested up to: 3.6
-Stable tag: 1.1.6
+Stable tag: 1.1.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -118,7 +118,7 @@ WP e-Commerce Dynamic Gallery is 100% compatible with [WP e-Commerce Grid View](
 * English (default) - always included.
 * .po file (wpsc_dgallery.po) in languages folder for translations.
 
-If you do a translation of this plugin for your site [please send it to us](http://a3rev.com/contact/) for inclusion in the plugins language folder. We'll acknowledge your work and link to your site. 
+If you do a translation of this plugin for your site [please send it to us](http://a3rev.com/contact-us-page/) for inclusion in the plugins language folder. We'll acknowledge your work and link to your site. 
 
 = Plugins Resources =
 
@@ -177,6 +177,13 @@ The manual installation method involves downloading our plugin and uploading it 
 You can use this plugin only when you have installed the WP e-Commerce plugin.
  
 == Changelog ==
+
+= 1.1.7 - 2013/09/07 =
+* Features :
+	* Added 'View Docs' link from the top of each admin panel to that menus section on the plugins docs.
+* Fixes :
+	* Gallery images not showing in Chrome with SSL on product pages. Stripped http// and https// protocols so browser will use the protocol that the page was loaded with. 
+	* Plugins admin script and style not loading in Firefox with SSL on admin. Stripped http// and https// protocols so browser will use the protocol that the page was loaded with.
 
 = 1.1.6 - 2013/08/22 =
 * Fixes :
@@ -288,6 +295,9 @@ MAJOR OVERHAUL & FEATURE UPGRADE
 
 
 == Upgrade Notice ==
+
+= 1.1.7 =
+Upgrade now for great new 'Help' feature - links from each admin page straight to that section of the docs. Plus 2 SSL Bug Fixes.
 
 = 1.1.6 =
 Upgrade now for 1 new bug fix.

@@ -93,7 +93,7 @@ class WPSC_Dynamic_Gallery_Thumbnail_Settings
 		extract($customized_settings);
 		
 		?>
-        <h3><?php _e('Image Thumbnails', 'wpsc_dgallery'); ?></h3>
+        <h3><?php _e('Image Thumbnails', 'wpsc_dgallery'); ?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo WPSC_DYNAMIC_GALLERY_DOCS_URI;?>#section-9" ><?php _e('View Docs', 'wpsc_dgallery'); ?></a></h3>
         <div class="pro_feature_fields">
 		<table class="form-table">
         	<tr valign="top">

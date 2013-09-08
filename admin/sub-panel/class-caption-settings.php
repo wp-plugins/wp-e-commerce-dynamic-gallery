@@ -63,7 +63,7 @@ class WPSC_Dynamic_Gallery_Caption_Settings
 		$fonts = WPSC_Dynamic_Gallery_Functions::get_font();
 		$font_sizes = WPSC_Dynamic_Gallery_Functions::get_font_sizes();
 		?>
-        <h3><?php _e('Caption Text', 'wpsc_dgallery'); ?></h3>
+        <h3><?php _e('Caption Text', 'wpsc_dgallery'); ?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo WPSC_DYNAMIC_GALLERY_DOCS_URI;?>#section-6" ><?php _e('View Docs', 'wpsc_dgallery'); ?></a></h3>
 		<table class="form-table">
         	<tr valign="top">
 		    	<th class="titledesc" scope="row"><label for="caption_font"><?php _e( 'Font', 'wpsc_dgallery' );?></label></th>

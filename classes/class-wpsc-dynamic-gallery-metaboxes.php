@@ -40,6 +40,7 @@ class WPSC_Dynamic_Gallery_Metaboxes_Class
 		});
 		
 		</script>';
+		echo '<a class="add-new-h2 a3-view-docs-button" style="background-color: #FFFFE0 !important; border: 1px solid #E6DB55 !important; text-shadow:none !important; font-weight:normal !important; margin: 5px 0 !important; display: inline-block !important;" target="_blank" href="'.WPSC_DYNAMIC_GALLERY_DOCS_URI.'#section-13" >'.__('View Docs', 'wpsc_dgallery').'</a>';
 		echo '<div class="wpsc_options_panel">';
 		$attached_images = (array)get_posts( array(
 			'post_type'   => 'attachment',

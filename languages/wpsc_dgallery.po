@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP e-Commerce Dynamic Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-05 13:08+0700\n"
-"PO-Revision-Date: 2013-08-05 13:08+0700\n"
+"POT-Creation-Date: 2013-09-07 11:54+0700\n"
+"PO-Revision-Date: 2013-09-07 11:54+0700\n"
 "Last-Translator: Nguyen Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "MIME-Version: 1.0\n"
@@ -13,35 +13,45 @@ msgstr ""
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:64
+#: admin/class-wpsc-dynamic-gallery-admin.php:70
 msgid "Gallery"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:65
+#: admin/class-wpsc-dynamic-gallery-admin.php:71
 msgid "Global Settings"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:66
+#: admin/class-wpsc-dynamic-gallery-admin.php:72
 msgid "Caption text"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:67
+#: admin/class-wpsc-dynamic-gallery-admin.php:73
 #: admin/sub-panel/class-navbar-settings.php:68
 msgid "Nav Bar"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:68
+#: admin/class-wpsc-dynamic-gallery-admin.php:74
 #: admin/sub-panel/class-lazyload-settings.php:61
 msgid "Lazy-load scroll"
 msgstr ""
 
-#: admin/class-wpsc-dynamic-gallery-admin.php:69
+#: admin/class-wpsc-dynamic-gallery-admin.php:75
 #: admin/sub-panel/class-thumbnail-settings.php:96
 msgid "Image Thumbnails"
 msgstr ""
 
 #: admin/sub-panel/class-caption-settings.php:66
 msgid "Caption Text"
+msgstr ""
+
+#: admin/sub-panel/class-caption-settings.php:66
+#: admin/sub-panel/class-gallery-container-settings.php:101
+#: admin/sub-panel/class-gallery-container-settings.php:104
+#: admin/sub-panel/class-lazyload-settings.php:61
+#: admin/sub-panel/class-navbar-settings.php:68
+#: admin/sub-panel/class-thumbnail-settings.php:96
+#: classes/class-wpsc-dynamic-gallery-metaboxes.php:43
+msgid "View Docs"
 msgstr ""
 
 #: admin/sub-panel/class-caption-settings.php:69
@@ -483,7 +493,7 @@ msgid "More FREE a3rev WP e-Commerce Plugins"
 msgstr ""
 
 #: classes/class-wpsc-dynamic-gallery-functions.php:128
-msgid "WP e-Commerce Dynamic Gallery"
+msgid "WP e-Commerce Products Quick View"
 msgstr ""
 
 #: classes/class-wpsc-dynamic-gallery-functions.php:129

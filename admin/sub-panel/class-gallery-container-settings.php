@@ -98,10 +98,10 @@ class WPSC_Dynamic_Gallery_Container_Settings
 		
 		$wpsc_dynamic_gallery = wp_create_nonce("wpsc_dynamic_gallery");
 		?>
-        <h3><?php _e('Preview', 'wpsc_dgallery'); ?></h3>
+        <h3><?php _e('Preview', 'wpsc_dgallery'); ?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo WPSC_DYNAMIC_GALLERY_DOCS_URI;?>#section-10" ><?php _e('View Docs', 'wpsc_dgallery'); ?></a></h3>
 		<p><a href="<?php echo admin_url( 'admin-ajax.php', 'relative' ); ?>?security=<?php echo $wpsc_dynamic_gallery;?>" class="preview_gallery"><?php _e('Click here to preview gallery', 'wpsc_dgallery');?></a></p>
         
-        <h3><?php _e('Gallery Dimensions', 'wpsc_dgallery'); ?></h3>
+        <h3><?php _e('Gallery Dimensions', 'wpsc_dgallery'); ?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo WPSC_DYNAMIC_GALLERY_DOCS_URI;?>#section-5" ><?php _e('View Docs', 'wpsc_dgallery'); ?></a></h3>
 		<table class="form-table">
         	<tr valign="top">
 				<th scope="row"><label for="product_gallery_width"><?php _e('Gallery width', 'wpsc_dgallery');?></label></th>

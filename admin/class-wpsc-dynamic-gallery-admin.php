@@ -49,6 +49,12 @@ class WPSC_Settings_Tab_Gallery_Settings {
 		.subsubsub li { white-space:nowrap;}
 		input.colorpick{text-transform:uppercase;}
 		img.help_tip{float: right; margin: 0 -10px 0 0;}
+		.a3-view-docs-button {
+			background-color: #FFFFE0 !important;
+			border: 1px solid #E6DB55 !important;
+			text-shadow:none !important;
+			font-weight:normal !important;
+		}
 		#a3_plugin_panel_container { position:relative; margin-top:10px;}
 		#a3_plugin_panel_fields {width:65%; float:left;}
 		#a3_plugin_panel_upgrade_area { position:relative; margin-left: 65%; padding-left:10px;}

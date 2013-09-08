@@ -58,7 +58,7 @@ class WPSC_Dynamic_Gallery_LazyLoad_Settings
 		extract($customized_settings);
 		
 		?>
-        <h3><?php _e('Lazy-load scroll', 'wpsc_dgallery'); ?></h3>
+        <h3><?php _e('Lazy-load scroll', 'wpsc_dgallery'); ?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo WPSC_DYNAMIC_GALLERY_DOCS_URI;?>#section-8" ><?php _e('View Docs', 'wpsc_dgallery'); ?></a></h3>
 		<table class="form-table">
         	<tr valign="top">
 		    	<th class="titledesc" scope="row"><label for="lazy_load_scroll"><?php _e( 'Control', 'wpsc_dgallery' );?></label></th>
