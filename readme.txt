@@ -179,7 +179,7 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 == Changelog ==
 
 = 1.1.8 - 2013/09/14 =
-* Fixeds :
+* Fixes :
 	* Use browser protocol http or https on page load fix in v1.1.8 caused sites that use Minify plugins to crash on update. Updated style url and script url to fix Minify conflict.
 	* Thanks to Roy Vella (USA) for reporting the issue and the wp-admin and ftp access to his site to find and fix the bug.
 
