@@ -3,7 +3,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, WP e-commerce product images,  wordpress ecommerce
 Requires at least: 3.3
 Tested up to: 3.6
-Stable tag: 1.1.7
+Stable tag: 1.1.8
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -178,6 +178,11 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
  
 == Changelog ==
 
+= 1.1.8 - 2013/09/14 =
+* Fixes :
+	* Use browser protocol http or https on page load fix in v1.1.7 caused sites that use Minify plugins to crash on update. Updated style url and script url to fix Minify conflict.
+	* Thanks to Roy Vella (USA) for reporting the issue and the wp-admin and ftp access to his site to find and fix the bug.
+
 = 1.1.7 - 2013/09/07 =
 * Features :
 	* Added 'View Docs' link from the top of each admin panel to that menus section on the plugins docs.
@@ -295,6 +300,9 @@ MAJOR OVERHAUL & FEATURE UPGRADE
 
 
 == Upgrade Notice ==
+
+= 1.1.8 =
+Upgrade now for very important conflict with Minify bug fix.
 
 = 1.1.7 =
 Upgrade now for great new 'Help' feature - links from each admin page straight to that section of the docs. Plus 2 SSL Bug Fixes.
