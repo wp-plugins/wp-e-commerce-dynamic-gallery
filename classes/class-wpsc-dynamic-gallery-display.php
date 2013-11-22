@@ -15,7 +15,7 @@ class WPSC_Dynamic_Gallery_Display_Class
 		 * Single Product Image
 		 */
 		global $post;
-		global $wpsc_dgallery_container_settings, $wpsc_dgallery_global_settings, $wpsc_dgallery_caption_settings, $wpsc_dgallery_navbar_settings, $wpsc_dgallery_lazyload_settings, $wpsc_dgallery_thumbnail_settings;
+		global $wpsc_dgallery_global_settings, $wpsc_dgallery_style_setting, $wpsc_dgallery_thumbnail_settings, $wpsc_dgallery_fonts_face;
 		
 		if ( $product_id <= 0 ) {
 			$product_id = $post->ID;
@@ -52,37 +52,31 @@ class WPSC_Dynamic_Gallery_Display_Class
 		$product_id .= '_'.rand(100,10000);
 		
 		//Gallery settings
-		$g_width = $wpsc_dgallery_container_settings['product_gallery_width'];
-        $g_height = $wpsc_dgallery_container_settings['product_gallery_height'];
-		$g_auto = $wpsc_dgallery_container_settings['product_gallery_auto_start'];
-        $g_speed = $wpsc_dgallery_container_settings['product_gallery_speed'];
-        $g_effect = $wpsc_dgallery_container_settings['product_gallery_effect'];
-        $g_animation_speed = $wpsc_dgallery_container_settings['product_gallery_animation_speed'];
-		$bg_image_wrapper = $wpsc_dgallery_container_settings['bg_image_wrapper'];
-		$border_image_wrapper_color = $wpsc_dgallery_container_settings['border_image_wrapper_color'];
+		$g_width = $wpsc_dgallery_style_setting['product_gallery_width_fixed'];
+        $g_height = $wpsc_dgallery_style_setting['product_gallery_height'];
+		$g_auto = $wpsc_dgallery_style_setting['product_gallery_auto_start'];
+        $g_speed = $wpsc_dgallery_style_setting['product_gallery_speed'];
+        $g_effect = $wpsc_dgallery_style_setting['product_gallery_effect'];
+        $g_animation_speed = $wpsc_dgallery_style_setting['product_gallery_animation_speed'];
+		$bg_image_wrapper = $wpsc_dgallery_style_setting['bg_image_wrapper'];
+		$border_image_wrapper_color = $wpsc_dgallery_style_setting['border_image_wrapper_color'];
 		$popup_gallery = $wpsc_dgallery_global_settings['popup_gallery'];
 		
 		//Caption text settings
-		$caption_font = htmlspecialchars_decode( $wpsc_dgallery_caption_settings['caption_font'] );
-		$caption_font_size = $wpsc_dgallery_caption_settings['caption_font_size'];
-		$caption_font_style = $wpsc_dgallery_caption_settings['caption_font_style'];
-		$product_gallery_text_color = $wpsc_dgallery_caption_settings['product_gallery_text_color'];
-		$product_gallery_bg_des = $wpsc_dgallery_caption_settings['product_gallery_bg_des'];
+		$caption_font = $wpsc_dgallery_style_setting['caption_font'];
+		$product_gallery_bg_des = $wpsc_dgallery_style_setting['product_gallery_bg_des'];
 		$bg_des = WPSC_Dynamic_Gallery_Functions::html2rgb($product_gallery_bg_des,true);
 		$des_background =str_replace('#','',$product_gallery_bg_des);
 		
 		//Nav bar settings
-		if( $wpsc_dgallery_navbar_settings['product_gallery_nav'] == 'yes') {
-			$product_gallery_nav = $wpsc_dgallery_navbar_settings['product_gallery_nav'];
+		if( $wpsc_dgallery_style_setting['product_gallery_nav'] == 'yes') {
+			$product_gallery_nav = $wpsc_dgallery_style_setting['product_gallery_nav'];
 		} else {
 			$product_gallery_nav = 'no';
 		}
-		$navbar_font = htmlspecialchars_decode ( $wpsc_dgallery_navbar_settings['navbar_font'] );
-		$navbar_font_size = $wpsc_dgallery_navbar_settings['navbar_font_size'];
-		$navbar_font_style = $wpsc_dgallery_navbar_settings['navbar_font_style'];
-		$bg_nav_color = $wpsc_dgallery_navbar_settings['bg_nav_color'];
-		$bg_nav_text_color = $wpsc_dgallery_navbar_settings['bg_nav_text_color'];
-		$navbar_height = $wpsc_dgallery_navbar_settings['navbar_height'];
+		$navbar_font = $wpsc_dgallery_style_setting['navbar_font'];
+		$bg_nav_color = $wpsc_dgallery_style_setting['bg_nav_color'];
+		$navbar_height = $wpsc_dgallery_style_setting['navbar_height'];
 		if ( $product_gallery_nav == 'yes' ) {
 			$display_ctrl = 'display:block !important;';
 			$mg = $navbar_height;
@@ -94,8 +88,8 @@ class WPSC_Dynamic_Gallery_Display_Class
 		}
 			
 		//Lazy-load scroll settings
-		$transition_scroll_bar = $wpsc_dgallery_lazyload_settings['transition_scroll_bar'];
-		$lazy_load_scroll = $wpsc_dgallery_lazyload_settings['lazy_load_scroll'];
+		$transition_scroll_bar = $wpsc_dgallery_style_setting['transition_scroll_bar'];
+		$lazy_load_scroll = $wpsc_dgallery_style_setting['lazy_load_scroll'];
 		
 		//Image Thumbnails settings
 		if ( $wpsc_dgallery_thumbnail_settings['enable_gallery_thumb'] == 'yes') {
@@ -115,6 +109,7 @@ class WPSC_Dynamic_Gallery_Display_Class
           <div class="product_gallery">';
                 
             $html .=  '<style>
+				.single_product_display .imagecol { max-width:100%; }
 				.single_product_display .imagecol > a { display: none !important;position: absolute;z-index: -1;left:-1000em;}
 				#TB_window{width:auto !important;}
                 .ad-gallery {
@@ -204,21 +199,9 @@ class WPSC_Dynamic_Gallery_Display_Class
 					background: rgba('.$bg_des.',0.5);
 					filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr="#88'.$des_background.'", EndColorStr="#88'.$des_background.'");
 
-					margin: 0 0 '.$mg.'px !important;
-					color: '.$product_gallery_text_color.' !important;
-					font-family:'.$caption_font.' !important;
-					font-size: '.$caption_font_size.';';
+					margin: 0 0 '.$mg.'px !important;';
 					
-					if($caption_font_style == 'bold'){
-						$html .=  'font-weight:bold !important;';
-					}elseif($caption_font_style == 'normal'){
-						$html .=  'font-weight:normal !important;';
-					}elseif($caption_font_style == 'italic'){
-						$html .=  'font-style:italic !important;';
-					}elseif($caption_font_style == 'bold_italic'){
-						$html .=  'font-weight:bold !important;';
-						$html .=  'font-style:italic !important;';
-					}
+					$html .= $wpsc_dgallery_fonts_face->generate_font_css( $caption_font );
 					
 					$html .=  '
 					left: 0;
@@ -237,20 +220,9 @@ class WPSC_Dynamic_Gallery_Display_Class
 				}
 				.product_gallery .slide-ctrl, .product_gallery .icon_zoom {
 					'.$display_ctrl.';
-					font-family:'.$navbar_font.' !important;
-					font-size: '.$navbar_font_size.';
 					height: '.($navbar_height-16).'px !important;
 					line-height: '.($navbar_height-16).'px !important;';
-					if($navbar_font_style == 'bold'){
-						$html .=  'font-weight:bold !important;';
-					}elseif($navbar_font_style == 'normal'){
-						$html .=  'font-weight:normal !important;';
-					}elseif($navbar_font_style == 'italic'){
-						$html .=  'font-style:italic !important;';
-					}elseif($navbar_font_style == 'bold_italic'){
-						$html .=  'font-weight:bold !important;';
-						$html .=  'font-style:italic !important;';
-					}
+					$html .= $wpsc_dgallery_fonts_face->generate_font_css( $navbar_font );
 				$html .=  '
 				}';
 				if($lazy_load_scroll == 'yes'){
@@ -275,8 +247,9 @@ class WPSC_Dynamic_Gallery_Display_Class
 					border-top: 1px solid '.$border_image_wrapper_color.';
 				}
 				.product_gallery .slide-ctrl .ad-slideshow-stop-slide,.product_gallery .slide-ctrl .ad-slideshow-start-slide,.product_gallery .icon_zoom{
-					color:'.$bg_nav_text_color.';
-					line-height: '.($navbar_height-16).'px !important;
+					line-height: '.($navbar_height-16).'px !important;';
+					$html .= $wpsc_dgallery_fonts_face->generate_font_css( $navbar_font );
+				$html .= '
 				}
 				.product_gallery .ad-gallery .ad-thumbs li a {
 					border:1px solid '.$border_image_wrapper_color.' !important;
@@ -285,7 +258,7 @@ class WPSC_Dynamic_Gallery_Display_Class
 					border: 1px solid '.$transition_scroll_bar.' !important;
 				}';
 			if($enable_gallery_thumb == 'no'){
-				$html .=  '.ad-nav{display:none;}.woocommerce .images { margin-bottom: 15px;}';
+				$html .=  '.ad-nav{visibility:hidden !important; height: 0 !important;}.woocommerce .images { margin-bottom: 15px;}';
 			}	
 			
 			if($product_gallery_nav == 'no'){
@@ -346,7 +319,7 @@ class WPSC_Dynamic_Gallery_Display_Class
                 jQuery("#gallery_'.$product_id.'").adGallery(settings_defaults_'.$product_id.');
             });
             </script>';
-            $html .=  '<div id="gallery_'.$product_id.'" class="ad-gallery">
+            $html .=  '<div id="gallery_'.$product_id.'" class="ad-gallery" style="width: '.$g_width.'px;">
                 <div class="ad-image-wrapper"></div>
                 <div class="ad-controls"> </div>
                   <div class="ad-nav">

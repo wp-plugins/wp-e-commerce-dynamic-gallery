@@ -11,52 +11,64 @@ class WPSC_Dynamic_Gallery_Preview_Display
 {
 	
 	public static function wpsc_dynamic_gallery_preview( $request = '' ) {
+		global $wpsc_dgallery_fonts_face;
+		$request = $_REQUEST;
+		
 		/**
 		 * Single Product Image
 		 */
 		$lightbox_class = 'lightbox';
-		global $wpsc_dgallery_container_settings, $wpsc_dgallery_global_settings, $wpsc_dgallery_caption_settings, $wpsc_dgallery_navbar_settings, $wpsc_dgallery_lazyload_settings, $wpsc_dgallery_thumbnail_settings;
 		
-		$wpsc_dgallery_container_settings_live = $request['wpsc_dgallery_container_settings'];
-		$wpsc_dgallery_thumbnail_settings_live = $request['wpsc_dgallery_thumbnail_settings'];
+		$wpsc_dgallery_style_setting = $request['wpsc_dgallery_style_setting'];
+		global $wpsc_dgallery_global_settings;
+		global $wpsc_dgallery_thumbnail_settings;
 		
+		if ( !isset( $wpsc_dgallery_style_setting['width_type'] ) || $wpsc_dgallery_style_setting['width_type'] == 'px' ) $g_width = $wpsc_dgallery_style_setting['product_gallery_width_fixed'].'px';
+		else $g_width = $wpsc_dgallery_style_setting['product_gallery_width_responsive'].'%';
+		
+		//Caption text settings
+		$caption_font = $wpsc_dgallery_style_setting['caption_font'];
+			
+		$navbar_font = $wpsc_dgallery_style_setting['navbar_font'];
+		
+		$google_fonts = array( $caption_font['face'], $navbar_font['face'] );
+		$wpsc_dgallery_fonts_face->generate_google_webfonts( $google_fonts );
+				
 		?>
-        <div class="images" style="width:<?php echo $wpsc_dgallery_container_settings['product_gallery_width'].'px';?>;margin:30px auto;">
+        <div class="images" style="width:<?php echo $g_width; ?>;margin:30px auto;">
           <div class="product_gallery">
             <?php
 			//Gallery settings
-            $g_width = $wpsc_dgallery_container_settings_live['product_gallery_width'];
-            $g_height = $wpsc_dgallery_container_settings_live['product_gallery_height'];
+            $g_height = $wpsc_dgallery_style_setting['product_gallery_height'];
 			
-			$g_auto = $wpsc_dgallery_container_settings['product_gallery_auto_start'];
-            $g_speed = $wpsc_dgallery_container_settings['product_gallery_speed'];
-            $g_effect = $wpsc_dgallery_container_settings['product_gallery_effect'];
-            $g_animation_speed = $wpsc_dgallery_container_settings['product_gallery_animation_speed'];
-			$bg_image_wrapper = $wpsc_dgallery_container_settings['bg_image_wrapper'];
-			$border_image_wrapper_color = $wpsc_dgallery_container_settings['border_image_wrapper_color'];
+			if ( isset( $wpsc_dgallery_style_setting['product_gallery_auto_start'] ) ) 
+				$g_auto = $wpsc_dgallery_style_setting['product_gallery_auto_start'];
+			else
+				$g_auto = 'false';
+            $g_speed = $wpsc_dgallery_style_setting['product_gallery_speed'];
+            $g_effect = $wpsc_dgallery_style_setting['product_gallery_effect'];
+            $g_animation_speed = $wpsc_dgallery_style_setting['product_gallery_animation_speed'];
+			$bg_image_wrapper = $wpsc_dgallery_style_setting['bg_image_wrapper'];
+			$border_image_wrapper_color = $wpsc_dgallery_style_setting['border_image_wrapper_color'];
 			$popup_gallery = $wpsc_dgallery_global_settings['popup_gallery'];
+			$zoom_label = __('ZOOM +', 'wpsc_dgallery');
+			if ($popup_gallery == 'deactivate') {
+				$lightbox_class = '';
+				$zoom_label = '';
+			}
 			
-			//Caption text settings
-			$caption_font = htmlspecialchars_decode( $wpsc_dgallery_caption_settings['caption_font'] );
-			$caption_font_size = $wpsc_dgallery_caption_settings['caption_font_size'];
-			$caption_font_style = $wpsc_dgallery_caption_settings['caption_font_style'];
-			$product_gallery_text_color = $wpsc_dgallery_caption_settings['product_gallery_text_color'];
-			$product_gallery_bg_des = $wpsc_dgallery_caption_settings['product_gallery_bg_des'];
+			$product_gallery_bg_des = $wpsc_dgallery_style_setting['product_gallery_bg_des'];
 			$bg_des = WPSC_Dynamic_Gallery_Functions::html2rgb($product_gallery_bg_des,true);
 			$des_background =str_replace('#','',$product_gallery_bg_des);
 			
 			//Nav bar settings
-			if ( isset( $wpsc_dgallery_navbar_settings['product_gallery_nav'] ) ) {
-				$product_gallery_nav = $wpsc_dgallery_navbar_settings['product_gallery_nav'];
+			if ( isset( $wpsc_dgallery_style_setting['product_gallery_nav'] ) ) {
+				$product_gallery_nav = $wpsc_dgallery_style_setting['product_gallery_nav'];
 			} else {
 				$product_gallery_nav = 'no';
 			}
-			$navbar_font = htmlspecialchars_decode ($wpsc_dgallery_navbar_settings['navbar_font']);
-			$navbar_font_size = $wpsc_dgallery_navbar_settings['navbar_font_size'];
-			$navbar_font_style = $wpsc_dgallery_navbar_settings['navbar_font_style'];
-			$bg_nav_color = $wpsc_dgallery_navbar_settings['bg_nav_color'];
-			$bg_nav_text_color = $wpsc_dgallery_navbar_settings['bg_nav_text_color'];
-			$navbar_height = $wpsc_dgallery_navbar_settings['navbar_height'];
+			$bg_nav_color = $wpsc_dgallery_style_setting['bg_nav_color'];
+			$navbar_height = $wpsc_dgallery_style_setting['navbar_height'];
 			if ( $product_gallery_nav == 'yes' ) {
 				$display_ctrl = 'display:block !important;';
 				$mg = $navbar_height;
@@ -69,9 +81,9 @@ class WPSC_Dynamic_Gallery_Preview_Display
 			}
 			
 			//Lazy-load scroll settings
-			$transition_scroll_bar = $wpsc_dgallery_lazyload_settings['transition_scroll_bar'];
-			if ( isset( $wpsc_dgallery_lazyload_settings['lazy_load_scroll'] ) ) {
-				$lazy_load_scroll = $wpsc_dgallery_lazyload_settings['lazy_load_scroll'];
+			$transition_scroll_bar = $wpsc_dgallery_style_setting['transition_scroll_bar'];
+			if ( isset( $wpsc_dgallery_style_setting['lazy_load_scroll'] ) ) {
+				$lazy_load_scroll = $wpsc_dgallery_style_setting['lazy_load_scroll'];
 			} else {
 				$lazy_load_scroll = 'no';
 			}
@@ -82,17 +94,16 @@ class WPSC_Dynamic_Gallery_Preview_Display
 			} else{
 				$enable_gallery_thumb = 'no';
 			}
-            $g_thumb_width = $wpsc_dgallery_thumbnail_settings_live['thumb_width'];
+            $g_thumb_width = $wpsc_dgallery_thumbnail_settings['thumb_width'];
 			if ( $g_thumb_width <= 0 ) $g_thumb_width = 105;
-            $g_thumb_height = $wpsc_dgallery_thumbnail_settings_live['thumb_height'];
+            $g_thumb_height = $wpsc_dgallery_thumbnail_settings['thumb_height'];
 			if ( $g_thumb_height <= 0 ) $g_thumb_height = 75;
-            $g_thumb_spacing = $wpsc_dgallery_thumbnail_settings_live['thumb_spacing'];
+            $g_thumb_spacing = $wpsc_dgallery_thumbnail_settings['thumb_spacing'];
                 
             $product_id = rand(10, 10000);
             echo '<style>
 			#TB_window{width:auto !important;}
                 .ad-gallery {
-                        width: '.$g_width.'px;
 						position:relative;
                 }
                 .ad-gallery .ad-image-wrapper {
@@ -176,20 +187,8 @@ class WPSC_Dynamic_Gallery_Preview_Display
 				.ad-gallery .ad-image-wrapper .ad-image-description {
 					background: rgba('.$bg_des.',0.5);
 					filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr="#88'.$des_background.'", EndColorStr="#88'.$des_background.'");
-					bottom: '.($mg-1).'px !important;
-					color: '.$product_gallery_text_color.' !important;
-					font-family:'.$caption_font.' !important;
-					font-size: '.$caption_font_size.';';
-					if($caption_font_style == 'bold'){
-						echo 'font-weight:bold !important;';
-					}elseif($caption_font_style == 'normal'){
-						echo 'font-weight:normal !important;';
-					}elseif($caption_font_style == 'italic'){
-						echo 'font-style:italic !important;';
-					}elseif($caption_font_style == 'bold_italic'){
-						echo 'font-weight:bold !important;';
-						echo 'font-style:italic !important;';
-					}
+					bottom: '.($mg-1).'px !important;';
+					echo $wpsc_dgallery_fonts_face->generate_font_css( $caption_font );
 					echo '
 					left: 0;
 					line-height: 1.4em;
@@ -219,21 +218,10 @@ class WPSC_Dynamic_Gallery_Preview_Display
 				echo'
 				.product_gallery .slide-ctrl, .product_gallery .icon_zoom {
 					'.$display_ctrl.';
-					font-family:'.$navbar_font.' !important;
-					font-size: '.$navbar_font_size.';
 					height: '.($navbar_height-16).'px !important;
 					line-height: '.($navbar_height-16).'px !important;';
 					
-					if ( $navbar_font_style == 'bold' ) {
-						echo 'font-weight:bold !important;';
-					} elseif ( $navbar_font_style == 'normal' ) {
-						echo 'font-weight:normal !important;';
-					} elseif ( $navbar_font_style == 'italic' ) {
-						echo 'font-style:italic !important;';
-					} elseif ( $navbar_font_style == 'bold_italic' ) {
-						echo 'font-weight:bold !important;';
-						echo 'font-style:italic !important;';
-					}
+					echo $wpsc_dgallery_fonts_face->generate_font_css( $navbar_font );
 				echo '
 				}
 				.ad-gallery .lazy-load{
@@ -253,8 +241,9 @@ class WPSC_Dynamic_Gallery_Preview_Display
 					border-top: 1px solid '.$border_image_wrapper_color.';
 				}
 				.product_gallery .slide-ctrl .ad-slideshow-stop-slide,.product_gallery .slide-ctrl .ad-slideshow-start-slide,.product_gallery .icon_zoom{
-					color:'.$bg_nav_text_color.';
-					line-height: '.($navbar_height-16).'px !important;
+					line-height: '.($navbar_height-16).'px !important;';
+					echo $wpsc_dgallery_fonts_face->generate_font_css( $navbar_font );
+				echo '
 				}
 				.product_gallery .ad-gallery .ad-thumbs li a {
 					border:1px solid '.$border_image_wrapper_color.' !important;
@@ -306,7 +295,7 @@ class WPSC_Dynamic_Gallery_Preview_Display
                             speed: '.$g_speed.'000,
                             start_label: "'.__('START SLIDESHOW', 'wpsc_dgallery').'",
                             stop_label: "'.__('STOP SLIDESHOW', 'wpsc_dgallery').'",
-							zoom_label: "'.__('ZOOM +', 'wpsc_dgallery').'",
+							zoom_label: "'.$zoom_label.'",
                             stop_on_scroll: true,
                             countdown_prefix: "(",
                             countdown_sufix: ")",

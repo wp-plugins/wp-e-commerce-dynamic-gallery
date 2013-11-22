@@ -6,8 +6,6 @@
  *
  * Table Of Contents
  *
- * add_wpsc_settings_tabs()
- * wpsc_dynamic_gallery_add_script()
  * dynamic_gallery_frontend_script()
  * wp_admin_footer_scripts()
  * wpsc_dynamic_gallery_display()
@@ -17,37 +15,7 @@
  */
 class WPSC_Dynamic_Gallery_Hook_Filter
 {
-	public static function add_wpsc_settings_tabs($tabs) {
-		$tabs['gallery_settings'] = __('Dynamic Gallery', 'wpsc_dgallery');
-		return $tabs;
-	}
-	
-	public static function wpsc_dynamic_gallery_add_script() {
-		$suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';
 		
-		wp_enqueue_script('jquery');
-		wp_enqueue_script('farbtastic');
-		wp_enqueue_style('farbtastic');
-		wp_enqueue_script( 'thickbox' );
-		wp_enqueue_style( 'thickbox' );
-		wp_register_script( 'wpsc-dynamic-gallery-script', WPSC_DYNAMIC_GALLERY_JS_URL.'/galleries.js' );
-		wp_enqueue_script( 'wpsc-dynamic-gallery-script' );
-		
-		wp_enqueue_style( 'ad-gallery-style', WPSC_DYNAMIC_GALLERY_JS_URL . '/mygallery/jquery.ad-gallery.css' );
-		wp_enqueue_script( 'ad-gallery-script', WPSC_DYNAMIC_GALLERY_JS_URL . '/mygallery/jquery.ad-gallery.js', array(), false, true );
-		
-		wp_enqueue_style( 'a3_colorbox_style', WPSC_DYNAMIC_GALLERY_JS_URL . '/colorbox/colorbox.css' );
-		wp_enqueue_script( 'colorbox_script', WPSC_DYNAMIC_GALLERY_JS_URL . '/colorbox/jquery.colorbox'.$suffix.'.js', array(), false, true );
-			
-		wp_enqueue_style( 'woocommerce_fancybox_styles', WPSC_DYNAMIC_GALLERY_JS_URL . '/fancybox/fancybox.css' );
-		wp_enqueue_script( 'fancybox', WPSC_DYNAMIC_GALLERY_JS_URL . '/fancybox/fancybox'.$suffix.'.js', array(), false, true );
-		
-		wp_enqueue_style( 'a3rev-chosen-style', WPSC_DYNAMIC_GALLERY_JS_URL . '/chosen/chosen.css' );
-		wp_enqueue_script( 'chosen', WPSC_DYNAMIC_GALLERY_JS_URL . '/chosen/chosen.jquery'.$suffix.'.js', array(), false, true );
-		
-		wp_enqueue_script( 'a3rev-chosen-script-init', WPSC_DYNAMIC_GALLERY_JS_URL.'/init-chosen.js', array(), false, true );
-	}
-	
 	public static function dynamic_gallery_frontend_script() {
 		global $wpsc_dgallery_global_settings;
 		
@@ -56,7 +24,6 @@ class WPSC_Dynamic_Gallery_Hook_Filter
 		wp_enqueue_script('jquery');
 		wp_enqueue_style( 'ad-gallery-style', WPSC_DYNAMIC_GALLERY_JS_URL . '/mygallery/jquery.ad-gallery.css' );
 		wp_enqueue_script( 'ad-gallery-script', WPSC_DYNAMIC_GALLERY_JS_URL . '/mygallery/jquery.ad-gallery.js', array(), false, true );
-		wp_enqueue_script( 'filter-gallery-script', WPSC_DYNAMIC_GALLERY_JS_URL . '/filter_gallery.js', array(), false, true );
 		
 		$popup_gallery = $wpsc_dgallery_global_settings['popup_gallery'];
 		if ( $popup_gallery == 'colorbox' ) {
@@ -160,11 +127,11 @@ class WPSC_Dynamic_Gallery_Hook_Filter
 	public static function do_dynamic_gallery() {
 		global $post;
 		if ( is_singular('wpsc-product') ) {
-			global $wpsc_dgallery_container_settings;
+			global $wpsc_dgallery_style_setting;
 			
 			$wpsc_dynamic_gallery_frontend = wp_create_nonce("wpsc_dynamic_gallery_frontend");
-			$g_width = $wpsc_dgallery_container_settings['product_gallery_width'];
-			$g_height = $wpsc_dgallery_container_settings['product_gallery_height'];
+			$g_width = $wpsc_dgallery_style_setting['product_gallery_width_fixed'];
+			$g_height = $wpsc_dgallery_style_setting['product_gallery_height'];
 	
 			echo "<script type=\"text/javascript\">
 			jQuery(window).load(function($){

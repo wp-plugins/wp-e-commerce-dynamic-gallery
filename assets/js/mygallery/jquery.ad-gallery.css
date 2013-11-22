@@ -123,7 +123,7 @@
 }
 .ad-gallery .ad-thumbs .ad-thumb-list {
 	float: none !important;
-	width: 9000px;
+	/*width: 9000px;*/
 	list-style: none;
 	margin-top:5px;
 }

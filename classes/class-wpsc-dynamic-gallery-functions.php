@@ -4,30 +4,15 @@
  *
  * Table Of Contents
  *
- * plugins_loaded()
  * reset_products_galleries_activate()
  * html2rgb()
- * rgb2html()
  * get_font()
  * get_font_sizes()
  * plugin_pro_notice()
  * upgrade_1_1_4()
  */
 class WPSC_Dynamic_Gallery_Functions 
-{	
-	/** 
-	 * Set global variable when plugin loaded
-	 */
-	public static function plugins_loaded() {
-		
-		WPSC_Dynamic_Gallery_Container_Settings::get_settings();
-		WPSC_Dynamic_Gallery_Global_Settings::get_settings();
-		WPSC_Dynamic_Gallery_Caption_Settings::get_settings();
-		WPSC_Dynamic_Gallery_Navbar_Settings::get_settings();
-		WPSC_Dynamic_Gallery_LazyLoad_Settings::get_settings();
-		WPSC_Dynamic_Gallery_Thumbnail_Settings::get_settings();
-		
-	}
+{
 	
 	public static function reset_products_galleries_activate() {
 		global $wpdb;
@@ -53,61 +38,10 @@ class WPSC_Dynamic_Gallery_Functions
 		}else{
 			return array($r, $g, $b);
 		}
-	}
+	}	
 	
-	public static function rgb2html($r, $g=-1, $b=-1){
-		if (is_array($r) && sizeof($r) == 3)
-			list($r, $g, $b) = $r;
-	
-		$r = intval($r); $g = intval($g);
-		$b = intval($b);
-	
-		$r = dechex($r<0?0:($r>255?255:$r));
-		$g = dechex($g<0?0:($g>255?255:$g));
-		$b = dechex($b<0?0:($b>255?255:$b));
-	
-		$color = (strlen($r) < 2?'0':'').$r;
-		$color .= (strlen($g) < 2?'0':'').$g;
-		$color .= (strlen($b) < 2?'0':'').$b;
-		return '#'.$color;
-	}
-	
-	public static function get_font() {
-		$fonts = array( 
-			'Arial, sans-serif'													=> __( 'Arial', 'wpsc_dgallery' ),
-			'Verdana, Geneva, sans-serif'										=> __( 'Verdana', 'wpsc_dgallery' ),
-			'Trebuchet MS, Tahoma, sans-serif'								=> __( 'Trebuchet', 'wpsc_dgallery' ),
-			'Georgia, serif'													=> __( 'Georgia', 'wpsc_dgallery' ),
-			'Times New Roman, serif'											=> __( 'Times New Roman', 'wpsc_dgallery' ),
-			'Tahoma, Geneva, Verdana, sans-serif'								=> __( 'Tahoma', 'wpsc_dgallery' ),
-			'Palatino, Palatino Linotype, serif'								=> __( 'Palatino', 'wpsc_dgallery' ),
-			'Helvetica Neue, Helvetica, sans-serif'							=> __( 'Helvetica*', 'wpsc_dgallery' ),
-			'Calibri, Candara, Segoe, Optima, sans-serif'						=> __( 'Calibri*', 'wpsc_dgallery' ),
-			'Myriad Pro, Myriad, sans-serif'									=> __( 'Myriad Pro*', 'wpsc_dgallery' ),
-			'Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif'	=> __( 'Lucida', 'wpsc_dgallery' ),
-			'Arial Black, sans-serif'											=> __( 'Arial Black', 'wpsc_dgallery' ),
-			'Gill Sans, Gill Sans MT, Calibri, sans-serif'					=> __( 'Gill Sans*', 'wpsc_dgallery' ),
-			'Geneva, Tahoma, Verdana, sans-serif'								=> __( 'Geneva*', 'wpsc_dgallery' ),
-			'Impact, Charcoal, sans-serif'										=> __( 'Impact', 'wpsc_dgallery' ),
-			'Courier, Courier New, monospace'									=> __( 'Courier', 'wpsc_dgallery' ),
-			'Century Gothic, sans-serif'										=> __( 'Century Gothic', 'wpsc_dgallery' ),
-		);
-		
-		return apply_filters('wpsc_dynamic_gallery_fonts_support', $fonts );
-	}
-	
-	public static function get_font_sizes($start = 9, $end = 30, $unit = 'px') {
-		$font_sizes = array();
-		for ($start; $start <= $end; $start ++) {
-			$font_sizes[$start.''.$unit] = $start.''.$unit;
-		}
-		
-		return $font_sizes;
-	}
-	
-	public static function plugin_pro_notice() {
+	public static function plugin_extension() {
 		$html = '';
-		$html .= '<div id="a3_plugin_panel_extensions">';
 		$html .= '<a href="http://a3rev.com/shop/" target="_blank" style="float:right;margin-top:5px; margin-left:10px;" ><img src="'.WPSC_DYNAMIC_GALLERY_IMAGES_URL.'/a3logo.png" /></a>';
 		$html .= '<h3>'.__('Upgrade available for WPEC Dynamic Gallery Pro', 'wpsc_dgallery').'</h3>';
 		$html .= '<p>'.__("<strong>NOTE:</strong> All the functions inside the Yellow border on the plugins admin panel are extra functionality that is activated by upgrading to the Pro version", 'wpsc_dgallery').':</p>';
@@ -145,13 +79,12 @@ class WPSC_Dynamic_Gallery_Functions
 		$html .= '<h3>'.__('Help spread the Word about this plugin', 'wpsc_dgallery').'</h3>';
 		$html .= '<p>'.__("Things you can do to help others find this plugin", 'wpsc_dgallery');
 		$html .= '<ul style="padding-left:10px;">';
-		$html .= '<li>* <a href="http://wordpress.org/plugins/wp-e-commerce-dynamic-gallery/" target="_blank">'.__('Rate this plugin 5', 'wpsc_dgallery').' <img src="'.WPSC_DYNAMIC_GALLERY_IMAGES_URL.'/stars.png" align="top" /> '.__('on WordPress.org', 'wpsc_dgallery').'</a></li>';
+		$html .= '<li>* <a href="http://wordpress.org/plugins/wp-e-commerce-dynamic-gallery/" target="_blank">'.__('Rate this plugin 5', 'wpsc_dgallery').' <img src="'.WPSC_DYNAMIC_GALLERY_IMAGES_URL.'/stars.png" align="top" style="width:auto !important; height:auto !important" /> '.__('on WordPress.org', 'wpsc_dgallery').'</a></li>';
 		$html .= '<li>* <a href="http://wordpress.org/plugins/wp-e-commerce-dynamic-gallery/" target="_blank">'.__('Mark the plugin as a fourite', 'wpsc_dgallery').'</a></li>';
 		$html .= '<li>* <a href="http://www.facebook.com/a3revolution/" target="_blank">'.__('Follow a3rev on facebook', 'wpsc_dgallery').'</a></li>';
 		$html .= '<li>* <a href="https://twitter.com/a3rev/" target="_blank">'.__('Follow a3rev on Twitter', 'wpsc_dgallery').'</a></li>';
 		$html .= '</ul>';
 		$html .= '</p>';
-		$html .= '</div>';
 		return $html;
 	}
 	
@@ -225,5 +158,18 @@ class WPSC_Dynamic_Gallery_Functions
 			update_option('wpsc_dgallery_global_settings', $wpsc_dgallery_global_settings );	
 		}
 	}
+	
+	public static function upgrade_1_1_9() {
+		$wpsc_dgallery_container_settings = get_option( 'wpsc_dgallery_container_settings' );
+		
+		$wpsc_dgallery_style_setting = array();
+		$wpsc_dgallery_style_setting = array_merge( $wpsc_dgallery_style_setting, $wpsc_dgallery_container_settings );
+		$wpsc_dgallery_style_setting['product_gallery_width_responsive'] = trim( $wpsc_dgallery_container_settings['product_gallery_width'] );
+		$wpsc_dgallery_style_setting['product_gallery_width_fixed'] = trim( $wpsc_dgallery_container_settings['product_gallery_width'] );
+		
+		update_option( 'wpsc_dgallery_style_setting', $wpsc_dgallery_style_setting );
+		
+	}
 }
+
 ?>
