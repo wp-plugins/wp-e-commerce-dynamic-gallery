@@ -101,7 +101,7 @@ class WPSC_Dynamic_Gallery_Style_Settings extends WPSC_Dynamic_Gallery_Admin_UI
 		
 		// Add yellow border for pro fields
 		add_action( $this->plugin_name . '_settings_pro_gallery_special_effects_before', array( $this, 'pro_fields_before' ) );
-		add_action( $this->plugin_name . '_settings_pro_lazy_bar_colour_after', array( $this, 'pro_fields_after' ) );
+		add_action( $this->plugin_name . '_settings_pro_variation_load_effect_timing_after', array( $this, 'pro_fields_after' ) );
 	}
 	
 	/*-----------------------------------------------------------------------------------*/
@@ -433,6 +433,35 @@ class WPSC_Dynamic_Gallery_Style_Settings extends WPSC_Dynamic_Gallery_Admin_UI
 				'type' 		=> 'color',
 				'default'	=> '#000000'
 			),
+			
+			array(	'name' => __('Variations Galleries', 'wpsc_dgallery'), 'type' => 'heading'),
+			array(  
+				'name' => __( 'Gallery load effect', 'wpsc_dgallery' ),
+				'desc' 		=> '',
+				'class'		=> 'variation_gallery_effect',
+				'id' 		=> 'variation_gallery_effect',
+				'default'	=> 'none',
+				'type' 		=> 'switcher_checkbox',
+				'checked_value'		=> 'fade',
+				'unchecked_value'	=> 'none',
+				'checked_label'		=> __( 'FADE', 'wpsc_dgallery' ),
+				'unchecked_label' 	=> __( 'DEFAULT', 'wpsc_dgallery' ),
+			),
+			array(	
+				'type' 		=> 'heading',
+				'class'		=> 'variation_load_effect_timing',
+				'id'		=> 'pro_variation_load_effect_timing'
+			),
+			array(  
+				'name' 		=> __( 'Load effect timing', 'wpsc_dgallery' ),
+				'desc' 		=> 'seconds',
+				'id' 		=> 'variation_gallery_effect_speed',
+				'type' 		=> 'slider',
+				'default'	=> 2,
+				'min'		=> 1,
+				'max'		=> 10,
+				'increment'	=> 1,
+			),
 		
         ));
 	}
@@ -460,6 +489,11 @@ $(document).ready(function() {
 	} else {
 		$(".lazy_load_container").hide();
 	}
+	if ( $("input.variation_gallery_effect:checked").val() == 'fade') {
+		$(".variation_load_effect_timing").show();
+	} else {
+		$(".variation_load_effect_timing").hide();
+	}
 	
 	$(document).on( "a3rev-ui-onoff_checkbox-switch", '.gallery_width_type', function( event, value, status ) {
 		if ( status == 'true' ) {
@@ -484,6 +518,14 @@ $(document).ready(function() {
 			$(".lazy_load_container").slideDown();
 		} else {
 			$(".lazy_load_container").slideUp();
+		}
+	});
+	
+	$(document).on( "a3rev-ui-onoff_checkbox-switch", '.variation_gallery_effect', function( event, value, status ) {
+		if ( status == 'true' ) {
+			$(".variation_load_effect_timing").slideDown();
+		} else {
+			$(".variation_load_effect_timing").slideUp();
 		}
 	});
 });

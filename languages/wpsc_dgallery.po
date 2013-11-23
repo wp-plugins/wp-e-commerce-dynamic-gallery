@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP e-Commerce Dynamic Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-22 15:31+0700\n"
-"PO-Revision-Date: 2013-11-22 15:31+0700\n"
+"POT-Creation-Date: 2013-11-23 12:41+0700\n"
+"PO-Revision-Date: 2013-11-23 12:41+0700\n"
 "Last-Translator: Nguyen Cong Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "MIME-Version: 1.0\n"
@@ -402,6 +402,26 @@ msgstr ""
 
 #: admin/settings/gallery-style-settings.php:431
 msgid "Scroll bar colour. Default [default_value]."
+msgstr ""
+
+#: admin/settings/gallery-style-settings.php:437
+msgid "Variations Galleries"
+msgstr ""
+
+#: admin/settings/gallery-style-settings.php:439
+msgid "Gallery load effect"
+msgstr ""
+
+#: admin/settings/gallery-style-settings.php:447
+msgid "FADE"
+msgstr ""
+
+#: admin/settings/gallery-style-settings.php:448
+msgid "DEFAULT"
+msgstr ""
+
+#: admin/settings/gallery-style-settings.php:456
+msgid "Load effect timing"
 msgstr ""
 
 #: admin/settings/global-settings.php:81

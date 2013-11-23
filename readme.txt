@@ -3,7 +3,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, WP e-commerce product images,  wordpress ecommerce
 Requires at least: 3.5
 Tested up to: 3.7.1
-Stable tag: 1.1.9
+Stable tag: 1.1.9.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -179,6 +179,9 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
  
 == Changelog ==
 
+= 1.1.9.1 - 2013/11/23 =
+* Tweak - Added new Pro version Variations Galleries setting to Gallery Style tab settings to keep plugin in synch with Pro Version.
+
 = 1.1.9 - 2013/11/21 =
 * Feature - Upgraded the plugin to the newly developed a3rev admin Framework with app style interface.
 * Feature - New admin UI features check boxes replaced by switches, some dropdowns replaced by sliders.
@@ -302,6 +305,9 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 
 
 == Upgrade Notice ==
+
+= 1.1.9.1 =
+Upgrade now for added Pro Version features settings on admin panel to keep the Pro and Lite version in synch.
 
 = 1.1.9 = 
 Upgrade your plugin now to the all new a3rev plugin framework with app style admin interface plus 3 new features and full compatibility with WordPress 3.7.1 

@@ -1,6 +1,6 @@
 <?php
 function wpsc_dynamic_gallery_install(){
-	update_option('a3rev_wpsc_dgallery_version', '1.1.9');
+	update_option('a3rev_wpsc_dgallery_version', '1.1.9.1');
 	
 	// Set Settings Default from Admin Init
 	global $wpsc_dgallery_admin_init;
@@ -129,6 +129,6 @@ if (version_compare(get_option('a3rev_wpsc_dgallery_version'), '1.1.9') === -1) 
 	update_option('a3rev_wpsc_dgallery_version', '1.1.9');
 }
 
-update_option('a3rev_wpsc_dgallery_version', '1.1.9');
+update_option('a3rev_wpsc_dgallery_version', '1.1.9.1');
 
 ?>
