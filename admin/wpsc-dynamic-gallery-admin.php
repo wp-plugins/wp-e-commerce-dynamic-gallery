@@ -1,6 +1,7 @@
 <?php
 function wpsc_dynamic_gallery_install(){
-	update_option('a3rev_wpsc_dgallery_version', '1.1.9.1');
+	update_option('a3rev_wpsc_dgallery_version', '1.1.9.2');
+	update_option('a3rev_wpsc_dgallery_lite_version', '1.1.9.2');
 	
 	// Set Settings Default from Admin Init
 	global $wpsc_dgallery_admin_init;
@@ -102,33 +103,40 @@ function wpsc_show_dynamic_gallery_with_goldcart() {
 	}	
 }
 
-// Upgrade to 1.0.4
-if ( version_compare(get_option('a3rev_wpsc_dgallery_version'), '1.0.4') === -1 ) {
-	update_option('width_type','px');
-	update_option('a3rev_wpsc_dgallery_version', '1.0.4');
-}
-
-// Upgrade to 1.1.4
-if (version_compare(get_option('a3rev_wpsc_dgallery_version'), '1.1.4') === -1 ) {
-	WPSC_Dynamic_Gallery_Functions::upgrade_1_1_4();
+// Check upgrade functions
+add_action('plugins_loaded', 'wpsc_dgallery_lite_upgrade_plugin');
+function wpsc_dgallery_lite_upgrade_plugin () {
 	
-	update_option('a3rev_wpsc_dgallery_version', '1.1.4');
-}
-
-// Upgrade to 1.1.5
-if (version_compare(get_option('a3rev_wpsc_dgallery_version'), '1.1.5') === -1) {
-	WPSC_Dynamic_Gallery_Functions::upgrade_1_1_5();
+	// Upgrade to 1.0.4
+	if ( version_compare(get_option('a3rev_wpsc_dgallery_version'), '1.0.4') === -1 ) {
+		update_option('width_type','px');
+		update_option('a3rev_wpsc_dgallery_version', '1.0.4');
+	}
 	
-	update_option('a3rev_wpsc_dgallery_version', '1.1.5');
-}
-
-// Upgrade to 1.1.9
-if (version_compare(get_option('a3rev_wpsc_dgallery_version'), '1.1.9') === -1) {
-	WPSC_Dynamic_Gallery_Functions::upgrade_1_1_9();
+	// Upgrade to 1.1.4
+	if (version_compare(get_option('a3rev_wpsc_dgallery_version'), '1.1.4') === -1 ) {
+		WPSC_Dynamic_Gallery_Functions::upgrade_1_1_4();
+		
+		update_option('a3rev_wpsc_dgallery_version', '1.1.4');
+	}
 	
-	update_option('a3rev_wpsc_dgallery_version', '1.1.9');
-}
+	// Upgrade to 1.1.5
+	if (version_compare(get_option('a3rev_wpsc_dgallery_version'), '1.1.5') === -1) {
+		WPSC_Dynamic_Gallery_Functions::upgrade_1_1_5();
+		
+		update_option('a3rev_wpsc_dgallery_version', '1.1.5');
+	}
+	
+	// Upgrade to 1.1.9
+	if (version_compare(get_option('a3rev_wpsc_dgallery_version'), '1.1.9') === -1) {
+		WPSC_Dynamic_Gallery_Functions::upgrade_1_1_9();
+		
+		update_option('a3rev_wpsc_dgallery_version', '1.1.9');
+	}
+	
+	update_option('a3rev_wpsc_dgallery_version', '1.1.9.2');
+	update_option('a3rev_wpsc_dgallery_lite_version', '1.1.9.2');
 
-update_option('a3rev_wpsc_dgallery_version', '1.1.9.1');
+}
 
 ?>

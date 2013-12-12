@@ -130,7 +130,7 @@ class WPSC_Dynamic_Gallery_Global_Settings extends WPSC_Dynamic_Gallery_Admin_UI
 			delete_option( 'wpsc_dgallery_reset_galleries_activate' );
 			WPSC_Dynamic_Gallery_Functions::reset_products_galleries_activate();			
 		}
-		if ( get_option( 'wpsc_dgallery_clean_on_deletion' ) == 0  )  {
+		if ( ( isset( $_POST['bt_save_settings'] ) || isset( $_POST['bt_reset_settings'] ) ) && get_option( 'wpsc_dgallery_lite_clean_on_deletion' ) == 'no'  )  {
 			$uninstallable_plugins = (array) get_option('uninstall_plugins');
 			unset($uninstallable_plugins[WPSC_DYNAMIC_GALLERY_NAME]);
 			update_option('uninstall_plugins', $uninstallable_plugins);
@@ -302,7 +302,7 @@ class WPSC_Dynamic_Gallery_Global_Settings extends WPSC_Dynamic_Gallery_Admin_UI
 			array(  
 				'name' 		=> __( 'Clean up on Deletion', 'wpsc_dgallery' ),
 				'desc' 		=> __( 'On deletion (not deactivate) the plugin it will completely remove all of its code and tables it has created, leaving no trace it was ever here. It will not delete your product images! <strong>WARNING</strong> All of the gallery settings you have made will be deleted forever. If you ever reinstall the gallery you will have to reset them all.', 'wpsc_dgallery' ),
-				'id' 		=> 'wpsc_dgallery_clean_on_deletion',
+				'id' 		=> 'wpsc_dgallery_lite_clean_on_deletion',
 				'default'	=> 'no',
 				'type' 		=> 'onoff_checkbox',
 				'free_version'		=> true,

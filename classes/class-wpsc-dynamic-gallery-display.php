@@ -181,9 +181,6 @@ class WPSC_Dynamic_Gallery_Display_Class
 				.ad-gallery .ad-nav .ad-thumbs{
 					margin:7px 4% 0 !important;
 				}
-				.ad-gallery .ad-nav{
-					margin-top:20px !important;
-				}
 				.ad-gallery .ad-thumbs .ad-thumb-list {
 					margin-top: 0px !important;
 				}

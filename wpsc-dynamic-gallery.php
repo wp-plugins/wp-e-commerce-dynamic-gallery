@@ -3,7 +3,7 @@
 Plugin Name: WP e-Commerce Dynamic Gallery LITE
 Plugin URI: http://a3rev.com/shop/wp-e-commerce-dynamic-gallery/
 Description: Bring your product pages and presentation alive with WP e-Commerce Dynamic Gallery. Simply and Beautifully.
-Version: 1.1.9.1
+Version: 1.1.9.2
 Author: A3 Revolution
 Author URI: http://www.a3rev.com/
 License: GPLv2 or later
@@ -53,8 +53,8 @@ include( 'admin/wpsc-dynamic-gallery-admin.php' );
 */
 register_activation_hook(__FILE__,'wpsc_dynamic_gallery_install');
 
-function wpsc_dynamic_gallery_uninstall() {
-	if ( get_option('wpsc_dgallery_clean_on_deletion') == 'yes' ) {
+function wpsc_dynamic_gallery_lite_uninstall() {
+	if ( get_option('wpsc_dgallery_lite_clean_on_deletion') == 'yes' ) {
 		delete_option( 'wpsc_dgallery_container_settings' );
 		delete_option( 'wpsc_dgallery_global_settings' );
 		delete_option( 'wpsc_dgallery_caption_settings' );
@@ -101,7 +101,7 @@ function wpsc_dynamic_gallery_uninstall() {
 		delete_option( 'thumb_height' );
 		delete_option( 'thumb_spacing' );
 		
-		delete_option('wpsc_dgallery_clean_on_deletion');
+		delete_option('wpsc_dgallery_lite_clean_on_deletion');
 		
 		delete_post_meta_by_key('_actived_d_gallery');
 		delete_post_meta_by_key('_wpsc_dgallery_show_variation');
@@ -109,7 +109,7 @@ function wpsc_dynamic_gallery_uninstall() {
 		delete_post_meta_by_key('_wpsc_dgallery_in_variations');
 	}
 }
-if ( get_option('wpsc_dgallery_clean_on_deletion') == 'yes' ) {
-	register_uninstall_hook( __FILE__, 'wpsc_dynamic_gallery_uninstall' );
+if ( get_option('wpsc_dgallery_lite_clean_on_deletion') == 'yes' ) {
+	register_uninstall_hook( __FILE__, 'wpsc_dynamic_gallery_lite_uninstall' );
 }
 ?>

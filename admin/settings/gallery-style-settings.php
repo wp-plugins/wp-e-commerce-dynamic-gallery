@@ -214,11 +214,14 @@ class WPSC_Dynamic_Gallery_Style_Settings extends WPSC_Dynamic_Gallery_Admin_UI
 			array(	
 				'name' 		=> __('Gallery Dimensions', 'wpsc_dgallery'), 
 				'type' 		=> 'heading',
-				'id'		=> 'pro_gallery_width_type',	
 			),
 			
+			array(	
+				'type' 		=> 'heading',
+				'id'		=> 'pro_gallery_width_type',	
+			),
 			array(  
-				'name' 		=> __( 'Gallery width', 'wpsc_dgallery' ),
+				'name' 		=> __( 'Gallery type', 'wpsc_dgallery' ),
 				'id' 		=> 'width_type',
 				'class'		=> 'gallery_width_type',
 				'type' 		=> 'switcher_checkbox',
@@ -232,10 +235,9 @@ class WPSC_Dynamic_Gallery_Style_Settings extends WPSC_Dynamic_Gallery_Admin_UI
 			array(
             	'class' 	=> 'gallery_width_type_percent',
                 'type' 		=> 'heading',
-				'id'		=> 'pro_product_gallery_width_responsive',
            	),
 			array(  
-				'name' 		=> '',
+				'name' 		=> __( 'Gallery width', 'wpsc_dgallery' ),
 				'id' 		=> 'product_gallery_width_responsive',
 				'desc'		=> '%',
 				'type' 		=> 'slider',
@@ -245,11 +247,18 @@ class WPSC_Dynamic_Gallery_Style_Settings extends WPSC_Dynamic_Gallery_Admin_UI
 				'increment'	=> 1,
 			),
 			array(
+            	'class' 	=> 'gallery_width_type_percent',
+                'type' 		=> 'heading',
+				'id'		=> 'pro_product_gallery_width_responsive',
+				'desc'		=> '<table class="form-table"><tbody><tr valign="top"><th class="titledesc" scope="row"><label>' . __( 'Gallery height', 'wpsc_dgallery' ) . '</label></th><td class="forminp">' . __( "Show tall in proportion to wide", 'wpsc_dgallery' ) . '</td></tr></tbody></table>',
+           	),
+			
+			array(
             	'class' 	=> 'gallery_width_type_fixed',
                 'type' 		=> 'heading',
            	),
 			array(  
-				'name' 		=> '',
+				'name' 		=> __( 'Gallery width', 'wpsc_dgallery' ),
 				'id' 		=> 'product_gallery_width_fixed',
 				'desc'		=> 'px',
 				'type' 		=> 'text',
@@ -257,10 +266,6 @@ class WPSC_Dynamic_Gallery_Style_Settings extends WPSC_Dynamic_Gallery_Admin_UI
 				'free_version'		=> true,
 				'css' 		=> 'width:40px;',
 			),
-			
-			array(
-                'type' 		=> 'heading',
-           	),
 			array(  
 				'name' 		=> __( 'Gallery height', 'wpsc_dgallery' ),
 				'desc'		=> 'px',
@@ -272,7 +277,11 @@ class WPSC_Dynamic_Gallery_Style_Settings extends WPSC_Dynamic_Gallery_Admin_UI
 				'css' 		=> 'width:40px;',
 			),
 			
-			array(	'name' => __('Gallery Special Effects', 'wpsc_dgallery'), 'type' => 'heading', 'id' => 'pro_gallery_special_effects' ),
+			array(	
+				'name' => __('Gallery Special Effects', 'wpsc_dgallery'), 
+				'type' => 'heading', 
+				'id' => 'pro_gallery_special_effects' 
+			),
 			array(  
 				'name' => __( 'Auto start', 'wpsc_dgallery' ),
 				'desc' 		=> '',
