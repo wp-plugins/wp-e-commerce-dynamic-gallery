@@ -11,6 +11,7 @@
  * wpsc_dynamic_gallery_display()
  * wpsc_dynamic_gallery_preview()
  * wpsc_hide_featured_image_single_product()
+ * a3_wp_admin()
  * plugin_extra_links()
  */
 class WPSC_Dynamic_Gallery_Hook_Filter
@@ -143,6 +144,10 @@ class WPSC_Dynamic_Gallery_Hook_Filter
 			});
 			</script>";
 		}
+	}
+	
+	public static function a3_wp_admin() {
+		wp_enqueue_style( 'a3rev-wp-admin-style', WPSC_DYNAMIC_GALLERY_CSS_URL . '/a3_wp_admin.css' );
 	}
 	
 	public static function plugin_extra_links($links, $plugin_name) {

@@ -2,8 +2,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, WP e-commerce product images,  wordpress ecommerce
 Requires at least: 3.5
-Tested up to: 3.7.1
-Stable tag: 1.1.9.2
+Tested up to: 3.8.0
+Stable tag: 1.1.9.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,8 +16,9 @@ As soon as you install WP e-Commerce Dynamic Gallery it <strong>brings your stor
 = Key Features =
 
 * Instantly adds a scrolling gallery to every product page.
-* Automatically shows every image in each product gallery that has been uploaded to the post (product).
-* Dynamic product image Gallery that displays beautifully in Firefox, Safari, Chrome and Opera on Apple OS X and on Widows XP to Windows 8 in IE7 to IE10.
+* Dynamic product image Gallery that displays beautifully in Firefox, Safari, Chrome and Opera on Apple OS X and on Widows XP to Windows 8.1 in IE7 to IE11.
+* Gallery images display beautifully in iOS mobile Safari - all iPads and iPhones, Android Browser all Tablets and mobiles and Opera Mobile all tablets and mobiles.
+* Note: In the Lite Version you set the Gallery Dimensions in px, these are fixed. Upgrade to the Pro Version to activate fluid responsive Gallery display. 
 * Gallery scales images to fit inside the container no matter what the size or shape.
 * Search Engine friendly images. Image Alt tags if set are visible to search engines
 * On-page meta Gallery easy manager greatly simplifies product image editing and gallery management.
@@ -60,9 +61,20 @@ We are one of only 12 [WP e-Commerce recommended developers](http://getshopped.o
 * Internationalization. Plugin includes language folder and coded ready for localization using poeditor (WordPress Codex)
 * Cleans Up After Itself. The plugin has an option which when set completely removes any and all code and tables it has created in your WordPress site.       
 
+= Mobile Responsive App style admin interface =
+Like WordPress we believe that a3rev plugin users should be able to configure and tweak our plugins settings while on the go, right from their mobile or tablet. This plugins features an app style admin interface with Switches, Sliders and a smart interface that hides associated settings when a feature is not turned ON.
+
+* 100% compatible with WordPress v3.8.0 admin interface.
+* Backward compatibility to WordPress v3.5.0
+* App style admin interface.
+* Admin app interface is fully mobile and tablet responsive.
+
+= Lite & Pro Version Admin Interface =
+All a3rev Lite Version plugins have exactly the same admin interface as the Pro Version. Pro Version features and settings are easy to spot on the admin dashboard as they are inside of a Yellow border. The Pro Version settings are all active on the admin panels so they can be used BUT the settings do not save when changes are saved and hence are not applied to the front end. Upgrading to the Pro version activates all the Pro version Features and Settings and removes the Yellow side bar and borders.
+
 = Lite Version Support =
 
-As a Lite Version user please post all support requests to the plugins WordPress Support forum. We do not watch that forum and posting there you will be relying on another user for support not an a3rev team member. Pro Version Licence holders have 'write' access to the a3rev support forum and Lifetime priority support, not from support staff but from the developers.
+As a Lite Version user please post all support requests to the plugins WordPress Support forum. We do not watch that forum and posting there you will be relying on another user for support, not an a3rev team member. Upgrading to a Pro Version Licence gives 'write' access to the a3rev support forum and hence Lifetime priority support as part of the License.
 
 
 = Pro Version Additional Functionality =
@@ -82,8 +94,8 @@ This plugin features a Pro version upgrade that adds extra functionality. You wi
 
 = Responsive - All Browsers and Mobiles =
 
-* Responsive Gallery option. Set gallery wide to % and it becomes fully responsive image product gallery including the image zoom pop up.
-* Meet all customers needs and sell more - works beautifully on PCs, laptops, tablets and mobiles.
+* Gallery has a 100% Responsive theme mobile and tablet display option. 
+* Switch On RESPONSIVE and gallery auto detects image dimensions (Tall and Wide) and resizes itself to show each image scaled proportion at 100% wide of your Themes product page image container.
 
 = Product by Product Activation = 
 
@@ -178,6 +190,14 @@ The manual installation method involves downloading our plugin and uploading it 
 You can use this plugin only when you have installed the WP e-Commerce plugin.
  
 == Changelog ==
+
+= 1.1.9.3 - 2013/12/18 =
+* Feature - a3rev Plugin Framework admin interface upgraded to 100% Compatibility with WordPress v3.8.0 with backward compatibility.
+* Feature - a3rev Plugin framework admin interface 100% mobile and tablet responsive. Portrait and landscape viewing and use in any device.
+* Tweak - Upgraded dashboard switch and slider to Vector based display that shows when WordPress version 3.8.0 is activated.
+* Tweak - Upgraded all plugin .jpg icons and images to Vector based display for full compatibility with new WordPress version.
+* Tweak - Yellow sidebar on Pro Version Menus dose not show in Mobile screens to optimize admin panel screen space.
+* Tweak - Tested 100% compatible with WP 3.8.0
 
 = 1.1.9.2 - 2013/12/12 =
 * Tweak - Removed fixed height setting that shows on admin when Gallery Dimension - Responsive is selected. (Pro Version settings) 
@@ -309,6 +329,9 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 
 
 == Upgrade Notice ==
+
+= 1.1.9.3 =
+Upgrade now for full a3rev Plugin Framework compatibility with WordPress version 3.8.0 and backwards. New admin interface full mobile and tablet responsive display.
 
 = 1.1.9.2 =
 Upgrade your plugin now for admin panel Tweak and bug fix.

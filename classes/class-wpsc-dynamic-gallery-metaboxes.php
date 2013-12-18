@@ -32,11 +32,31 @@ class WPSC_Dynamic_Gallery_Metaboxes_Class
 			$actived_d_gallery = 1;
 		}
 		
-		add_meta_box( 'wpsc_product_gallery_image_forms', __('A3 Dynamic Image Gallery activated', 'wpsc_dgallery').' : <span><input style="position: relative; top: 3px; left: 5px; margin-right: 50px;" type="checkbox" '.checked( $actived_d_gallery, 1, false).' value="1" name="_actived_d_gallery" /></span> '.__('Product Variation Images activated', 'wpsc_dgallery').' : <span><input disabled="disabled" style="position:relative;top:3px;left:5px" type="checkbox" value="1" name="_show_variation" /></span>', array('WPSC_Dynamic_Gallery_Metaboxes_Class','wpsc_product_image_box'), 'wpsc-product', 'normal', 'high' );
+		add_meta_box( 'wpsc_product_gallery_image_forms', '<label class="a3_actived_d_gallery" style="margin-right: 50px;"><input type="checkbox" '.checked( $actived_d_gallery, 1, false).' value="1" name="_actived_d_gallery" /> '.__('A3 Dynamic Image Gallery activated', 'wpsc_dgallery').'</label> <label class="a3_wpsc_dgallery_show_variation"><input disabled="disabled" type="checkbox" value="1" name="_show_variation" /> '.__('Product Variation Images activated', 'wpsc_dgallery').'</label>', array('WPSC_Dynamic_Gallery_Metaboxes_Class','wpsc_product_image_box'), 'wpsc-product', 'normal', 'high' );
 	}
 	
 	public static function wpsc_product_image_box() {
 		global $post, $thepostid;
+	?>
+    	<style>
+		@media screen and ( max-width: 782px ) {
+			.a3_actived_d_gallery {
+				padding-bottom:5px;	
+				display:inline-block;
+			}
+			.a3_wpsc_dgallery_show_variation {
+				white-space:nowrap;
+				padding-bottom:5px;
+				display:inline-block;
+			}
+		}
+		@media screen and ( max-width: 480px ) {
+			.a3_wpsc_dgallery_show_variation {
+				white-space:inherit;
+			}
+		}
+        </style>
+    <?php
 		echo '<script type="text/javascript">
 		jQuery(document).on("click", "#wpsc_product_gallery_image_forms h3", function(){
 			jQuery("#wpsc_product_gallery_image_forms").removeClass("closed");

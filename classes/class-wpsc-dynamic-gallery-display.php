@@ -388,12 +388,12 @@ class WPSC_Dynamic_Gallery_Display_Class
 									   $img_description = $alt;
 								   }
                                             
-                                    $html .=  '<li class="'.$li_class.'"><a alt="'.$alt.'" class="gallery_product_'.$product_id.' gallery_product_'.$product_id.'_'.$idx.'"  title="'.$img_description.'" rel="gallery_product_'.$product_id.'" href="'.$image_lager_default_url.'"><div><img idx="'.$idx.'" style="width:'.$thumb_width.'px !important;height:'.$thumb_height.'px !important" src="'.$image_thumb_default_url.'" alt="'.$img_description.'" class="image'.$i.'" width="'.$thumb_width.'" height="'.$thumb_height.'"></div></a></li>';
-                                    $img_description = trim(strip_tags(stripslashes(str_replace("'","", str_replace('"', '', $img_description)))));
+                                    $html .=  '<li class="'.$li_class.'"><a alt="'.$alt.'" class="gallery_product_'.$product_id.' gallery_product_'.$product_id.'_'.$idx.'"  title="'. esc_attr( $img_description ) .'" rel="gallery_product_'.$product_id.'" href="'.$image_lager_default_url.'"><div><img idx="'.$idx.'" style="width:'.$thumb_width.'px !important;height:'.$thumb_height.'px !important" src="'.$image_thumb_default_url.'" alt="'. esc_attr( $img_description ) .'" class="image'.$i.'" width="'.$thumb_width.'" height="'.$thumb_height.'"></div></a></li>';
+                                    $img_description =  esc_js( $img_description ) ;
                                     if ( $img_description != '' ) {
-										$script_fancybox .= $common.'{href:\''.$image_lager_default_url.'\',title:\''.$img_description.'\'}';
+										$script_fancybox .= $common.'{href:"'.$image_lager_default_url.'",title:"'.$img_description.'"}';
                                     } else {
-										$script_fancybox .= $common.'{href:\''.$image_lager_default_url.'\',title:\'\'}';
+										$script_fancybox .= $common.'{href:"'.$image_lager_default_url.'",title:""}';
                                     }
                                     $common = ',';
                                     $i++;

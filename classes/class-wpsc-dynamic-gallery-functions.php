@@ -42,7 +42,7 @@ class WPSC_Dynamic_Gallery_Functions
 	
 	public static function plugin_extension() {
 		$html = '';
-		$html .= '<a href="http://a3rev.com/shop/" target="_blank" style="float:right;margin-top:5px; margin-left:10px;" ><img src="'.WPSC_DYNAMIC_GALLERY_IMAGES_URL.'/a3logo.png" /></a>';
+		$html .= '<a href="http://a3rev.com/shop/" target="_blank" style="float:right;margin-top:5px; margin-left:10px;" ><div class="a3-plugin-ui-icon a3-plugin-ui-a3-rev-logo"></div></a>';
 		$html .= '<h3>'.__('Upgrade available for WPEC Dynamic Gallery Pro', 'wpsc_dgallery').'</h3>';
 		$html .= '<p>'.__("<strong>NOTE:</strong> All the functions inside the Yellow border on the plugins admin panel are extra functionality that is activated by upgrading to the Pro version", 'wpsc_dgallery').':</p>';
 		$html .= '<h3>* <a href="http://a3rev.com/shop/wp-e-commerce-dynamic-gallery/" target="_blank">'.__('WPEC Dynamic Gallery Pro', 'wpsc_dgallery').'</a> '.__('Features', 'wpsc_dgallery').':</h3>';

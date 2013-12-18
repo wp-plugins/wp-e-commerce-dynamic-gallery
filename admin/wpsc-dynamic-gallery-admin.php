@@ -1,7 +1,7 @@
 <?php
 function wpsc_dynamic_gallery_install(){
-	update_option('a3rev_wpsc_dgallery_version', '1.1.9.2');
-	update_option('a3rev_wpsc_dgallery_lite_version', '1.1.9.2');
+	update_option('a3rev_wpsc_dgallery_version', '1.1.9.3');
+	update_option('a3rev_wpsc_dgallery_lite_version', '1.1.9.3');
 	
 	// Set Settings Default from Admin Init
 	global $wpsc_dgallery_admin_init;
@@ -29,6 +29,9 @@ function wpsc_dynamic_gallery_init() {
 }
 // Add language
 add_action('init', 'wpsc_dynamic_gallery_init');
+
+// Add custom style to dashboard
+add_action( 'admin_enqueue_scripts', array( 'WPSC_Dynamic_Gallery_Hook_Filter', 'a3_wp_admin' ) );
 
 // Add text on right of Visit the plugin on Plugin manager page
 add_filter( 'plugin_row_meta', array('WPSC_Dynamic_Gallery_Hook_Filter', 'plugin_extra_links'), 10, 2 );
@@ -134,8 +137,8 @@ function wpsc_dgallery_lite_upgrade_plugin () {
 		update_option('a3rev_wpsc_dgallery_version', '1.1.9');
 	}
 	
-	update_option('a3rev_wpsc_dgallery_version', '1.1.9.2');
-	update_option('a3rev_wpsc_dgallery_lite_version', '1.1.9.2');
+	update_option('a3rev_wpsc_dgallery_version', '1.1.9.3');
+	update_option('a3rev_wpsc_dgallery_lite_version', '1.1.9.3');
 
 }
 
