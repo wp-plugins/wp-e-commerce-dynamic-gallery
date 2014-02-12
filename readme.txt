@@ -2,8 +2,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, WP e-commerce product images,  wordpress ecommerce
 Requires at least: 3.5
-Tested up to: 3.8.0
-Stable tag: 1.1.9.3
+Tested up to: 3.8.1
+Stable tag: 1.1.9.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -191,6 +191,16 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
  
 == Changelog ==
 
+= 1.1.9.4 - 2014/02/12 =
+* Tweak - Added remove_all_filters('mce_external_plugins'); before call to wp_editor to remove extension scripts from other plugins.
+* Tweak - All switch text to show as Uppercase.
+* Tweak - Updated Framework help text font for consistency.
+* Tweak - Added description text to the top of each Pro Version yellow border section
+* Tweak - Full WP_DEBUG ran, all uncaught exceptions, errors, warnings, notices and php strict standard notices fixed.
+* Tweak - Tested 100% compatible with WordPress version 3.8.1
+* Tweak - Tested 100% compatible with WP e-Commerce version 3.8.13.3
+* Fix - Conflict with wpMandrill plugin. Rewrote Gallery preview URL security require_once( ABSPATH . 'wp-includes/pluggable.php' ); with sanitiser that does not call wp_mail.
+
 = 1.1.9.3 - 2013/12/18 =
 * Feature - a3rev Plugin Framework admin interface upgraded to 100% Compatibility with WordPress v3.8.0 with backward compatibility.
 * Feature - a3rev Plugin framework admin interface 100% mobile and tablet responsive. Portrait and landscape viewing and use in any device.
@@ -329,6 +339,9 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 
 
 == Upgrade Notice ==
+
+= 1.1.9.4 =
+Upgrade now for wpMandrill plugin conflict bug fix plus 4 Framework Tweaks and full compatibility with WP e-Commerce Version 3.8.13.3 and WordPress Version 3.8.1.
 
 = 1.1.9.3 =
 Upgrade now for full a3rev Plugin Framework compatibility with WordPress version 3.8.0 and backwards. New admin interface full mobile and tablet responsive display.
