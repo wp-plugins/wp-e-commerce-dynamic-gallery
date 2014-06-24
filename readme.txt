@@ -3,7 +3,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, WP e-commerce product images,  wordpress ecommerce
 Requires at least: 3.7
 Tested up to: 3.9.1
-Stable tag: 1.1.9.5
+Stable tag: 1.1.9.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -47,17 +47,14 @@ As soon as you install WP e-Commerce Dynamic Gallery it <strong>brings your stor
 * The Pro Version settings are all active on the admin panels But do not save and are not applied to the front end.
 * Upgrading to the Pro version activates all the Pro version Features and Settings and removes the Yellow side bar and borders.
 
-= Lite Version Support =
+>= Premium Support =
 
-* As a Lite Version user please post all support requests to the plugins WordPress Support forum.
-* We do not watch that forum and posting there you will be relying on another user for support, not an a3rev team member.
-* Upgrading to a Pro Version gives 'write' access to the a3rev support forum.
+>The a3rev team does not provide support for the WP e-Commerce Dynamic Product Gallery plugin on the WordPress.org forums. One on one developer support is available via the plugins [a3rev support forum](https://a3rev.com/forums/forum/wp-e-commerce-plugins/dynamic-gallery/) to people who have purchased a [WP e-Commerce Dynamic Gallery Pro](http://a3rev.com/shop/wp-e-commerce-dynamic-gallery/) plugin Lifetime License.
 
-= Pro Version Additional Functionality =
+>The Pro Version has lots of extra features (listed below) that coupled with developer support might be well worth your investment!
 
-This plugin features a Pro version upgrade that adds extra functionality. You will see all of the available upgrade features inside of the Yellow border areas on the Free Lite Version admin panel. Some of those advanced features include:
 
-= Product Variation Images =
+= Pro Version - Product Variation Images =
 
 * The Only WP e-Commerce Product gallery that shows Variation images in gallery when the variation or combination of variations is selected by user.
 * Front end Users see Product variation images in gallery as they select options.
@@ -67,18 +64,18 @@ This plugin features a Pro version upgrade that adds extra functionality. You wi
 * Upload images using the WordPress media uploader or Dynamic Gallery image uploader and assign images to variations or variation sets. 
 * Makes handling variation images very quick and easy. 
 
-= Responsive - All Browsers and Mobiles =
+= Pro Version - Responsive - All Browsers and Mobiles =
 
 * Gallery has a 100% Responsive theme mobile and tablet display option. 
 * Switch On RESPONSIVE and gallery auto detects image dimensions (Tall and Wide) and resizes itself to show each image scaled proportion at 100% wide of your Themes product page image container.
 
-= Product by Product Activation = 
+= Pro Version - Product by Product Activation = 
 
 * Option to turn the Gallery off on single product pages. If you only have 1 image on some product pages and don't want the Gallery, just turn it off for that product.
 * Global Enable / Disable of Gallery - including Global Custom Product activation reset.
 * Global Enable / Disable of Variations feature - including Global custom product variation reset.
 
-= Custom Point and Click Gallery Styling =
+= Pro Version - Custom Point and Click Gallery Styling =
 
 * Completely Customize the look and feel of your product page Dynamic Gallery without writing a single line of code. 
 * Featuring 25 different WYSIWYG options to style your gallery.
@@ -162,6 +159,15 @@ The manual installation method involves downloading our plugin and uploading it 
 You can use this plugin only when you have installed the WP e-Commerce plugin.
  
 == Changelog ==
+
+= 1.1.9.6 - 2014/06/24 =
+* Feature - Added option to Hide or show the default WPEC Image Gallery Meta box on product edit pages.
+* Feature - If default WPEC Product Gallery is deactivated - Turn OFF the Dynamic Gallery on the product, the WPEC default gallery shows again.
+* Tweak - Improved UI - Turn off the Dynamic gallery from the Meta box and the box closes. Turn it on and it opens.
+* Tweak - Added support for placeholder feature for input, email , password , text area types
+* Tweak - Updated chosen js script to latest version 1.0.1 on the a3rev Plugin Framework 
+* Fixed - Fixed the Warning - "Creating default object from empty value in" on Dynamic Gallery Preview popup.
+* Fixed - Solved the conflict with WP Email Template for the warning "WP Email Template: wp_mail has been declared by another process or plugin, so you won't be able to use another Email Deliver Provider until the problem is solved." on Dynamic Gallery Style tab.
 
 = 1.1.9.5 - 2014/05/24 =
 * Tweak - Chnaged add_filter( 'gettext', array( $this, 'change_button_text' ), null, 2 ); to add_filter( 'gettext', array( $this, 'change_button_text' ), null, 3 );
@@ -317,6 +323,9 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 
 
 == Upgrade Notice ==
+
+= 1.1.9.6 =
+Upgrade your plugin now for 2 new features, 3 code tweaks and 2 bug fixes to keep your plugin in tip top running order.
 
 = 1.1.9.5 =
 Update now for a bug fix - a3 Plugin Framework conflict with WP e-Commerce tax rates and full compatibility with WP e-Commerce v 3.8.14.1 and WordPress v 3.9.1.
