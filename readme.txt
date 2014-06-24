@@ -48,9 +48,9 @@ As soon as you install WP e-Commerce Dynamic Gallery it <strong>brings your stor
 * Upgrading to the Pro version activates all the Pro version Features and Settings and removes the Yellow side bar and borders.
 
 >= Premium Support =
-
+>
 >The a3rev team does not provide support for the WP e-Commerce Dynamic Product Gallery plugin on the WordPress.org forums. One on one developer support is available via the plugins [a3rev support forum](https://a3rev.com/forums/forum/wp-e-commerce-plugins/dynamic-gallery/) to people who have purchased a [WP e-Commerce Dynamic Gallery Pro](http://a3rev.com/shop/wp-e-commerce-dynamic-gallery/) plugin Lifetime License.
-
+>
 >The Pro Version has lots of extra features (listed below) that coupled with developer support might be well worth your investment!
 
 
