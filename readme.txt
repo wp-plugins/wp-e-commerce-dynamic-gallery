@@ -1,9 +1,9 @@
 === WP e-Commerce Dynamic Gallery  ===
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, WP e-commerce product images,  wordpress ecommerce
-Requires at least: 3.7
-Tested up to: 3.9.1
-Stable tag: 1.1.9.6
+Requires at least: 3.8
+Tested up to: 4.0
+Stable tag: 1.1.9.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -111,7 +111,7 @@ If you do a translation of this plugin for your site [please send it to us](http
 
 = Minimum Requirements =
 
-* WordPress 3.7 or greater
+* WordPress 3.8 or greater
 * PHP version 5.2.4 or greater
 * MySQL version 5.0 or greater
  
@@ -159,6 +159,12 @@ The manual installation method involves downloading our plugin and uploading it 
 You can use this plugin only when you have installed the WP e-Commerce plugin.
  
 == Changelog ==
+
+= 1.1.9.7 - 2014/09/09 = 
+* Tweak - Upgrade fancybox script lib to include fancybox.js file when SCRIPT_DEBUG = true
+* Tweak - Updated google font face in plugin framework.
+* Tweak - Tested 100% compatible with WP e-Commerce 3.8.14.3
+* Tweak - Tested 100% compatible with WordPress Version 4.0
 
 = 1.1.9.6 - 2014/06/24 =
 * Feature - Added option to Hide or show the default WPEC Image Gallery Meta box on product edit pages.
@@ -323,6 +329,9 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 
 
 == Upgrade Notice ==
+
+= 1.1.9.7 =
+Upgrade your plugin now for full compatibility with WordPress Version 4.0 and WP e-Commerce Version 3.8.14.3
 
 = 1.1.9.6 =
 Upgrade your plugin now for 2 new features, 3 code tweaks and 2 bug fixes to keep your plugin in tip top running order.

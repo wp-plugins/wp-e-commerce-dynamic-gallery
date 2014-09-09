@@ -1,7 +1,7 @@
 <?php
 function wpsc_dynamic_gallery_install(){
-	update_option('a3rev_wpsc_dgallery_version', '1.1.9.6');
-	update_option('a3rev_wpsc_dgallery_lite_version', '1.1.9.6');
+	update_option('a3rev_wpsc_dgallery_version', '1.1.9.7');
+	update_option('a3rev_wpsc_dgallery_lite_version', '1.1.9.7');
 	
 	// Set Settings Default from Admin Init
 	global $wpsc_dgallery_admin_init;
@@ -137,8 +137,8 @@ function wpsc_dgallery_lite_upgrade_plugin () {
 		update_option('a3rev_wpsc_dgallery_version', '1.1.9');
 	}
 	
-	update_option('a3rev_wpsc_dgallery_version', '1.1.9.6');
-	update_option('a3rev_wpsc_dgallery_lite_version', '1.1.9.6');
+	update_option('a3rev_wpsc_dgallery_version', '1.1.9.7');
+	update_option('a3rev_wpsc_dgallery_lite_version', '1.1.9.7');
 
 }
 
