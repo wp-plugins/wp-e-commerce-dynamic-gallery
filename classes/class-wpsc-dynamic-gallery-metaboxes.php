@@ -16,7 +16,7 @@ class WPSC_Dynamic_Gallery_Metaboxes_Class
 {
 	public static function remove_wpsc_metaboxes(){
 		global $post;
-		if (is_admin()) :
+		if ( is_admin() ) :
 			remove_meta_box('wpsc_product_image_forms', 'wpsc-product', 'normal');
 		endif;
 	}
@@ -32,13 +32,70 @@ class WPSC_Dynamic_Gallery_Metaboxes_Class
 			$actived_d_gallery = 1;
 		}
 		
-		add_meta_box( 'wpsc_product_gallery_image_forms', '<label class="a3_actived_d_gallery" style="margin-right: 50px;"><input type="checkbox" '.checked( $actived_d_gallery, 1, false).' value="1" name="_actived_d_gallery" /> '.__('A3 Dynamic Image Gallery activated', 'wpsc_dgallery').'</label> <label class="a3_wpsc_dgallery_show_variation"><input disabled="disabled" type="checkbox" value="1" name="_show_variation" /> '.__('Product Variation Images activated', 'wpsc_dgallery').'</label>', array('WPSC_Dynamic_Gallery_Metaboxes_Class','wpsc_product_image_box'), 'wpsc-product', 'normal', 'high' );
+		add_meta_box( 'wpsc_product_gallery_image_forms', '<label class="a3_actived_d_gallery" style="margin-right: 50px;"><input type="checkbox" '.checked( $actived_d_gallery, 1, false).' value="1" name="_actived_d_gallery" class="actived_d_gallery" /> '.__('A3 Dynamic Image Gallery activated', 'wpsc_dgallery').'</label> <label class="a3_wpsc_dgallery_show_variation"><input disabled="disabled" type="checkbox" value="1" name="_show_variation" /> '.__('Product Variation Images activated', 'wpsc_dgallery').'</label>', array('WPSC_Dynamic_Gallery_Metaboxes_Class','wpsc_product_image_box'), 'wpsc-product', 'normal', 'high' );
 	}
 	
 	public static function wpsc_product_image_box() {
 		global $post, $thepostid;
+		global $wpsc_dgallery_global_settings;
+		
+		$hide_wpec_gallery = $wpsc_dgallery_global_settings['hide_wpec_gallery'];
+		$global_wpec_dgallery_activate = $wpsc_dgallery_global_settings['dgallery_activate'];
+		$actived_d_gallery = get_post_meta($post->ID, '_actived_d_gallery', true);
+		
+		if ($actived_d_gallery == '' && $global_wpec_dgallery_activate != 'no') {
+			$actived_d_gallery = 1;
+		}
 	?>
+    	<script>
+		<?php if ( $actived_d_gallery == 1 && $hide_wpec_gallery == 'yes' ) { ?>
+		jQuery(document).ready(function() {
+			jQuery('#wpsc_product_details_tabs li').first().removeClass('tabs').hide();
+			jQuery('#wpsc_product_details_tabs li:nth-child(2)' ).addClass('tabs');
+			jQuery('#wpsc_product_details-image').hide();
+			jQuery('#wpsc_product_details-desc').show();
+		});
+		<?php } ?>
+		jQuery(document).on('click', '#wpsc_product_gallery_image_forms h3', function(){
+			if( jQuery('input.actived_d_gallery').is(":checked") ) {
+				jQuery('#wpsc_product_gallery_image_forms').removeClass("closed");
+			} else {
+				jQuery('#wpsc_product_gallery_image_forms').addClass("closed");
+			}
+		});
+		jQuery(document).ready(function() {
+			if( jQuery('input.actived_d_gallery').is(":checked") ) {
+				jQuery('#wpsc_product_gallery_image_forms').removeClass("closed");
+			} else {
+				jQuery('#wpsc_product_gallery_image_forms').addClass("closed");
+			}
+			jQuery('input.actived_d_gallery').change(function() {
+				if( jQuery(this).is(":checked") ) {
+					jQuery('#wpsc_product_gallery_image_forms').removeClass("closed");
+					<?php if ( $hide_wpec_gallery == 'yes' ) { ?>
+					jQuery('#wpsc_product_details_tabs li').first().removeClass('tabs').hide();
+					jQuery('#wpsc_product_details_tabs li:nth-child(2)' ).addClass('tabs');
+					jQuery('#wpsc_product_details-image').slideUp();
+					jQuery('#wpsc_product_details-desc').show();
+					<?php } ?>
+				} else {
+					jQuery('#wpsc_product_gallery_image_forms').addClass("closed");
+					<?php if ( $hide_wpec_gallery == 'yes' ) { ?>
+					jQuery('#wpsc_product_details_tabs li').first().css('display', 'inline');
+					<?php } ?>
+				}
+			});
+		});
+		</script>
     	<style>
+		<?php if ( $actived_d_gallery == 1 && $hide_wpec_gallery == 'yes' ) { ?>
+		#wpsc_product_details_tabs li:first-child {
+			display: none;
+		}
+		#wpsc_product_details-image {
+			display: none;
+		}
+		<?php } ?>
 		@media screen and ( max-width: 782px ) {
 			.a3_actived_d_gallery {
 				padding-bottom:5px;	

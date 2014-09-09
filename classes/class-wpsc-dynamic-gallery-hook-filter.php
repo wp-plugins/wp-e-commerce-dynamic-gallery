@@ -113,8 +113,7 @@ class WPSC_Dynamic_Gallery_Hook_Filter
 	}
 	
 	public static function wpsc_dynamic_gallery_preview() {
-		global $post;
-		check_ajax_referer( 'wpsc_dynamic_gallery', 'security' );
+		if ( ! is_user_logged_in() || ! current_user_can( 'manage_options' ) ) die();
 		WPSC_Dynamic_Gallery_Preview_Display::wpsc_dynamic_gallery_preview($_REQUEST);
 		die();
 	}
