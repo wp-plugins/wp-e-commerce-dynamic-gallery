@@ -204,6 +204,23 @@ class WPSC_Dynamic_Gallery_Global_Settings extends WPSC_Dynamic_Gallery_Admin_UI
 		
   		// Define settings			
      	$this->form_fields = apply_filters( $this->option_name . '_settings_fields', array(
+			
+			array(
+            	'name' => __('WPEC Image Gallery Meta Box', 'wpsc_dgallery'),
+                'type' => 'heading',
+           	),
+			array(  
+				'name' 		=> __( 'Disable it', 'woo_dgallery' ),
+				'desc' 		=> __( 'ON to hide the default WPEC Image Gallery meta box on product edit pages. Do this to avoid confusion with the Dynamic Gallery meta box.', 'wpsc_dgallery' ),
+				'id' 		=> 'hide_wpec_gallery',
+				'default'	=> 'no',
+				'type' 		=> 'onoff_checkbox',
+				'free_version'		=> true,
+				'checked_value'		=> 'yes',
+				'unchecked_value'	=> 'no',
+				'checked_label'		=> __( 'ON', 'wpsc_dgallery' ),
+				'unchecked_label' 	=> __( 'OFF', 'wpsc_dgallery' ),
+			),
 		
 			array(	'name' => __( 'Image Zoom Function', 'wpsc_dgallery' ), 'type' => 'heading'),
 			array(  
