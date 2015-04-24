@@ -2,8 +2,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, WP e-commerce product images,  wordpress ecommerce
 Requires at least: 3.8
-Tested up to: 4.0
-Stable tag: 1.2.0
+Tested up to: 4.2.0
+Stable tag: 1.2.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -165,6 +165,13 @@ The manual installation method involves downloading our plugin and uploading it 
 You can use this plugin only when you have installed the WP e-Commerce plugin.
 
 == Changelog ==
+
+= 1.2.1 - 2015/04/24 =
+* Tweak - Tested and Tweaked for full compatibility with WordPress Version 4.2.0
+* Tweak - Tested and Tweaked for full compatibility with WP e-Commerce Version 3.9.3
+* Tweak - Changed <code>WP_CONTENT_DIR</code> to <code>WP_PLUGIN_DIR</code>. When admin sets a custom WordPress file structure then it can get the correct path of plugin
+* Tweak - Update style of plugin framework. Removed the <code>[data-icon]</code> selector to prevent conflict with other plugins that have font awesome icons
+* Fix - Sass compile path not saving on windows xampp.
 
 = 1.2.0 - 2014/09/18 =
 * Feature - Converted all front end CSS #dynamic {stylesheets} to Sass #dynamic {stylesheets} for faster loading.
@@ -342,6 +349,9 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 
 
 == Upgrade Notice ==
+
+= 1.2.1 =
+Major Maintenance Update. Code tweaks and a bug fix for full compatibility with WordPress Version 4.2.0 and WP e-Commerce Version 3.9.3
 
 = 1.2.0 =
 Major Version upgrade! Upgrade now for 1 important bug fix, 2 Tweaks and full front end conversion to Sass #dynamic {stylesheets}.
