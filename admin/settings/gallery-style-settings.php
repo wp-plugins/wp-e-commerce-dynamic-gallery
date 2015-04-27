@@ -203,19 +203,13 @@ class WPSC_Dynamic_Gallery_Style_Settings extends WPSC_Dynamic_Gallery_Admin_UI
 	/* Init all fields of this form */
 	/*-----------------------------------------------------------------------------------*/
 	public function init_form_fields() {
-		$wpsc_dynamic_gallery = '';
-		if ( is_admin() && in_array (basename($_SERVER['PHP_SELF']), array('edit.php') ) && isset( $_GET['page'] ) && $_GET['page'] == 'wpsc-dynamic-gallery' && isset( $_GET['tab'] ) && $_GET['tab'] == 'gallery-style' ) {
-			require_once( ABSPATH . 'wp-includes/pluggable.php' );
-			add_action('init' , array( $this, 'remove_mandrill_notice' ) );
-			$wpsc_dynamic_gallery = wp_create_nonce("wpsc_dynamic_gallery");
-		}
 		
   		// Define settings			
      	$this->form_fields = apply_filters( $this->option_name . '_settings_fields', array(
 		
 			array(
             	'name' 		=> __( 'Preview', 'wpsc_dgallery' ),
-				'desc'		=> '<a href="'.  admin_url( 'admin-ajax.php', 'relative') .'?security='.$wpsc_dynamic_gallery.'" class="preview_gallery">' . __( 'Click here to preview gallery', 'wpsc_dgallery' ) . '</a>',
+				'desc'		=> '<a href="'.  admin_url( 'admin-ajax.php', 'relative') .'?act=preview-dgallery" class="preview_gallery">' . __( 'Click here to preview gallery', 'wpsc_dgallery' ) . '</a>',
                 'type' 		=> 'heading',
            	),
 			
@@ -497,9 +491,9 @@ $(document).ready(function() {
 		$(".gallery_width_type_fixed").show();
 	}
 	if ( $("input.gallery_nav_control:checked").val() == 'yes') {
-		$(".nav_bar_container").show();
+		$('.nav_bar_container').css( {'visibility': 'visible', 'height' : 'auto', 'overflow' : 'inherit'} );
 	} else {
-		$(".nav_bar_container").hide();
+		$('.nav_bar_container').css( {'visibility': 'hidden', 'height' : '0px', 'overflow' : 'hidden'} );
 	}
 	if ( $("input.lazy_load_control:checked").val() == 'yes') {
 		$(".lazy_load_container").show();
@@ -523,6 +517,7 @@ $(document).ready(function() {
 	});
 	
 	$(document).on( "a3rev-ui-onoff_checkbox-switch", '.gallery_nav_control', function( event, value, status ) {
+		$('.nav_bar_container').hide().css( {'visibility': 'visible', 'height' : 'auto', 'overflow' : 'inherit'} );
 		if ( status == 'true' ) {
 			$(".nav_bar_container").slideDown();
 		} else {

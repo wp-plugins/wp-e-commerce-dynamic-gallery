@@ -1,24 +1,24 @@
 === WP e-Commerce Dynamic Gallery  ===
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, WP e-commerce product images,  wordpress ecommerce
-Requires at least: 3.5
-Tested up to: 3.8.1
-Stable tag: 1.1.9.4
+Requires at least: 3.8
+Tested up to: 4.2.0
+Stable tag: 1.2.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Bring your product pages and presentation alive with WP e-Commerce Dynamic Gallery. Simply and Beautifully.
- 
+
 == Description ==
 
-As soon as you install WP e-Commerce Dynamic Gallery it <strong>brings your store to life</strong> with a beautifully stylish sliding image gallery on every product page.  
- 
+As soon as you install WP e-Commerce Dynamic Gallery it <strong>brings your store to life</strong> with a beautifully stylish sliding image gallery on every product page.
+
 = Key Features =
 
 * Instantly adds a scrolling gallery to every product page.
-* Dynamic product image Gallery that displays beautifully in Firefox, Safari, Chrome and Opera on Apple OS X and on Widows XP to Windows 8.1 in IE7 to IE11.
+* Dynamic product image Gallery that displays beautifully in Firefox, Safari, Chrome and Opera on Apple OS X and on Widows XP to Windows 8.1 in IE8 to IE11.
 * Gallery images display beautifully in iOS mobile Safari - all iPads and iPhones, Android Browser all Tablets and mobiles and Opera Mobile all tablets and mobiles.
-* Note: In the Lite Version you set the Gallery Dimensions in px, these are fixed. Upgrade to the Pro Version to activate fluid responsive Gallery display. 
+* Note: In the Lite Version you set the Gallery Dimensions in px, these are fixed. Upgrade to the Pro Version to activate fluid responsive Gallery display.
 * Gallery scales images to fit inside the container no matter what the size or shape.
 * Search Engine friendly images. Image Alt tags if set are visible to search engines
 * On-page meta Gallery easy manager greatly simplifies product image editing and gallery management.
@@ -33,81 +33,59 @@ As soon as you install WP e-Commerce Dynamic Gallery it <strong>brings your stor
 * START SLIDE SHOW | STOP SLIDESHOW control
 * Gallery thumbnails scroll left and right on hover.
 
-= Beautifully Lightweight Product Gallery =
+= Featuring Sass (Simply Awesome Stylesheets)  =
 
-WP e-Commerce Dynamic Gallery is a beautifully lightweight Product Gallery plugin that won't slow your site page load speed. Extensively road tested using the GoDaddy [P3 Plugin Performance Profiler](http://wordpress.org/plugins/p3-profiler/). We recommend you get and install this mighty plugin. You will soon get rid of any badly coded plugin that is slowing your site load speed. Cumulative testing of the Dynamic Gallery shows: 
-
-* Dynamic Gallery (on a fully functional live store) average page load time is just 0.0155 seconds
-
-To give you an idea of how that compares here are some other results on the same site over a number tests
-* WordPress Core load time 0.1097 seconds
-* WP e-Commerce load time 0.1752 seconds.
-* WordPress SEO load time 0.031 seconds
-* Contact Form 7 load time 0.0148 seconds
-
-= Plugin Security =
-
-At a3rev we take plugin security very seriously. This plugins code is hardened with all inputs sanitized and outputs escaped in accordance with the WordPress codex. We welcome security mined developers reviewing the code.
-
-= Trusted WordPress / WP e-Commerce Plugin Developers =
-
-We are one of only 12 [WP e-Commerce recommended developers](http://getshopped.org/consultant/) world wide. This plugins source code strictly adheres to the WordPress coding standards:
-
-* Source code written using consistent spacing, indenting, for ease of understanding and editing.
-* Namespacing with registered Class names and commenting. 
-* Where applicable all JavaScript uses the WordPress jQuery Lib
-* Functions use the WordPress API. 
-* Scripts enqueued and only called when and where needed (Key to optimizing plugin resource use and hence average load time)
-* Internationalization. Plugin includes language folder and coded ready for localization using poeditor (WordPress Codex)
-* Cleans Up After Itself. The plugin has an option which when set completely removes any and all code and tables it has created in your WordPress site.       
+* All the front end style display is created via [Sass](http://sass-lang.com/) for faster loader and render.
+* Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
+* This plugins backend admin panels are created in Sass.
 
 = Mobile Responsive App style admin interface =
-Like WordPress we believe that a3rev plugin users should be able to configure and tweak our plugins settings while on the go, right from their mobile or tablet. This plugins features an app style admin interface with Switches, Sliders and a smart interface that hides associated settings when a feature is not turned ON.
 
-* 100% compatible with WordPress v3.8.0 admin interface.
-* Backward compatibility to WordPress v3.5.0
-* App style admin interface.
-* Admin app interface is fully mobile and tablet responsive.
+* Tested 100% compatible with WordPress v 4.0 admin interface.
+* Backward compatibility to WordPress v 3.7.0
+* Sass app style admin inteface.
+* Admin interface is optimized for mobiles and tablets.
 
-= Lite & Pro Version Admin Interface =
-All a3rev Lite Version plugins have exactly the same admin interface as the Pro Version. Pro Version features and settings are easy to spot on the admin dashboard as they are inside of a Yellow border. The Pro Version settings are all active on the admin panels so they can be used BUT the settings do not save when changes are saved and hence are not applied to the front end. Upgrading to the Pro version activates all the Pro version Features and Settings and removes the Yellow side bar and borders.
+= a3rev Plugins Lite & Pro Version Admin Interface =
 
-= Lite Version Support =
+* All a3rev Lite Version plugins have exactly the same admin interface as the Pro Version.
+* Pro Version features and settings are inside of a Yellow border.
+* The Pro Version settings are all active on the admin panels But do not save and are not applied to the front end.
+* Upgrading to the Pro version activates all the Pro version Features and Settings and removes the Yellow side bar and borders.
 
-As a Lite Version user please post all support requests to the plugins WordPress Support forum. We do not watch that forum and posting there you will be relying on another user for support, not an a3rev team member. Upgrading to a Pro Version Licence gives 'write' access to the a3rev support forum and hence Lifetime priority support as part of the License.
+>= Premium Support =
+>
+>The a3rev team does not provide support for the WP e-Commerce Dynamic Product Gallery plugin on the WordPress.org forums. One on one developer support is available via the plugins [a3rev support forum](https://a3rev.com/forums/forum/wp-e-commerce-plugins/dynamic-gallery/) to people who have purchased a [WP e-Commerce Dynamic Gallery Pro](http://a3rev.com/shop/wp-e-commerce-dynamic-gallery/) plugin Lifetime License.
+>
+>The Pro Version has lots of extra features (listed below) that coupled with developer support might be well worth your investment!
 
 
-= Pro Version Additional Functionality =
-
-This plugin features a Pro version upgrade that adds extra functionality. You will see all of the available upgrade features inside of the Yellow border areas on the Free Lite Version admin panel. Some of those advanced features include:
-
-= Product Variation Images =
+= Pro Version - Product Variation Images =
 
 * The Only WP e-Commerce Product gallery that shows Variation images in gallery when the variation or combination of variations is selected by user.
-* Check this incredible new Pro Version feature out on our <strong>[DEMO SITE](http://wpeccompare.a3dev.net/products-page/clothes/plain-t-shirt)</strong>
 * Front end Users see Product variation images in gallery as they select options.
-* Show Multiple images per variation. 
+* Show Multiple images per variation.
 * Exclude Variation images from main gallery - only show when variation is selected.
 * When variations are created they auto show on the Gallery Image Manager.
-* Upload images using the WordPress media uploader or Dynamic Gallery image uploader and assign images to variations or variation sets. 
-* Makes handling variation images very quick and easy. 
+* Upload images using the WordPress media uploader or Dynamic Gallery image uploader and assign images to variations or variation sets.
+* Makes handling variation images very quick and easy.
 
-= Responsive - All Browsers and Mobiles =
+= Pro Version - Responsive - All Browsers and Mobiles =
 
-* Gallery has a 100% Responsive theme mobile and tablet display option. 
+* Gallery has a 100% Responsive theme mobile and tablet display option.
 * Switch On RESPONSIVE and gallery auto detects image dimensions (Tall and Wide) and resizes itself to show each image scaled proportion at 100% wide of your Themes product page image container.
 
-= Product by Product Activation = 
+= Pro Version - Product by Product Activation =
 
 * Option to turn the Gallery off on single product pages. If you only have 1 image on some product pages and don't want the Gallery, just turn it off for that product.
 * Global Enable / Disable of Gallery - including Global Custom Product activation reset.
 * Global Enable / Disable of Variations feature - including Global custom product variation reset.
 
-= Custom Point and Click Gallery Styling =
+= Sass #dynamic {stylesheets} =
 
-* Completely Customize the look and feel of your product page Dynamic Gallery without writing a single line of code. 
-* Featuring 25 different WYSIWYG options to style your gallery.
-        
+* All the front end style display is created via [Sass](http://sass-lang.com/) #dynamic {stylesheets} for faster loader and render.
+* Completely Customize the look and feel of your product page Dynamic Gallery without writing a single line of code. Featuring 27 different poimy and click options to style your gallery.
+
  - Image Gallery - 7 Custom Options - Auto Start, Image transition timing, Transition effects (5 available effects), Transition effect speed, Gallery main image background colour, Border Colour, Gallery pop-up tool.
  - Caption Text - 5 Options - Font type (17 Web browser friendly fonts), Font size, Font styler, Font Colour and caption background colour.
  - Nav Bar - 7 Option - Activate / Deactivate, Font type (17 Web browser friendly fonts), Font size, Font styler, Font Colour, Nav bar background colour, Nav bar tall.
@@ -122,35 +100,32 @@ WP e-Commerce Dynamic Gallery PRO and Lite are tested 100% compatible with the g
 
 WP e-Commerce Dynamic Gallery is 100% compatible with [WP e-Commerce Grid View](http://wordpress.org/extend/plugins/wp-e-commerce-grid-view/)
 
-= Priority Support =
-
-Please note that we do not provide support for our Lite Version plugins. Hundreds of thousands of plugin downloads has proven that vast majority of the support requests we get have nothing to do with our plugins but are related to bugs in the users theme or other plugins they have installed. We give priority support to those users who purchase a Pro Version license. In this plugins case, we offer a single payment, Lifetime License fee which includes access to and full support from the a3rev developers on the plugins support forum.   
 
 = Localization =
 
 * English (default) - always included.
 * .po file (wpsc_dgallery.po) in languages folder for translations.
 
-If you do a translation of this plugin for your site [please send it to us](http://a3rev.com/contact-us-page/) for inclusion in the plugins language folder. We'll acknowledge your work and link to your site. 
+If you do a translation of this plugin for your site [please send it to us](http://a3rev.com/contact-us-page/) for inclusion in the plugins language folder. We'll acknowledge your work and link to your site.
 
 = Plugins Resources =
 
 [Pro Version Upgrade](http://a3rev.com/shop/wp-e-commerce-dynamic-gallery/) |
 [Plugin Documentation](http://docs.a3rev.com/user-guides/wp-e-commerce/wpec-dynamic-gallery/) |
- 
+
 == Installation ==
 
 = Minimum Requirements =
 
-* WordPress 3.5 or greater
+* WordPress 3.8 or greater
 * PHP version 5.2.4 or greater
 * MySQL version 5.0 or greater
- 
+
 = Automatic installation =
 
-Automatic installation is the easiest option as WordPress handles the file transfers itself and you don't even need to leave your web browser. To do an automatic install of WP e-Commerce Dynamic Gallery, log in to your WordPress admin panel, navigate to the Plugins menu and click Add New. 
+Automatic installation is the easiest option as WordPress handles the file transfers itself and you don't even need to leave your web browser. To do an automatic install of WP e-Commerce Dynamic Gallery, log in to your WordPress admin panel, navigate to the Plugins menu and click Add New.
 
-In the search field type "WP e-Commerce Dynamic Gallery" and click Search Plugins. Once you have found our plugin you can install it by simply clicking Install Now. After clicking that link you will be asked if you are sure you want to install the plugin. Click yes and WordPress will automatically complete the installation. 
+In the search field type "WP e-Commerce Dynamic Gallery" and click Search Plugins. Once you have found our plugin you can install it by simply clicking Install Now. After clicking that link you will be asked if you are sure you want to install the plugin. Click yes and WordPress will automatically complete the installation.
 
 = Manual installation =
 
@@ -188,8 +163,43 @@ The manual installation method involves downloading our plugin and uploading it 
 = When can I use this plugin? =
 
 You can use this plugin only when you have installed the WP e-Commerce plugin.
- 
+
 == Changelog ==
+
+= 1.2.1 - 2015/04/24 =
+* Tweak - Tested and Tweaked for full compatibility with WordPress Version 4.2.0
+* Tweak - Tested and Tweaked for full compatibility with WP e-Commerce Version 3.9.3
+* Tweak - Changed <code>WP_CONTENT_DIR</code> to <code>WP_PLUGIN_DIR</code>. When admin sets a custom WordPress file structure then it can get the correct path of plugin
+* Tweak - Update style of plugin framework. Removed the <code>[data-icon]</code> selector to prevent conflict with other plugins that have font awesome icons
+* Fix - Sass compile path not saving on windows xampp.
+
+= 1.2.0 - 2014/09/18 =
+* Feature - Converted all front end CSS #dynamic {stylesheets} to Sass #dynamic {stylesheets} for faster loading.
+* Feature - Convert all back end CSS to Sass.
+* Tweak - Remove inline style is loaded for each gallery and gallery variation to reduce the query to database
+* Tweak - Added customized_style.php file for Sass
+* Fix - Make 'Deactivate' option for 'Gallery Pop-up' work, current if choose 'Deactivate' option for 'Gallery popup' then it use Fancybox to open image.
+
+= 1.1.9.7 - 2014/09/09 =
+* Tweak - Upgrade fancybox script lib to include fancybox.js file when SCRIPT_DEBUG = true
+* Tweak - Updated google font face in plugin framework.
+* Tweak - Tested 100% compatible with WP e-Commerce 3.8.14.3
+* Tweak - Tested 100% compatible with WordPress Version 4.0
+
+= 1.1.9.6 - 2014/06/24 =
+* Feature - Added option to Hide or show the default WPEC Image Gallery Meta box on product edit pages.
+* Feature - If default WPEC Product Gallery is deactivated - Turn OFF the Dynamic Gallery on the product, the WPEC default gallery shows again.
+* Tweak - Improved UI - Turn off the Dynamic gallery from the Meta box and the box closes. Turn it on and it opens.
+* Tweak - Added support for placeholder feature for input, email , password , text area types
+* Tweak - Updated chosen js script to latest version 1.0.1 on the a3rev Plugin Framework
+* Fixed - Fixed the Warning - "Creating default object from empty value in" on Dynamic Gallery Preview popup.
+* Fixed - Solved the conflict with WP Email Template for the warning "WP Email Template: wp_mail has been declared by another process or plugin, so you won't be able to use another Email Deliver Provider until the problem is solved." on Dynamic Gallery Style tab.
+
+= 1.1.9.5 - 2014/05/24 =
+* Tweak - Chnaged add_filter( 'gettext', array( $this, 'change_button_text' ), null, 2 ); to add_filter( 'gettext', array( $this, 'change_button_text' ), null, 3 );
+* Tweak - Update change_button_text() function from ( $original == 'Insert into Post' ) to ( is_admin() && $original === 'Insert into Post' )
+* Tweak - Checked and updated for full compatibility with WP e-Commerce Version 3.8.14.1 and WordPress version 3.9.1
+* Fix - Code tweaks to fix a3 Plugins Framework conflict with WP e-Commerce tax rates.
 
 = 1.1.9.4 - 2014/02/12 =
 * Tweak - Added remove_all_filters('mce_external_plugins'); before call to wp_editor to remove extension scripts from other plugins.
@@ -210,7 +220,7 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 * Tweak - Tested 100% compatible with WP 3.8.0
 
 = 1.1.9.2 - 2013/12/12 =
-* Tweak - Removed fixed height setting that shows on admin when Gallery Dimension - Responsive is selected. (Pro Version settings) 
+* Tweak - Removed fixed height setting that shows on admin when Gallery Dimension - Responsive is selected. (Pro Version settings)
 * Fix - Upgraded array_textareas type for Padding, Margin settings on the a3rev plugin framework
 
 = 1.1.9.1 - 2013/11/23 =
@@ -232,7 +242,7 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 
 = 1.1.7 - 2013/09/07 =
 * Tweak - Added 'View Docs' link from the top of each admin panel to that menus section on the plugins docs.
-* Fix - Gallery images not showing in Chrome with SSL on product pages. Stripped http// and https// protocols so browser will use the protocol that the page was loaded with. 
+* Fix - Gallery images not showing in Chrome with SSL on product pages. Stripped http// and https// protocols so browser will use the protocol that the page was loaded with.
 * Fix - Plugins admin script and style not loading in Firefox with SSL on admin. Stripped http// and https// protocols so browser will use the protocol that the page was loaded with.
 
 = 1.1.6 - 2013/08/22 =
@@ -241,7 +251,7 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 = 1.1.5 - 2013/08/05 =
 * Tweak - Plugin in code tested fully compatible with WordPress v3.6.0
 * Fix - Update Gallery script to work with the new WordPress jQuery v1.10.2. Changed .live to .on
-* Fix - Replaced old Lightbox pop-up script with new Colorbox script. 
+* Fix - Replaced old Lightbox pop-up script with new Colorbox script.
 * Fix - Replacing Lightbox script with Colorbox fixes issue of the Lightbox script not opening the current image on Zoom. Lightbox always opened pop-up at first image in the Gallery.
 * Fix - Added Product Gallery Class attribute box-sizing:content-box for compatibility with new WordPress Twenty Thirteen default theme.
 
@@ -256,7 +266,7 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 * Tweak - Added PHP Public Static to functions in Class. Done so that PHP Public Static warnings don't show in DE_BUG mode.
 * Tweak - Updated the plugins support links to the plugins WordPress support forum.
 * Tweak - Updated the plugins WordPress description.
-* Fix - Fixed not divisible by zero error message that showed when 0 value entered or for thumbnail wide and tall. Updated feature help text. 
+* Fix - Fixed not divisible by zero error message that showed when 0 value entered or for thumbnail wide and tall. Updated feature help text.
 
 = 1.1.3 - 2013/04/26 =
 * Tweak - Added when install and activate plugin link redirects to WP e-Commerce Gallery admin panel instead of the wp-plugins dashboard.
@@ -265,17 +275,17 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 * Tweak - Updated all plugin code to be 100% compatible with the new WP e-Commerce version 3.8.10. The plugin is backward compatible with older version to 3.8.5
 
 = 1.1.1 - 2013/04/04 =
-* Tweak - Full Gallery Optimization in Windows XP, IE 7, IE8, Windows 7, IE8 and IE9 and Windows 8, IE10 and IE10 Desktop. 
+* Tweak - Full Gallery Optimization in Windows XP, IE 7, IE8, Windows 7, IE8 and IE9 and Windows 8, IE10 and IE10 Desktop.
 * Tweak - Full Gallery test and optimization for  all 3 Windows operating systems - for these legacy browsers - Firefox, Safari, Chrome and Opera.
 * Tweak - Fully Gallery test and optimization for Apple OS X operating systems. Snow leopard, Lion and Mountain Lion using these legacy Browsers - Firefox, Safari, Chrome and Opera
 * Tweak - Full Gallery test and optimization for Apple IOS Mobile Safari in iPhones and all iPads.
 * Tweak - Fully Gallery test and optimization for Android Browser on all models of these manufacturers tablets that use the Android operating system - Amazon Kindle Fire, Google Nexus 7, Samsung Galaxy Note, Samsung Galaxy Tab 2
 * Tweak - Fully Gallery test and optimization for Android Browser on all models of these manufacturers phone that use the Android operating system (to many to list)  mobile phones that support - Samsung Galaxy, Motorola, HTC, Sony and LG
-* Tweak - Full Gallery test and optimization for Opera Mobile - Samsung Galaxy Tablet and Mobiles HTC Wildfire. Nokia 5800, Samsung Galaxy S II, Motorola Droid X and Motorola Atrix 4G 
-* Tweak: Jumped version from 1.0.8.1 to 1.1.0 to keep in synch with the Pro Version. 
+* Tweak - Full Gallery test and optimization for Opera Mobile - Samsung Galaxy Tablet and Mobiles HTC Wildfire. Nokia 5800, Samsung Galaxy S II, Motorola Droid X and Motorola Atrix 4G
+* Tweak: Jumped version from 1.0.8.1 to 1.1.0 to keep in synch with the Pro Version.
 * Fix - Conflict with Chrome browser add on AdBlocker. Chrome extension Adblocker was hiding the gallery class name ad-images which was causing the main gallery images not to show. Edited style so now gallery shows with that add-on activated.
 * Fix - Bug for users who have https: (SSL) on their sites wp-admin but have http on sites front end. This was causing a -1 to show in the Gallery Container instead of the current image because wp-admin with SSL applied only allows https:, but the url of admin-ajax.php is http: and it is denied hence returning the ajax -1 error. Fixed by writing a filter to recognize when https is configured on wp-admin  and parsing correctly. If you do not have this configuration nothing changes for you, if you do have https on your wp-admin (or install it in the future) and http on the front end then Dynamic Gallery will automatically detect that and works as it should.
-* Fix - Long standing issue with Gallery main image not showing in bespoke themes in Windows 7 and Widows 8 with IE browsers 8.0, 9.0, 10.0 and 10.0 Desktop. 
+* Fix - Long standing issue with Gallery main image not showing in bespoke themes in Windows 7 and Widows 8 with IE browsers 8.0, 9.0, 10.0 and 10.0 Desktop.
 * Credit - Thanks to Nemanja from the Art Binaire Team for providing the solution.
 
 = 1.0.8.1 - 2013/02/13 =
@@ -311,7 +321,7 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 * Fix - Single image click zoom function. The current image now opens when Zoom or the image is clicked.
 * Fix - Stopped Lazy load scrolling on Gallery initial load for auto start (Lite and Pro Versions) and when Auto Start not activated on Pro Version. Now the Lazy load scroll only starts when transition to second image in the Gallery starts.
 * Fix - Lazy Load scroll duration now sync with and set by the transition effect speed setting (Lite and Pro Versions).
-* Fix - Caption text pop-up now sync with and set by the Time between transitions settings (Lite and Pro Versions). 
+* Fix - Caption text pop-up now sync with and set by the Time between transitions settings (Lite and Pro Versions).
 * Fix - Make center for image in gallery frame
 
 = 1.0.3 - 2012/09/10 =
@@ -340,6 +350,21 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 
 == Upgrade Notice ==
 
+= 1.2.1 =
+Major Maintenance Update. Code tweaks and a bug fix for full compatibility with WordPress Version 4.2.0 and WP e-Commerce Version 3.9.3
+
+= 1.2.0 =
+Major Version upgrade! Upgrade now for 1 important bug fix, 2 Tweaks and full front end conversion to Sass #dynamic {stylesheets}.
+
+= 1.1.9.7 =
+Upgrade your plugin now for full compatibility with WordPress Version 4.0 and WP e-Commerce Version 3.8.14.3
+
+= 1.1.9.6 =
+Upgrade your plugin now for 2 new features, 3 code tweaks and 2 bug fixes to keep your plugin in tip top running order.
+
+= 1.1.9.5 =
+Update now for a bug fix - a3 Plugin Framework conflict with WP e-Commerce tax rates and full compatibility with WP e-Commerce v 3.8.14.1 and WordPress v 3.9.1.
+
 = 1.1.9.4 =
 Upgrade now for wpMandrill plugin conflict bug fix plus 4 Framework Tweaks and full compatibility with WP e-Commerce Version 3.8.13.3 and WordPress Version 3.8.1.
 
@@ -352,8 +377,8 @@ Upgrade your plugin now for admin panel Tweak and bug fix.
 = 1.1.9.1 =
 Upgrade now for added Pro Version features settings on admin panel to keep the Pro and Lite version in synch.
 
-= 1.1.9 = 
-Upgrade your plugin now to the all new a3rev plugin framework with app style admin interface plus 3 new features and full compatibility with WordPress 3.7.1 
+= 1.1.9 =
+Upgrade your plugin now to the all new a3rev plugin framework with app style admin interface plus 3 new features and full compatibility with WordPress 3.7.1
 
 = 1.1.8 =
 Upgrade now for very important conflict with Minify bug fix.

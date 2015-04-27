@@ -441,7 +441,10 @@ class WPSC_Dynamic_Gallery_Preview_Display
                             echo '<li> <a class="lightbox" rel="gallery_product_'.$product_id.'" href="'.WPSC_DYNAMIC_GALLERY_JS_URL . '/mygallery/no-image.png"> <img src="'.WPSC_DYNAMIC_GALLERY_JS_URL . '/mygallery/no-image.png" class="image" alt=""> </a> </li>';
 									
                         }
-						if ( $popup_gallery == 'colorbox' ) {
+						if ($popup_gallery == 'deactivate') {
+							$script_colorbox = '';
+							$script_fancybox = '';
+						} else if ( $popup_gallery == 'colorbox' ) {
                         	echo $script_colorbox;
 						} else {
 							echo $script_fancybox;
