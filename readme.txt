@@ -3,7 +3,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, WP e-commerce product images,  wordpress ecommerce
 Requires at least: 3.8
 Tested up to: 4.2.0
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -165,6 +165,9 @@ The manual installation method involves downloading our plugin and uploading it 
 You can use this plugin only when you have installed the WP e-Commerce plugin.
 
 == Changelog ==
+
+= 1.2.2 - 2015/04/27 =
+* Fix - Changed from <code>jQuery(window).load(function($)</code> to <code>jQuery(document).ready(function($)</code> for called after jquery is loaded
 
 = 1.2.1 - 2015/04/24 =
 * Tweak - Tested and Tweaked for full compatibility with WordPress Version 4.2.0
@@ -349,6 +352,9 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 
 
 == Upgrade Notice ==
+
+= 1.2.2 =
+Maintenance Upgrade. Update now for 1 js bug fix from version 1.2.1 released 24-04-2015
 
 = 1.2.1 =
 Major Maintenance Update. Code tweaks and a bug fix for full compatibility with WordPress Version 4.2.0 and WP e-Commerce Version 3.9.3
