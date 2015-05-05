@@ -2,8 +2,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce image gallery, WP e-Commerce, WP e-Commerce Product images, WP e-commerce product images,  wordpress ecommerce
 Requires at least: 3.8
-Tested up to: 4.2.0
-Stable tag: 1.2.2
+Tested up to: 4.2.1
+Stable tag: 1.2.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -165,6 +165,12 @@ The manual installation method involves downloading our plugin and uploading it 
 You can use this plugin only when you have installed the WP e-Commerce plugin.
 
 == Changelog ==
+
+= 1.2.3 - 2015/05/05 =
+* Tweak - Tested for full compatibility with WordPress Version 4.2.1
+* Tweak - Define image Alt Text for Alt Attribute for serach engine optomization
+* Tweak - Redefine caption text as new attribute data-caption for use as image captions in gallery
+* Fix - Removed check_ajax_referer() call on frontend for compatibility with PHP caching plugins. Was returning -1 to js success call-back.
 
 = 1.2.2 - 2015/04/27 =
 * Fix - Changed from <code>jQuery(window).load(function($)</code> to <code>jQuery(document).ready(function($)</code> for called after jquery is loaded
@@ -352,6 +358,9 @@ You can use this plugin only when you have installed the WP e-Commerce plugin.
 
 
 == Upgrade Notice ==
+
+= 1.2.3 =
+Maintenance Update. 1 Bug fix for full compatibility with PHP caching plugins with 2 Image Alt and Caption text tweaks and full compatibility with WordPress version 4.2.1
 
 = 1.2.2 =
 Maintenance Upgrade. Update now for 1 js bug fix from version 1.2.1 released 24-04-2015

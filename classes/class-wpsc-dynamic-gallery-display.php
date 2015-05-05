@@ -191,11 +191,8 @@ class WPSC_Dynamic_Gallery_Display_Class
                                     }
                                    $alt = get_post_meta($item_thumb->ID, '_wp_attachment_image_alt', true);
 								   $img_description = $item_thumb->post_excerpt;
-								   if ($img_description == '') {
-									   $img_description = $alt;
-								   }
 
-                                    $html .=  '<li class="'.$li_class.'"><a alt="'.$alt.'" class="gallery_product_'.$product_id.' gallery_product_'.$product_id.'_'.$idx.'"  title="'. esc_attr( $img_description ) .'" rel="gallery_product_'.$product_id.'" href="'.$image_lager_default_url.'"><div><img idx="'.$idx.'" style="width:'.$thumb_width.'px !important;height:'.$thumb_height.'px !important" src="'.$image_thumb_default_url.'" alt="'. esc_attr( $img_description ) .'" class="image'.$i.'" width="'.$thumb_width.'" height="'.$thumb_height.'"></div></a></li>';
+                                    $html .=  '<li class="'.$li_class.'"><a alt="'.esc_attr( $alt ).'" class="gallery_product_'.$product_id.' gallery_product_'.$product_id.'_'.$idx.'"  title="'. esc_attr( $img_description ) .'" rel="gallery_product_'.$product_id.'" href="'.$image_lager_default_url.'"><div><img idx="'.$idx.'" style="width:'.$thumb_width.'px !important;height:'.$thumb_height.'px !important" src="'.$image_thumb_default_url.'" alt="'. esc_attr( $alt ) .'" data-caption="'. esc_attr( $img_description ) .'" class="image'.$i.'" width="'.$thumb_width.'" height="'.$thumb_height.'"></div></a></li>';
                                     $img_description =  esc_js( $img_description ) ;
                                     if ( $img_description != '' ) {
 										$script_fancybox .= $common.'{href:"'.$image_lager_default_url.'",title:"'.$img_description.'"}';
