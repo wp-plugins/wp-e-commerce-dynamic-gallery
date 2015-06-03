@@ -30,7 +30,7 @@ class WPSC_Dynamic_Gallery_Hook_Filter
 		if ( $popup_gallery == 'colorbox' ) {
 			wp_enqueue_style( 'a3_colorbox_style', WPSC_DYNAMIC_GALLERY_JS_URL . '/colorbox/colorbox.css' );
 			wp_enqueue_script( 'colorbox_script', WPSC_DYNAMIC_GALLERY_JS_URL . '/colorbox/jquery.colorbox'.$suffix.'.js', array(), false, true );
-		} else {
+		} elseif($popup_gallery != 'deactivate') {
 			wp_enqueue_style( 'woocommerce_fancybox_styles', WPSC_DYNAMIC_GALLERY_JS_URL . '/fancybox/fancybox.css' );
 			wp_enqueue_script( 'fancybox', WPSC_DYNAMIC_GALLERY_JS_URL . '/fancybox/fancybox'.$suffix.'.js', array(), false, true );
 		}
@@ -113,14 +113,12 @@ class WPSC_Dynamic_Gallery_Hook_Filter
 	}
 	
 	public static function wpsc_dynamic_gallery_preview() {
-		global $post;
-		check_ajax_referer( 'wpsc_dynamic_gallery', 'security' );
+		if ( ! is_user_logged_in() || ! current_user_can( 'manage_options' ) ) die();
 		WPSC_Dynamic_Gallery_Preview_Display::wpsc_dynamic_gallery_preview($_REQUEST);
 		die();
 	}
 	
 	public static function wpsc_dynamic_gallery_frontend() {
-		check_ajax_referer( 'wpsc_dynamic_gallery_frontend', 'security' );
 		echo WPSC_Dynamic_Gallery_Display_Class::wpsc_dynamic_gallery_display($_REQUEST['product_id']);
 		die();
 	}
@@ -135,7 +133,7 @@ class WPSC_Dynamic_Gallery_Hook_Filter
 			$g_height = $wpsc_dgallery_style_setting['product_gallery_height'];
 	
 			echo "<script type=\"text/javascript\">
-			jQuery(window).load(function($){
+			jQuery(document).ready(function($){
 				var container_image = $('.single_product_display .imagecol');
 				container_image.html('<div style=\'display: block; width: 100%; height: 16px; text-align: center; position: absolute; top: 48%;\'><img src=\'".WPSC_DYNAMIC_GALLERY_JS_URL."/mygallery/ajax-loader.gif\' style=\'width:16px !important;height:16px !important;margin:auto !important;padding:0 !important;border:0 !important;\' /></div>').css('position','relative').css('width','".$g_width."px').css('min-height','".$g_height."px');
 				$.post('". admin_url( 'admin-ajax.php', 'relative' )."?security=".$wpsc_dynamic_gallery_frontend."&action=wpsc_dynamic_gallery_frontend&product_id=".$post->ID."', function(data) {
