@@ -74,7 +74,7 @@ class WPSC_Dynamic_Gallery_Display_Class
 
 		$_upload_dir = wp_upload_dir();
 		if ( file_exists( $_upload_dir['basedir'] . '/sass/wpsc_dynamic_gallery.min.css' ) ) {
-			$html .= '<link media="screen" type="text/css" href="' . $_upload_dir['baseurl'] . '/sass/wpsc_dynamic_gallery.min.css" rel="stylesheet" />' . "\n";
+			$html .= '<link media="screen" type="text/css" href="' . str_replace(array('http:','https:'), '', $_upload_dir['baseurl'] ) . '/sass/wpsc_dynamic_gallery.min.css" rel="stylesheet" />' . "\n";
 		} else {
 			ob_start();
 			include( WPSC_DYNAMIC_GALLERY_DIR . '/templates/customized_style.php' );
