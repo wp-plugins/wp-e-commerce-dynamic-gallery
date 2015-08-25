@@ -1,7 +1,7 @@
 <?php
 function wpsc_dynamic_gallery_install(){
-	update_option('a3rev_wpsc_dgallery_version', '1.2.4');
-	update_option('a3rev_wpsc_dgallery_lite_version', '1.2.4');
+	update_option('a3rev_wpsc_dgallery_version', '1.2.6');
+	update_option('a3rev_wpsc_dgallery_lite_version', '1.2.5');
 	
 	// Set Settings Default from Admin Init
 	global $wpsc_dgallery_admin_init;
@@ -43,6 +43,9 @@ add_filter( 'plugin_row_meta', array('WPSC_Dynamic_Gallery_Hook_Filter', 'plugin
 // Need to call Admin Init to show Admin UI
 global $wpsc_dgallery_admin_init;
 $wpsc_dgallery_admin_init->init();
+
+// Add extra link on left of Deactivate link on Plugin manager page
+add_action('plugin_action_links_' . WPSC_DYNAMIC_GALLERY_NAME, array( 'WPSC_Dynamic_Gallery_Hook_Filter', 'settings_plugin_links' ) );
 
 // Add upgrade notice to Dashboard pages
 add_filter( $wpsc_dgallery_admin_init->plugin_name . '_plugin_extension', array( 'WPSC_Dynamic_Gallery_Functions', 'plugin_extension' ) );
@@ -149,8 +152,8 @@ function wpsc_dgallery_lite_upgrade_plugin () {
 		update_option('a3rev_wpsc_dgallery_version', '1.2.0');
 	}
 	
-	update_option('a3rev_wpsc_dgallery_version', '1.2.4');
-	update_option('a3rev_wpsc_dgallery_lite_version', '1.2.4');
+	update_option('a3rev_wpsc_dgallery_version', '1.2.6');
+	update_option('a3rev_wpsc_dgallery_lite_version', '1.2.5');
 
 }
 

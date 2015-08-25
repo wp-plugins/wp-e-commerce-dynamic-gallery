@@ -156,5 +156,11 @@ class WPSC_Dynamic_Gallery_Hook_Filter
 		$links[] = '<a href="http://wordpress.org/support/plugin/wp-e-commerce-dynamic-gallery/" target="_blank">'.__('Support', 'wpsc_dgallery').'</a>';
 		return $links;
 	}
+
+	public static function settings_plugin_links($actions) {
+		$actions = array_merge( array( 'settings' => '<a href="edit.php?post_type=wpsc-product&page=wpsc-dynamic-gallery">' . __( 'Settings', 'wpsc_dgallery' ) . '</a>' ), $actions );
+
+		return $actions;
+	}
 }
 ?>
